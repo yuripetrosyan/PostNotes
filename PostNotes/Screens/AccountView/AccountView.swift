@@ -4,16 +4,22 @@
 //
 //  Created by Yuri Petrosyan on 23/03/2024.
 //
-
+import UIKit
 import SwiftUI
+
+var i = 1
+
+
 
 struct AccountView: View {
     
+  
     
     @State private var username: String = ""
     @State private var password: String = ""
-    
-    
+  
+   
+       
     
     var body: some View {
         VStack{
@@ -21,12 +27,14 @@ struct AccountView: View {
             HStack {
                 Text("PostNotes")
                     .font(.custom("ARCADECLASSIC", size: 36))
-                   
                     .fontDesign(.serif)
                     .fontWeight(.semibold)
                 
                 Text("Ai")
                     .font(.custom("ARCADECLASSIC", size: 20))
+                   
+                   
+                    
                     
                     
                 
@@ -88,3 +96,6 @@ struct AccountView: View {
 #Preview {
     AccountView()
 }
+
+
+

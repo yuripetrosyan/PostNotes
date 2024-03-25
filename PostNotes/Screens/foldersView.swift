@@ -13,6 +13,8 @@ struct foldersView: View {
     var body: some View {
         
         NavigationStack{
+            ZStack{
+            
             VStack{
                 List{
                     
@@ -44,9 +46,23 @@ struct foldersView: View {
                 .listRowSpacing(6)
                 .navigationTitle("Folders").navigationBarTitleDisplayMode(.inline).tint(.brandPrimary)
                 
+                
             }
             
+            VStack{
+                Spacer()
+                HStack{
+                    Spacer()
+                    RoundButton(imageName: "pencil")
+                        .padding()
+                
+                }
+                    .padding()
+                    
+               
+            }
             
+        }
             }
         }
 }
