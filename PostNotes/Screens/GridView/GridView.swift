@@ -16,7 +16,6 @@ struct GridView: View {
         CustomGridItem(itemTitle: "Meeting", itemContent: "Reminder: Team meeting tomorrow at 10 AM. Please prepare the status updates for your projects. Looking forward to productive discussions!"),
         CustomGridItem(itemTitle: "To do ", itemContent: "I need to do groceries today"),
         CustomGridItem(itemTitle: "Exercise", itemContent: "30-minute jog in the morning followed by some light stretching. Stay consistent with your workout routine to maintain a healthy lifestyle."),
-        CustomGridItem(itemTitle: "Holidays", itemContent: "I spent my holidays in Paris and it was wonderful. I spent my holidays in Paris and it was wonderful, I spent my holidays in Paris and it was wonderful"),
         CustomGridItem(itemTitle: "Travel", itemContent: "Plan for upcoming vacation: book flights, reserve accommodation, create itinerary. Ensure all travel documents are up-to-date for a hassle-free trip."),
         CustomGridItem(itemTitle: "Books", itemContent: "Reading list: 'The Alchemist' by Paulo Coelho, 'Atomic Habits' by James Clear, and 'Sapiens' by Yuval Noah Harari. Dive into these insightful reads during your free time."),
         CustomGridItem(itemTitle: "Budget", itemContent: "Review monthly expenses, track spending habits, and set savings goals. Take control of your finances to achieve financial stability and peace of mind."),
