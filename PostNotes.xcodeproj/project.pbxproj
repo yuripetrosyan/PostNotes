@@ -7,18 +7,39 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		925FF01D2BAF6ABD00F8EE87 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF01C2BAF6ABD00F8EE87 /* PostNotesApp.swift */; };
-		925FF01F2BAF6ABD00F8EE87 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF01E2BAF6ABD00F8EE87 /* ContentView.swift */; };
+		925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */; };
 		925FF0212BAF6ABE00F8EE87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925FF0202BAF6ABE00F8EE87 /* Assets.xcassets */; };
 		925FF0242BAF6ABE00F8EE87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925FF0232BAF6ABE00F8EE87 /* Preview Assets.xcassets */; };
+		925FF02D2BAF6AE800F8EE87 /* GridView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF02C2BAF6AE800F8EE87 /* GridView.swift */; };
+		925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF02E2BAF6B1300F8EE87 /* AccountView.swift */; };
+		925FF0312BAF6B3500F8EE87 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF0302BAF6B3500F8EE87 /* SearchView.swift */; };
+		925FF0332BAF6B5B00F8EE87 /* CustiomGridtem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF0322BAF6B5B00F8EE87 /* CustiomGridtem.swift */; };
+		925FF0352BAF6B9300F8EE87 /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF0342BAF6B9300F8EE87 /* CustomTextField.swift */; };
+		925FF03A2BAF709600F8EE87 /* CutomNotepad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF0392BAF709500F8EE87 /* CutomNotepad.swift */; };
+		926812592BB0DD140048822D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812582BB0DD140048822D /* SettingsView.swift */; };
+		9268125B2BB1D2D10048822D /* Custom3circles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268125A2BB1D2D10048822D /* Custom3circles.swift */; };
+		926812772BB1D6C30048822D /* foldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812762BB1D6C20048822D /* foldersView.swift */; };
+		92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */; };
+		92C973502BB0A3870080C2C0 /* ARCADECLASSIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		925FF0192BAF6ABD00F8EE87 /* PostNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		925FF01C2BAF6ABD00F8EE87 /* PostNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
-		925FF01E2BAF6ABD00F8EE87 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotesTabView.swift; sourceTree = "<group>"; };
 		925FF0202BAF6ABE00F8EE87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		925FF0232BAF6ABE00F8EE87 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		925FF02C2BAF6AE800F8EE87 /* GridView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridView.swift; sourceTree = "<group>"; };
+		925FF02E2BAF6B1300F8EE87 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		925FF0302BAF6B3500F8EE87 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		925FF0322BAF6B5B00F8EE87 /* CustiomGridtem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustiomGridtem.swift; sourceTree = "<group>"; };
+		925FF0342BAF6B9300F8EE87 /* CustomTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
+		925FF0392BAF709500F8EE87 /* CutomNotepad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CutomNotepad.swift; sourceTree = "<group>"; };
+		926812582BB0DD140048822D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		9268125A2BB1D2D10048822D /* Custom3circles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom3circles.swift; sourceTree = "<group>"; };
+		926812762BB1D6C20048822D /* foldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foldersView.swift; sourceTree = "<group>"; };
+		92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedVIew.swift; sourceTree = "<group>"; };
+		92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ARCADECLASSIC.TTF; sourceTree = "<group>"; };
+		92C973512BB0A41C0080C2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +72,12 @@
 		925FF01B2BAF6ABD00F8EE87 /* PostNotes */ = {
 			isa = PBXGroup;
 			children = (
-				925FF01C2BAF6ABD00F8EE87 /* PostNotesApp.swift */,
-				925FF01E2BAF6ABD00F8EE87 /* ContentView.swift */,
+				92C973512BB0A41C0080C2C0 /* Info.plist */,
+				92C973432BB09DF60080C2C0 /* Screens */,
+				92C973452BB09E210080C2C0 /* Utilities */,
+				92C973442BB09E160080C2C0 /* Model */,
+				925FF02B2BAF6AD300F8EE87 /* View */,
+				925FF0362BAF6BB700F8EE87 /* Custom  */,
 				925FF0202BAF6ABE00F8EE87 /* Assets.xcassets */,
 				925FF0222BAF6ABE00F8EE87 /* Preview Content */,
 			);
@@ -65,6 +90,93 @@
 				925FF0232BAF6ABE00F8EE87 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		925FF02B2BAF6AD300F8EE87 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		925FF0362BAF6BB700F8EE87 /* Custom  */ = {
+			isa = PBXGroup;
+			children = (
+				925FF0322BAF6B5B00F8EE87 /* CustiomGridtem.swift */,
+				925FF0342BAF6B9300F8EE87 /* CustomTextField.swift */,
+				925FF0392BAF709500F8EE87 /* CutomNotepad.swift */,
+				9268125A2BB1D2D10048822D /* Custom3circles.swift */,
+			);
+			path = "Custom ";
+			sourceTree = "<group>";
+		};
+		926812572BB0DD040048822D /* SettingsView */ = {
+			isa = PBXGroup;
+			children = (
+				926812582BB0DD140048822D /* SettingsView.swift */,
+			);
+			path = SettingsView;
+			sourceTree = "<group>";
+		};
+		92C973432BB09DF60080C2C0 /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */,
+				92C973462BB09E3A0080C2C0 /* GridView */,
+				92C973482BB09E510080C2C0 /* SeachView */,
+				92C973472BB09E480080C2C0 /* AccountView */,
+				92C973492BB09EA90080C2C0 /* DetailedView */,
+				926812572BB0DD040048822D /* SettingsView */,
+				926812762BB1D6C20048822D /* foldersView.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		92C973442BB09E160080C2C0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		92C973452BB09E210080C2C0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		92C973462BB09E3A0080C2C0 /* GridView */ = {
+			isa = PBXGroup;
+			children = (
+				925FF02C2BAF6AE800F8EE87 /* GridView.swift */,
+			);
+			path = GridView;
+			sourceTree = "<group>";
+		};
+		92C973472BB09E480080C2C0 /* AccountView */ = {
+			isa = PBXGroup;
+			children = (
+				925FF02E2BAF6B1300F8EE87 /* AccountView.swift */,
+			);
+			path = AccountView;
+			sourceTree = "<group>";
+		};
+		92C973482BB09E510080C2C0 /* SeachView */ = {
+			isa = PBXGroup;
+			children = (
+				925FF0302BAF6B3500F8EE87 /* SearchView.swift */,
+			);
+			path = SeachView;
+			sourceTree = "<group>";
+		};
+		92C973492BB09EA90080C2C0 /* DetailedView */ = {
+			isa = PBXGroup;
+			children = (
+				92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */,
+			);
+			path = DetailedView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,6 +237,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92C973502BB0A3870080C2C0 /* ARCADECLASSIC.TTF in Resources */,
 				925FF0242BAF6ABE00F8EE87 /* Preview Assets.xcassets in Resources */,
 				925FF0212BAF6ABE00F8EE87 /* Assets.xcassets in Resources */,
 			);
@@ -137,8 +250,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				925FF01F2BAF6ABD00F8EE87 /* ContentView.swift in Sources */,
-				925FF01D2BAF6ABD00F8EE87 /* PostNotesApp.swift in Sources */,
+				925FF0352BAF6B9300F8EE87 /* CustomTextField.swift in Sources */,
+				925FF0312BAF6B3500F8EE87 /* SearchView.swift in Sources */,
+				9268125B2BB1D2D10048822D /* Custom3circles.swift in Sources */,
+				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
+				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
+				92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */,
+				926812772BB1D6C30048822D /* foldersView.swift in Sources */,
+				926812592BB0DD140048822D /* SettingsView.swift in Sources */,
+				925FF02D2BAF6AE800F8EE87 /* GridView.swift in Sources */,
+				925FF03A2BAF709600F8EE87 /* CutomNotepad.swift in Sources */,
+				925FF0332BAF6B5B00F8EE87 /* CustiomGridtem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,11 +397,14 @@
 				DEVELOPMENT_TEAM = ZT829445M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PostNotes/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PostNotes Ai";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -304,11 +429,14 @@
 				DEVELOPMENT_TEAM = ZT829445M9;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = PostNotes/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "PostNotes Ai";
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
