@@ -85,10 +85,10 @@ struct GridView: View {
                 }
             }
             
-            ToolbarItem(placement: .topBarLeading) {
-                Image(systemName: "plus")
-            }
-            
+           // ToolbarItem(placement: .topBarLeading) {
+           //     Image(systemName: "plus")
+         //   }
+           
             ToolbarItem(placement: .topBarLeading) {
                 NavigationLink(destination: foldersView()){
                     Image(systemName: "folder")

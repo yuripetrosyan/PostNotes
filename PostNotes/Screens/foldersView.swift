@@ -22,7 +22,7 @@ struct foldersView: View {
                                 Text("Notes on the phone")){
                         ForEach(folders, id: \.self){ folderName in
                             CustomFolderCell(name: folderName)
-                                .swipeActions{
+                                .swipeActions(allowsFullSwipe: true){
                                     HStack{
                                         Button{ }label: {
                                             Text("Archive")
