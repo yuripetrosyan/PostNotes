@@ -10,6 +10,7 @@ import SwiftUI
 
 struct GridView: View {
     
+    @State var searchedText: String = ""
     @State private var items: [CustomGridItem] = [
         
         CustomGridItem(itemTitle: "Ideas", itemContent: "Brainstorming session results: new marketing strategies, product improvement ideas, and potential collaborations. Let's discuss these in our next team meeting."),
@@ -38,22 +39,42 @@ struct GridView: View {
         
         NavigationStack{
             ZStack{
-                ScrollView {
-                    LazyVGrid(columns: columns, spacing: 10) {
-                        ForEach(items, id: \.id) { item in
-                            CustomGridItemView(item: item)
+                    
+                    ScrollView {
+                        
+                  
+                        TextField("Search", text: $searchedText)
+                            .padding()
+                            .frame(height: 40)
+                            .background(.brandSecondary).opacity(0.8)
+                            .clipShape(RoundedRectangle(cornerRadius: 25.0))
+
+                            .padding(.horizontal)
+                            .padding(.top, 10)
+                        
+                        
+                        LazyVGrid(columns: columns, spacing: 10) {
+                            ForEach(items, id: \.id) { item in
+                                
+                                NavigationLink(destination: DetailedVIew(item: item)){
+                                    CustomGridItemView(item: item)
+                                      
+                                        
+                                        
+                                }.buttonStyle(PlainButtonStyle())
+                                
+                            }
+                            
+                            
+                            
                         }
                         
+                        .padding()
                         
                         
-                    }
-                    
-                    .padding()
-                    .padding(.top, 10)
-                    
+                        
                     
                 }
-                
                 
                 
           //Round button here

@@ -6,15 +6,13 @@
 //
 
 import SwiftUI
-
+//import CoreData
+//import UserNotifications
 
 
 struct PostNotesTabView: View {
     
-    
-    
     var body: some View{
-        
         
         TabView{
             GridView()

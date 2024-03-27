@@ -10,7 +10,7 @@ struct DetailedVIew: View {
       NavigationStack  {
             VStack{
             VStack{
-                Rectangle().frame(maxWidth: .infinity, maxHeight: 130)
+                Rectangle().frame(maxWidth: .infinity, maxHeight: 200)
                     .overlay {
                         HStack{
                             Text(item.itemTitle)
@@ -22,12 +22,13 @@ struct DetailedVIew: View {
                             Spacer()
                             VStack{
                                 Custom3circles()
+                                    .frame(width: 80, height: 800)
                                 
                                 Spacer()
                             }
                             
                         }   .padding()
-                            .padding(.top, 50)
+                            .padding(.top, 100)
                     }
                 
             }
@@ -37,9 +38,10 @@ struct DetailedVIew: View {
             
             Spacer()
             }.ignoresSafeArea()
+             
               
         
-    }
+      } .tint(.white)
         
         
     }

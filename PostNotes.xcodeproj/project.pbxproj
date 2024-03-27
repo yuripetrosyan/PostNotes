@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257981E2BB2195400254FB4 /* PostNotesApp.swift */; };
 		925798212BB21D1D00254FB4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925798202BB21D1D00254FB4 /* RoundButton.swift */; };
+		925798232BB329A300254FB4 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925798222BB329A300254FB4 /* Config.swift */; };
 		925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */; };
 		925FF0212BAF6ABE00F8EE87 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925FF0202BAF6ABE00F8EE87 /* Assets.xcassets */; };
 		925FF0242BAF6ABE00F8EE87 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 925FF0232BAF6ABE00F8EE87 /* Preview Assets.xcassets */; };
@@ -21,6 +22,7 @@
 		926812592BB0DD140048822D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812582BB0DD140048822D /* SettingsView.swift */; };
 		9268125B2BB1D2D10048822D /* Custom3circles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268125A2BB1D2D10048822D /* Custom3circles.swift */; };
 		926812772BB1D6C30048822D /* foldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812762BB1D6C20048822D /* foldersView.swift */; };
+		92C877D62BB341F6000E9BBB /* CustomPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C877D52BB341F6000E9BBB /* CustomPopover.swift */; };
 		92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */; };
 		92C973502BB0A3870080C2C0 /* ARCADECLASSIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */; };
 /* End PBXBuildFile section */
@@ -28,6 +30,7 @@
 /* Begin PBXFileReference section */
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
 		925798202BB21D1D00254FB4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
+		925798222BB329A300254FB4 /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		925FF0192BAF6ABD00F8EE87 /* PostNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostNotesTabView.swift; sourceTree = "<group>"; };
 		925FF0202BAF6ABE00F8EE87 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -41,6 +44,7 @@
 		926812582BB0DD140048822D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9268125A2BB1D2D10048822D /* Custom3circles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom3circles.swift; sourceTree = "<group>"; };
 		926812762BB1D6C20048822D /* foldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foldersView.swift; sourceTree = "<group>"; };
+		92C877D52BB341F6000E9BBB /* CustomPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopover.swift; sourceTree = "<group>"; };
 		92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedVIew.swift; sourceTree = "<group>"; };
 		92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ARCADECLASSIC.TTF; sourceTree = "<group>"; };
 		92C973512BB0A41C0080C2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
@@ -113,6 +117,7 @@
 				925FF0392BAF709500F8EE87 /* CutomNotepad.swift */,
 				9268125A2BB1D2D10048822D /* Custom3circles.swift */,
 				925798202BB21D1D00254FB4 /* RoundButton.swift */,
+				92C877D52BB341F6000E9BBB /* CustomPopover.swift */,
 			);
 			path = "Custom ";
 			sourceTree = "<group>";
@@ -142,6 +147,7 @@
 		92C973442BB09E160080C2C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				925798222BB329A300254FB4 /* Config.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -259,6 +265,8 @@
 				925FF0352BAF6B9300F8EE87 /* CustomTextField.swift in Sources */,
 				925FF0312BAF6B3500F8EE87 /* SearchView.swift in Sources */,
 				9268125B2BB1D2D10048822D /* Custom3circles.swift in Sources */,
+				92C877D62BB341F6000E9BBB /* CustomPopover.swift in Sources */,
+				925798232BB329A300254FB4 /* Config.swift in Sources */,
 				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
 				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
 				92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */,

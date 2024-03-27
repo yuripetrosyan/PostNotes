@@ -47,7 +47,8 @@ struct CustomGridItemView: View {
                 
                 Spacer()
                 
-            }.frame(height: 120)
+            }
+            .frame(height: 120)
             
            
             
