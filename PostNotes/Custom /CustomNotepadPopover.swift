@@ -17,6 +17,8 @@ struct CustomNotepadPopover: View {
     @State var popoverName: String
     @State var popoverDescription: String
     
+    @Binding var isShowingPopover:Bool
+    
     
     
     var body: some View {
@@ -55,7 +57,7 @@ struct CustomNotepadPopover: View {
                         Color.gray.frame(width: 200, height: CGFloat(1))
                         
                         HStack{
-                            Button(action: {print("qyabab")}) {
+                            Button(action: {isShowingPopover.toggle()}) {
                                 Text("Cancel")
                                     .frame(maxWidth: .infinity)
                                     .foregroundStyle(.brandPrimary)
@@ -91,5 +93,5 @@ struct CustomNotepadPopover: View {
 
 
 #Preview {
-    CustomNotepadPopover(popoverName: "Name", popoverDescription: "Write the name of you folder here")
+    CustomNotepadPopover(popoverName: "Name", popoverDescription: "Write the name of you folder here", isShowingPopover: .constant(true))
 }

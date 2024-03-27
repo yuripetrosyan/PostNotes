@@ -81,7 +81,7 @@ struct foldersView: View {
             }
         }
             if isShowingPopover{
-                CustomNotepadPopover(searchedText: newFolderName, popoverName: "Name", popoverDescription: "Let's decide a name for your new folder")
+                CustomNotepadPopover(searchedText: newFolderName, popoverName: "Name", popoverDescription: "Let's decide a name for your new folder", isShowingPopover: $isShowingPopover).background(.ultraThinMaterial)
             }
         
         
