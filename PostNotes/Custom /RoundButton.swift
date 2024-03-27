@@ -13,29 +13,31 @@ struct RoundButton: View {
     
     
     var body: some View {
-        Button{print("new note added ")}
-    label:{
-        ZStack{
+        
+        
+    //    ZStack{
             
             
             
             Circle()
                 .foregroundStyle(.ultraThinMaterial)
-                .frame(width: 50)
+                .frame(width: 60)
                 .clipShape(Circle())
+                .overlay{
+                    
+                    Image(systemName: imageName)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 30, height: 30)
+                        .foregroundStyle(.brandPrimary)
+                    
+                }
             
-            Image(systemName: imageName)
-                .resizable()
-                .frame(width: 25, height: 25)
-                .foregroundStyle(.brandPrimary)
-          
-                
-            
-        }
-    }
+     //   }
     }
 }
 
+
 #Preview {
-    RoundButton(imageName: "pencil")
+    RoundButton(imageName: "folder")
 }

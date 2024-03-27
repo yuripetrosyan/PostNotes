@@ -57,14 +57,10 @@ struct foldersView: View {
                     HStack{
                         Spacer()
                         
-                        
-                        Image(systemName: "folder.badge.plus")
-                          
-                            .background(Circle().foregroundStyle(.brandSecondary.opacity(0.9)).frame(width: 40, height: 40))
-                            .onTapGesture {
-                                isShowingPopover.toggle()
-                            }
-                        
+              
+                        Button(action: {isShowingPopover.toggle()}, label: {
+                            RoundButton(imageName: "folder.badge.plus")
+                        })
                             
                         
                        

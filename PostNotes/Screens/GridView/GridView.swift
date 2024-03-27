@@ -10,6 +10,9 @@ import SwiftUI
 
 struct GridView: View {
     
+    @State var isShowingPopover = false
+   // @State var itemTitle: String = ""
+
     @State var searchedText: String = ""
     @State private var items: [CustomGridItem] = [
         
@@ -36,19 +39,19 @@ struct GridView: View {
     
     
     var body: some View {
-        
-        NavigationStack{
-            ZStack{
+        ZStack{
+            NavigationStack{
+                ZStack{
                     
                     ScrollView {
                         
-                  
+                        
                         TextField("Search", text: $searchedText)
                             .padding()
                             .frame(height: 40)
                             .background(.brandSecondary).opacity(0.8)
                             .clipShape(RoundedRectangle(cornerRadius: 25.0))
-
+                        
                             .padding(.horizontal)
                             .padding(.top, 10)
                         
@@ -58,9 +61,9 @@ struct GridView: View {
                                 
                                 NavigationLink(destination: DetailedVIew(item: item)){
                                     CustomGridItemView(item: item)
-                                      
-                                        
-                                        
+                                    
+                                    
+                                    
                                 }.buttonStyle(PlainButtonStyle())
                                 
                             }
@@ -73,55 +76,67 @@ struct GridView: View {
                         
                         
                         
-                    
-                }
-                
-                
-          //Round button here
-                
-                VStack{
-                    Spacer()
-                    HStack{
-                        Spacer()
-                        RoundButton(imageName: "pencil")
-                            .padding()
-                    
+                        
                     }
+                    
+                    
+                    //Round button here
+                    
+                    VStack{
+                        Spacer()
+                        HStack{
+                            Spacer()
+                            Button(action: {isShowingPopover.toggle()}, label: {
+                                RoundButton(imageName: "pencil")
+                            })
+                                
+                            
+                           
+                                .padding()
+                            
+                        }
                         .padding()
                         
-                   
+                        
+                    }
+                    
                 }
+                .navigationTitle("My Notes").navigationBarTitleDisplayMode(.inline)
                 
-            }
-        .navigationTitle("My Notes").navigationBarTitleDisplayMode(.inline)
-            
-            
-        .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
                 
-                NavigationLink(destination: SettingsView()) {
-                    Image(systemName: "gear")
-                        .imageScale(.large)
-                        .tint(.brandPrimary)
+                .toolbar {
+                    ToolbarItem(placement: .navigationBarTrailing) {
+                        
+                        NavigationLink(destination: SettingsView()) {
+                            Image(systemName: "gear")
+                                .imageScale(.large)
+                                .tint(.brandPrimary)
+                        }
+                    }
+                    
+                    // ToolbarItem(placement: .topBarLeading) {
+                    //     Image(systemName: "plus")
+                    //   }
+                    
+                    ToolbarItem(placement: .topBarLeading) {
+                        NavigationLink(destination: foldersView()){
+                            Image(systemName: "folder")
+                                .tint(.brandPrimary)
+                        }
+                        
+                    }
+                    
+                    
+                    
+                    
                 }
             }
-            
-           // ToolbarItem(placement: .topBarLeading) {
-           //     Image(systemName: "plus")
-         //   }
-           
-            ToolbarItem(placement: .topBarLeading) {
-                NavigationLink(destination: foldersView()){
-                    Image(systemName: "folder")
-                        .tint(.brandPrimary)
-                }
+            if isShowingPopover{
                 
+                CustomNotepadPopover(popoverName: "Note Title", popoverDescription: "Write the title of your note", isShowingPopover: $isShowingPopover).background(.ultraThinMaterial)
             }
             
             
-            
-            
-        }
         }
         
     }
