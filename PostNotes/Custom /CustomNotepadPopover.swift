@@ -48,35 +48,43 @@ struct CustomNotepadPopover: View {
                         .padding()
                         .background(.brandSecondary)
                         .clipShape(RoundedRectangle(cornerRadius: 10))
-                        .offset(CGSize(width: 00.0, height: 10.0))
+                        .offset(CGSize( width: 00.0, height: 10.0))
                     
                   
                     
 
                     VStack{
+                       
                         Color.gray.frame(width: 200, height: CGFloat(1))
                         
                         HStack{
                             Button(action: {isShowingPopover.toggle()}) {
                                 Text("Cancel")
-                                    .frame(maxWidth: .infinity)
+                                    .frame(width: 100)
                                     .foregroundStyle(.brandPrimary)
                             }
+                            
+                            Spacer(minLength: 20)
+                            
                             Button(action: {print("Save")}) {
                                 Text("Save")
                                     
-                                    .frame(maxWidth: .infinity)
-                                    .frame(height: geo.size.width * 0.10)
+                                    .frame(width: 100)
+                                    .frame(height: 40)
                                   
                                     .foregroundStyle(.white)
                                     .background(RoundedRectangle(cornerRadius: 20)
                                         .foregroundStyle(.brandPrimary))
-                                    .frame(width: geo.size.width * 0.3)
+                                   
                                   
                                     
                             }
-                        }.padding(.horizontal)
+                            
+                        }   
+                            .frame(width: 200)
+                        //.padding(.horizontal)
                             .padding(.top, 10)
+                            
                     }.offset(CGSize(width: 00.0, height: 20.0))
                 }
                 .frame(width: geo.size.width * 0.7, height: geo.size.height * 0.2)

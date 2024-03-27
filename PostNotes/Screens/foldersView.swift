@@ -59,10 +59,8 @@ struct foldersView: View {
                         
                         
                         Image(systemName: "folder.badge.plus")
-                            .resizable()
-                            .frame(width: 40, height: 30)
-                            .offset(x: 3, y: -2)
-                            .background(Circle().foregroundStyle(.brandSecondary.opacity(0.9)).frame(width: 60, height: 60))
+                          
+                            .background(Circle().foregroundStyle(.brandSecondary.opacity(0.9)).frame(width: 40, height: 40))
                             .onTapGesture {
                                 isShowingPopover.toggle()
                             }
@@ -81,7 +79,7 @@ struct foldersView: View {
             }
         }
             if isShowingPopover{
-                CustomNotepadPopover(searchedText: newFolderName, popoverName: "Name", popoverDescription: "Let's decide a name for your new folder", isShowingPopover: $isShowingPopover).background(.ultraThinMaterial)
+                CustomNotepadPopover(searchedText: newFolderName, popoverName: "Name", popoverDescription: "Write the name of your new folder", isShowingPopover: $isShowingPopover).background(.ultraThinMaterial)
             }
         
         
