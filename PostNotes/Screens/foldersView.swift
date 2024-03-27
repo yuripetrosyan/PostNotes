@@ -56,12 +56,16 @@ struct foldersView: View {
                     Spacer()
                     HStack{
                         Spacer()
-                        RoundButton(imageName: "square.and.pencil")
-                            .onTapGesture(perform: {
-                                /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
-                            })
-                       
-                           // isShowingPopover.toggle()
+                        
+                        
+                        Image(systemName: "folder.badge.plus")
+                            .resizable()
+                            .frame(width: 40, height: 30)
+                            .offset(x: 3, y: -2)
+                            .background(Circle().foregroundStyle(.brandSecondary.opacity(0.9)).frame(width: 60, height: 60))
+                            .onTapGesture {
+                                isShowingPopover.toggle()
+                            }
                         
                             
                         
@@ -77,7 +81,7 @@ struct foldersView: View {
             }
         }
             if isShowingPopover{
-                CustomPopover(searchedText: newFolderName, popoverName: "Name", popoverDescription: "Let's decide a name for your new folder")
+                CustomNotepadPopover(searchedText: newFolderName, popoverName: "Name", popoverDescription: "Let's decide a name for your new folder")
             }
         
         
