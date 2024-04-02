@@ -11,14 +11,12 @@ import SwiftUI
 
 struct CustomNotepadPopover: View {
     
-    @State var searchedText:String = ""
-    @State var newFolderName: String = ""
-    
-    @State var popoverName: String
-    @State var popoverDescription: String
-    
-    @Binding var isShowingPopover:Bool
-    
+    @State var newNoteTitle: String = ""
+        @State var newNoteContent: String = ""
+        @State var popoverName: String
+        @State var popoverDescription: String
+        @Binding var isShowingPopover: Bool
+        var onSave: ((String) -> Void)? // Closure to be executed on save
     
     
     var body: some View {
@@ -43,7 +41,7 @@ struct CustomNotepadPopover: View {
                         
                     
                     
-                    TextField("Name", text: $newFolderName)
+                    TextField("Name", text: $newNoteTitle)
                         .frame(width: 200, height: 10)
                         .padding()
                         .background(.brandSecondary)
@@ -66,7 +64,9 @@ struct CustomNotepadPopover: View {
                             
                             Spacer(minLength: 20)
                             
-                            Button(action: {print("Save")}) {
+                            Button(action: {
+                                onSave?(newNoteTitle)
+                                isShowingPopover.toggle()}) {
                                 Text("Save")
                                     
                                     .frame(width: 100)
