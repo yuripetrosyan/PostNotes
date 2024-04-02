@@ -70,7 +70,12 @@ struct AccountView: View {
             
                 
             
-            Button(action: {},
+            Button(action: {
+                withAnimation(.smooth){
+                    labelPressed.toggle()
+                    glowIsOn.toggle()
+                }
+            },
                    
                    label: {
                 Text("log in")
@@ -78,7 +83,7 @@ struct AccountView: View {
                     .fontWeight(.medium)
                     .foregroundColor(.white)
                     .padding()
-                    .frame(width: 150, height: 50)
+                    .frame(width: labelPressed ? 180 : 150, height:  50)
                     .background(Color.brandPrimary)
                     .cornerRadius(30)
                     .padding(.horizontal)

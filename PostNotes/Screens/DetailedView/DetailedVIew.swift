@@ -32,9 +32,14 @@ struct DetailedVIew: View {
                     }
                 
             }
+                
+                
+                TextEditor(text: .constant("\(item.itemContent)"))
+                    .foregroundStyle(.brandPrimary)
+                    .padding()
             
-            Text(item.itemContent)
-                .padding()
+//            Text(item.itemContent)
+//                .padding()
             
             Spacer()
             }.ignoresSafeArea()
