@@ -23,7 +23,7 @@ struct CustomNotepadWide: View {
                 .frame(width: 270, height: 230)
                 .shadow(radius: 10)
                 
-        }
+        }.shadow(radius: 5, x: 3, y: 5)
     }
 }
 

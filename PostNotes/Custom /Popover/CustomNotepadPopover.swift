@@ -101,5 +101,5 @@ struct CustomNotepadPopover: View {
 
 
 #Preview {
-    CustomNotepadPopover(popoverName: "Name", popoverDescription: "Write the name of you folder here", isShowingPopover: .constant(true))
+    CustomNotepadPopover(popoverName: "Title", popoverDescription: "Write the name of you folder here", isShowingPopover: .constant(true))
 }
