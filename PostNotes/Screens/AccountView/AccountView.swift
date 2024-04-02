@@ -7,13 +7,13 @@
 import UIKit
 import SwiftUI
 
-var i = 1
-
 
 
 struct AccountView: View {
-    
-  
+   
+    //fun animations
+    @State private var labelPressed = false
+    @State private var glowIsOn = false
     
     @State private var username: String = ""
     @State private var password: String = ""
@@ -31,43 +31,44 @@ struct AccountView: View {
                     .fontWeight(.semibold)
                 
                 Text("Ai")
-                    .font(.custom("ARCADECLASSIC", size: 20))
+                    .font(.custom("ARCADECLASSIC", size: labelPressed ? 40 : 20))
                    
                    
-                    
-                    
-                    
-                
+            
+            }
+            .shadow(color: .brandPrimary, radius: glowIsOn ? 10 : 0)
+            
+            .onTapGesture {
+                withAnimation(.bouncy){
+                    labelPressed.toggle()
+                    glowIsOn.toggle()
+                }
             }
             
-            TextField("username", text: $username)
-        
-                .textContentType(.username)
-                .autocapitalization(.none)
-                .padding(.horizontal, 40)
-                .padding(.vertical, 20)
-            //   .background(Color.white)
-                .cornerRadius(8)
-                .padding(.horizontal)
             
-                .overlay {
-                    CustomTextField()
+            CustomTextField()
+                .overlay{
+                    TextField("username", text: $username)
+                        .textContentType(.username)
+                        .autocapitalization(.none)
+                        .padding(.horizontal)
+                        .padding(.top, 10)
+                        
                 }
             
-            SecureField("password", text: $password)
-                .textContentType(.password)
-                .autocapitalization(.none)
             
-                .padding(.horizontal, 40)
-                .padding(.vertical, 20)
-            //   .background(Color.white)
-                .cornerRadius(8)
-                .padding(.horizontal)
+            CustomTextField()
+                .overlay{
+                SecureField("password", text: $password)
+                    .textContentType(.password)
+                    .autocapitalization(.none)
+                    .padding(.horizontal)
+                    .padding(.top, 10)
+            }
+              
+          
             
-                .overlay {
-                    CustomTextField()
-                }
-            
+                
             
             Button(action: {},
                    
@@ -75,13 +76,13 @@ struct AccountView: View {
                 Text("log in")
                     .fontDesign(.serif)
                     .fontWeight(.medium)
-                    .shadow(radius: 3)
                     .foregroundColor(.white)
                     .padding()
                     .frame(width: 150, height: 50)
                     .background(Color.brandPrimary)
                     .cornerRadius(30)
                     .padding(.horizontal)
+                    .shadow(radius: 5, x: 3, y: 3)
             }).padding()
             
             

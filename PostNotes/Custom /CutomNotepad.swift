@@ -34,17 +34,22 @@ struct TopRoundedRectangle: Shape {
 struct CustomNotepad: View {
     var body: some View {
         ZStack{
+            
+            
+            RoundedRectangle(cornerRadius: 25.0)
+               // .strokeBorder(Color.brandPrimary, lineWidth: 1)
+               // .shadow(radius: 5)
+                .frame(width: 170, height: 170)
+                .foregroundStyle(.white)
+               // .shadow(radius: 10)
+            
+            
             TopRoundedRectangle(radius: 25)
                 .frame(width: 170, height: 50)
                 .offset(CGSize(width: 0.0, height: -60.0))
                 .foregroundColor(.brandPrimary)
             
-            RoundedRectangle(cornerRadius: 25.0)
-                .strokeBorder(Color.brandPrimary, lineWidth: 1)
-                .shadow(radius: 5)
-                .frame(width: 170, height: 170)
-                .shadow(radius: 10)
-        }
+        }.shadow(radius: 5, x: 3, y: 5)
     }
 }
 

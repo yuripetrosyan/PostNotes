@@ -92,7 +92,6 @@ struct foldersView: View {
 
 struct CustomFolderCell: View {
     var name: String
-    
     var body: some View {
         
         
@@ -100,14 +99,14 @@ struct CustomFolderCell: View {
             ZStack{
                 RoundedRectangle(cornerRadius: 5.0)
                     .frame(maxHeight: .infinity)
-                    .frame(width: 80)
+                    .frame(width: 75)
                 
                 Image(systemName: "folder")
                     .foregroundStyle(.white)
     
                     
             
-            }.padding(-15)
+            }   .padding(-15)
                 .padding(.leading, -10)
             
            
@@ -118,5 +117,7 @@ struct CustomFolderCell: View {
             
            
         }.frame(height: 40)
+         .shadow(radius: 5, x: 3, y: 5)
+            
     }
 }

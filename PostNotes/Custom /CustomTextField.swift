@@ -12,9 +12,11 @@ struct CustomTextField: View {
       
             
             RoundedRectangle(cornerRadius: 25.0)
-                .strokeBorder(Color.brandPrimary, lineWidth: 2)
+              //  .strokeBorder(Color.brandPrimary, lineWidth: 2)
                 .frame(width: 300, height: 50)
-                .shadow(radius: 10)
+                .foregroundStyle(.white)
+                .shadow(radius: 4, x: 4, y: 6)
+                .padding(.top, 10)
                 
         
         

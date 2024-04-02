@@ -11,8 +11,8 @@ import SwiftUI
 struct GridView: View {
     
     @State var isShowingPopover = false
-   // @State var itemTitle: String = ""
-
+    // @State var itemTitle: String = ""
+    
     @State var searchedText: String = ""
     @State private var items: [CustomGridItem] = [
         
@@ -21,7 +21,7 @@ struct GridView: View {
         CustomGridItem(itemTitle: "Exercise", itemContent: "30-minute jog in the morning followed by some light stretching. Stay consistent with your workout routine to maintain a healthy lifestyle."),
         CustomGridItem(itemTitle: "Travel", itemContent: "Plan for upcoming vacation: book flights, reserve accommodation, create itinerary. Ensure all travel documents are up-to-date for a hassle-free trip."),
         CustomGridItem(itemTitle: "Books", itemContent: "Reading list: 'The Alchemist' by Paulo Coelho, 'Atomic Habits' by James Clear, and 'Sapiens' by Yuval Noah Harari. Dive into these insightful reads during your free time.")
-       
+        
         
     ]
     
@@ -41,15 +41,20 @@ struct GridView: View {
                     
                     ScrollView {
                         
-                        
                         TextField("Search", text: $searchedText)
                             .padding()
                             .frame(height: 40)
-                            .background(.brandSecondary).opacity(0.8)
+                            .background(.ultraThinMaterial)
                             .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                        
+                            .shadow(radius: 5, x: 3, y: 5)
                             .padding(.horizontal)
                             .padding(.top, 10)
+                        
+                        
+                        Spacer()
+                        
+                        
+                        
                         
                         
                         LazyVGrid(columns: columns, spacing: 10) {
@@ -57,6 +62,7 @@ struct GridView: View {
                                 
                                 NavigationLink(destination: DetailedVIew(item: item)){
                                     CustomGridItemView(item: item)
+                                    
                                     
                                     
                                     
@@ -85,10 +91,10 @@ struct GridView: View {
                             Button(action: {isShowingPopover.toggle()}, label: {
                                 RoundButton(imageName: "pencil")
                             })
-                                
                             
-                           
-                                .padding()
+                            
+                            
+                            .padding()
                             
                         }
                         .padding()
@@ -127,12 +133,26 @@ struct GridView: View {
                     
                 }
             }
+            
+            
             if isShowingPopover{
                 
-                CustomNotepadPopover(popoverName: "Note Title", popoverDescription: "Write the title of your note", isShowingPopover: $isShowingPopover){ newTitle in
-                    items.append(CustomGridItem(itemTitle: newTitle, itemContent: ""))
-                }.background(.ultraThinMaterial)
+              
+                    CustomNotepadPopover(popoverName: "Note Title", popoverDescription: "Write the title of your note", isShowingPopover: $isShowingPopover){ newTitle in
+                        
+                       
+                            items.append(CustomGridItem(itemTitle: newTitle, itemContent: ""))
+                        
+                }
+                
+                .transition(.move(edge: .bottom))
+                .animation(.snappy)
+                .background(.ultraThinMaterial)
+                
+            
             }
+            
+            
             
             
         }
