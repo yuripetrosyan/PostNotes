@@ -11,7 +11,10 @@ import SwiftUI
 
 struct CustomGridItemView: View {
   
-    let item: CustomGridItem
+    
+    let item: Note
+
+  //  let item: CustomGridItem
     
     var body: some View {
         
@@ -19,7 +22,7 @@ struct CustomGridItemView: View {
         
         VStack(alignment: .leading){
             HStack(alignment: .center){
-                Text(item.itemTitle)
+                Text(item.title)
                     
                     .font(.headline)
                     .fontDesign(.serif)
@@ -37,7 +40,7 @@ struct CustomGridItemView: View {
             
                
             VStack{
-                Text(item.itemContent)
+                Text(item.content)
                     .font(.body)
                     .lineLimit(nil)
                     .lineSpacing(4)
@@ -74,6 +77,6 @@ struct CustomGridItem: Identifiable {
 
 
 #Preview {
-    CustomGridItemView(item: CustomGridItem(itemTitle: "Holiday", itemContent: "I spent my holidays in a nice place. I had a week there and each day was like a "))
+    CustomGridItemView(item: Note(title: "Holiday", content: "I spent my holidays in a nice place. I had a week there and each day was like a "))
 }
 

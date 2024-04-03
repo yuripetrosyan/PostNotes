@@ -36,7 +36,7 @@ struct CustomNotepad: View {
         ZStack{
             
             
-            RoundedRectangle(cornerRadius: 25.0)
+            RoundedRectangle(cornerRadius: 25)
                // .strokeBorder(Color.brandPrimary, lineWidth: 1)
                // .shadow(radius: 5)
                 .frame(width: 170, height: 170)

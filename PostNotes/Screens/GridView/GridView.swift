@@ -7,28 +7,23 @@
 
 import SwiftUI
 
-
 struct GridView: View {
     
+    @State var isShowingLongPress = false
     @State var isShowingPopover = false
-    // @State var itemTitle: String = ""
-    
+    @State var selectedNote: Note? = nil
     @State var searchedText: String = ""
-    @State private var items: [CustomGridItem] = [
-        
-        CustomGridItem(itemTitle: "Ideas", itemContent: "Brainstorming session results: new marketing strategies, product improvement ideas, and potential collaborations. Let's discuss these in our next team meeting."),
-        CustomGridItem(itemTitle: "Meeting", itemContent: "Reminder: Team meeting tomorrow at 10 AM. Please prepare the status updates for your projects. Looking forward to productive discussions!"),
-        CustomGridItem(itemTitle: "Exercise", itemContent: "30-minute jog in the morning followed by some light stretching. Stay consistent with your workout routine to maintain a healthy lifestyle."),
-        CustomGridItem(itemTitle: "Travel", itemContent: "Plan for upcoming vacation: book flights, reserve accommodation, create itinerary. Ensure all travel documents are up-to-date for a hassle-free trip."),
-        CustomGridItem(itemTitle: "Books", itemContent: "Reading list: 'The Alchemist' by Paulo Coelho, 'Atomic Habits' by James Clear, and 'Sapiens' by Yuval Noah Harari. Dive into these insightful reads during your free time.")
-        
-        
-    ]
+    @State private var items: [Note] = [ ]
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
+    // Load notes when the view appears
+    init() {
+        self._items = State(initialValue: NoteManager.shared.loadNotes())
+        
+    }
     
     //MARK: - body
     
@@ -38,9 +33,7 @@ struct GridView: View {
         ZStack{
             NavigationStack{
                 ZStack{
-                    
                     ScrollView {
-                        
                         TextField("Search", text: $searchedText)
                             .padding()
                             .frame(height: 40)
@@ -50,65 +43,48 @@ struct GridView: View {
                             .padding(.horizontal)
                             .padding(.top, 10)
                         
-                        
-                        Spacer()
-                        
-                        
-                        
-                        
+                        //Spacer()
                         
                         LazyVGrid(columns: columns, spacing: 10) {
-                            ForEach(items, id: \.id) { item in
-                                
-                                NavigationLink(destination: DetailedVIew(item: item)){
-                                    CustomGridItemView(item: item)
-                                    
-                                    
-                                    
-                                    
-                                }.buttonStyle(PlainButtonStyle())
-                                
+                            ForEach(items) { note in
+                                NavigationLink(destination: DetailedVIew(item: note)) {
+                                    CustomGridItemView(item: note)
+                                        .contextMenu {
+                                            Button(action: {
+                                                // Handle context menu action here
+                                            }) {
+                                                Label("Edit", systemImage: "pencil")
+                                            }
+                                            Button(action: {
+                                                // Handle context menu action here
+                                            }) {
+                                                Label("Delete", systemImage: "trash")
+                                            }
+                                        }preview: {
+                                            LongPressedView()
+                                        }
+                                }
                             }
-                            
-                            
-                            
                         }
                         
                         .padding()
-                        
-                        
-                        
-                        
                     }
-                    
-                    
                     //Round button here
-                    
                     VStack{
                         Spacer()
                         HStack{
                             Spacer()
-                            Button(action: {isShowingPopover.toggle()}, label: {
-                                RoundButton(imageName: "pencil")
-                            })
+                            Button(action: {isShowingPopover.toggle()}, label: {RoundButton(imageName: "pencil")})
                             
-                            
-                            
-                            .padding()
-                            
+                                .padding()
                         }
                         .padding()
-                        
-                        
                     }
-                    
                 }
                 .navigationTitle("My Notes").navigationBarTitleDisplayMode(.inline)
                 
-                
                 .toolbar {
                     ToolbarItem(placement: .navigationBarTrailing) {
-                        
                         NavigationLink(destination: SettingsView()) {
                             Image(systemName: "gear")
                                 .imageScale(.large)
@@ -116,50 +92,31 @@ struct GridView: View {
                         }
                     }
                     
-                    // ToolbarItem(placement: .topBarLeading) {
-                    //     Image(systemName: "plus")
-                    //   }
-                    
                     ToolbarItem(placement: .topBarLeading) {
                         NavigationLink(destination: foldersView()){
                             Image(systemName: "folder")
                                 .tint(.brandPrimary)
                         }
-                        
                     }
-                    
-                    
-                    
-                    
                 }
             }
             
-            
             if isShowingPopover{
-                
-              
-                    CustomNotepadPopover(popoverName: "Note Title", popoverDescription: "Write the title of your note", isShowingPopover: $isShowingPopover){ newTitle in
-                        
-                       
-                            items.append(CustomGridItem(itemTitle: newTitle, itemContent: ""))
-                        
+                CustomNotepadPopover(popoverName: "Note Title", popoverDescription: "Write the title of your note", isShowingPopover: $isShowingPopover){ newTitle in
+                    items.append(Note(title: newTitle, content: ""))
+                    NoteManager.shared.saveNotes(items) // Save notes here
                 }
-                
                 .transition(.move(edge: .bottom))
                 .animation(.snappy)
                 .background(.ultraThinMaterial)
-                
-            
             }
             
-            
-            
-            
+        }.onDisappear {
+            // Save notes when the view disappears
+            NoteManager.shared.saveNotes(self.items)
         }
-        
     }
 }
-
 
 
 struct ContentView_Previews: PreviewProvider {

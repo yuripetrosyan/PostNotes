@@ -10,7 +10,7 @@ import SwiftUI
 
 
 struct CustomNotepadPopover: View {
-    
+    //@State private var items: [Note] = []
     @State var newNoteTitle: String = ""
         @State var newNoteContent: String = ""
         @State var popoverName: String
@@ -64,9 +64,16 @@ struct CustomNotepadPopover: View {
                             
                             Spacer(minLength: 20)
                             
-                            Button(action: {
+                            Button(action:  {
+                                
+                                
                                 onSave?(newNoteTitle)
-                                isShowingPopover.toggle()}) {
+                                isShowingPopover.toggle()
+                             //   NoteManager.shared.saveNotes(self.items)
+
+                                
+                                
+                            }) {
                                 Text("Save")
                                     
                                     .frame(width: 100)

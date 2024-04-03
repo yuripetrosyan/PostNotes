@@ -14,7 +14,52 @@ struct LongPressedViewItem: View {
 
     var body: some View {
         
-        LongPressedView()
+        
+        VStack(alignment: .leading){
+            HStack{
+                Text(item.title)
+                    
+                    .font(.title)
+                    .fontDesign(.serif)
+                    .fontWeight(.semibold)
+                    .foregroundStyle(.white)
+                    // .offset(CGSize(width: 0.0, height: -20.0))
+                   
+                
+                Spacer()
+                
+               
+                
+            }  
+           
+            .frame(height: 80)
+            
+               
+            VStack{
+                Text(item.content)
+                    .font(.title3)
+                    .lineLimit(nil)
+                    .lineSpacing(6)
+                    
+                    //   .padding(.horizontal, 10)
+                
+                
+                Spacer()
+                
+            }
+            .frame(height: 170)
+            
+           
+            
+            
+        }
+        
+        .frame(width: 300, height: 250)
+            
+            .background {
+                LongPressedView()
+            }
+
         
     }
 }
@@ -26,11 +71,11 @@ struct LongPressedView: View {
         
         ZStack{
             
-            RoundedRectangle(cornerRadius: 25.0)
+            RoundedRectangle(cornerRadius: 25) //25
                 .frame(width: 330, height: 250)
                 .foregroundStyle(.white).opacity(0.7)
             
-            TopRoundedRectangle(radius: 25)
+            TopRoundedRectangle(radius: 25) //25
                 .frame(width: 330, height: 80)
                 .offset(CGSize(width: 0.0, height: -90))
                 .foregroundColor(.brandPrimary)
@@ -46,5 +91,5 @@ struct LongPressedView: View {
 
 
 #Preview {
-    LongPressedViewItem()
+    LongPressedViewItem(item: Note(title: "Holiday", content: "I spent my holidays in a nice place. I had a week there and each day was like a,I had a week there and each day was like a,I had a week there and each day was like a "))
 }
