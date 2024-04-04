@@ -37,5 +37,24 @@ class NoteManager {
             UserDefaults.standard.set(data, forKey: key)
         }
     }
+    
+    
+    // Delete a note from the list and save the updated list
+    func deleteNote(_ note: Note, from notes: inout [Note]) {
+        if let index = notes.firstIndex(where: { $0.id == note.id }) {
+            notes.remove(at: index)
+            saveNotes(notes)
+        }
+    }
 }
+
+
+
+struct MockData {
+    
+    static let sampleNote = Note(title: "Holidays", content: "The destination was this and this and that but for the overall this and that we could barely this and that")
+    
+}
+
+
 

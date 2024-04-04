@@ -30,28 +30,26 @@ struct CustomGridItemView: View {
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                     .padding(.horizontal, 10)
-                    .padding(.top, 10)
-                
+                    .offset(CGSize(width: 0.0, height: -5.0))
                 Spacer()
                 
                
                 
-            }  .frame(height: 50)
+            }  .frame(height: 30)
             
                
-            VStack{
+           // VStack{
                 Text(item.content)
                     .font(.body)
                     .lineLimit(nil)
                     .lineSpacing(4)
-                    
-                    .padding(.horizontal, 10)
+                    .padding(.horizontal, 7)
+                    .frame(width: 170,height: 100)
                 
+               // Spacer()
                 
-                Spacer()
-                
-            }
-            .frame(height: 120)
+                //}
+           
             
            
             
@@ -77,6 +75,6 @@ struct CustomGridItem: Identifiable {
 
 
 #Preview {
-    CustomGridItemView(item: Note(title: "Holiday", content: "I spent my holidays in a nice place. I had a week there and each day was like a "))
+    CustomGridItemView(item: Note(title: "Holiday", content: "Activities such as swimming, snork, and sunbathing are popular during these sunny days. Barbecues and picnics by the shore create cherished moments of togetherness and relaxation. Adventure seekers may opt for hiking, camping, or exploring national parks to immerse themselves in nature's beauty. Regardless of the destination, the summer holiday provides a much-needed break from routine, allowing individuals to recharge and create lasting memories with loved ones."))
 }
 

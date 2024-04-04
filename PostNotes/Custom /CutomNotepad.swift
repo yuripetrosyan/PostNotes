@@ -49,7 +49,14 @@ struct CustomNotepad: View {
                 .offset(CGSize(width: 0.0, height: -60.0))
                 .foregroundColor(.brandPrimary)
             
-        }.shadow(radius: 5, x: 3, y: 5)
+        }
+       
+        .shadow(radius: 5, x: 3, y: 5)
+        .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 25))
+                      
+                          
+        
+
     }
 }
 

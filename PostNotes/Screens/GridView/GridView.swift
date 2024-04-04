@@ -14,6 +14,7 @@ struct GridView: View {
     @State var selectedNote: Note? = nil
     @State var searchedText: String = ""
     @State private var items: [Note] = [ ]
+
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -47,22 +48,28 @@ struct GridView: View {
                         
                         LazyVGrid(columns: columns, spacing: 10) {
                             ForEach(items) { note in
-                                NavigationLink(destination: DetailedVIew(item: note)) {
+                                NavigationLink(destination: DetailedVIew(item: note, items: $items))  {
                                     CustomGridItemView(item: note)
                                         .contextMenu {
-                                            Button(action: {
-                                                // Handle context menu action here
-                                            }) {
+                                            Button {
+                                                
+                                            } label: {
+                                                Label("Add to Favorites", systemImage: "star")
+                                            }
+                                            Button{
+                                                
+                                            }  label: {
                                                 Label("Edit", systemImage: "pencil")
                                             }
+                                           
+                                            
                                             Button(action: {
-                                                // Handle context menu action here
+                                                NoteManager.shared.deleteNote(note, from: &items)
                                             }) {
                                                 Label("Delete", systemImage: "trash")
                                             }
-                                        }preview: {
-                                            LongPressedView()
                                         }
+
                                 }
                             }
                         }
@@ -102,13 +109,19 @@ struct GridView: View {
             }
             
             if isShowingPopover{
+                
                 CustomNotepadPopover(popoverName: "Note Title", popoverDescription: "Write the title of your note", isShowingPopover: $isShowingPopover){ newTitle in
                     items.append(Note(title: newTitle, content: ""))
+                    
                     NoteManager.shared.saveNotes(items) // Save notes here
+                    
                 }
+                
+               
                 .transition(.move(edge: .bottom))
-                .animation(.snappy)
+                .animation(.smooth)
                 .background(.ultraThinMaterial)
+                
             }
             
         }.onDisappear {
@@ -124,3 +137,4 @@ struct ContentView_Previews: PreviewProvider {
         GridView()
     }
 }
+
