@@ -134,7 +134,6 @@
 		926812572BB0DD040048822D /* SettingsView */ = {
 			isa = PBXGroup;
 			children = (
-				926812582BB0DD140048822D /* SettingsView.swift */,
 			);
 			path = SettingsView;
 			sourceTree = "<group>";
@@ -143,12 +142,17 @@
 			isa = PBXGroup;
 			children = (
 				925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */,
+				925FF02C2BAF6AE800F8EE87 /* GridView.swift */,
+				925FF0302BAF6B3500F8EE87 /* SearchView.swift */,
+				925FF02E2BAF6B1300F8EE87 /* AccountView.swift */,
+				92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */,
+				926812582BB0DD140048822D /* SettingsView.swift */,
+				926812762BB1D6C20048822D /* foldersView.swift */,
 				92C973462BB09E3A0080C2C0 /* GridView */,
 				92C973482BB09E510080C2C0 /* SeachView */,
 				92C973472BB09E480080C2C0 /* AccountView */,
 				92C973492BB09EA90080C2C0 /* DetailedView */,
 				926812572BB0DD040048822D /* SettingsView */,
-				926812762BB1D6C20048822D /* foldersView.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -171,7 +175,6 @@
 		92C973462BB09E3A0080C2C0 /* GridView */ = {
 			isa = PBXGroup;
 			children = (
-				925FF02C2BAF6AE800F8EE87 /* GridView.swift */,
 			);
 			path = GridView;
 			sourceTree = "<group>";
@@ -179,7 +182,6 @@
 		92C973472BB09E480080C2C0 /* AccountView */ = {
 			isa = PBXGroup;
 			children = (
-				925FF02E2BAF6B1300F8EE87 /* AccountView.swift */,
 			);
 			path = AccountView;
 			sourceTree = "<group>";
@@ -187,7 +189,6 @@
 		92C973482BB09E510080C2C0 /* SeachView */ = {
 			isa = PBXGroup;
 			children = (
-				925FF0302BAF6B3500F8EE87 /* SearchView.swift */,
 			);
 			path = SeachView;
 			sourceTree = "<group>";
@@ -195,7 +196,6 @@
 		92C973492BB09EA90080C2C0 /* DetailedView */ = {
 			isa = PBXGroup;
 			children = (
-				92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */,
 			);
 			path = DetailedView;
 			sourceTree = "<group>";
