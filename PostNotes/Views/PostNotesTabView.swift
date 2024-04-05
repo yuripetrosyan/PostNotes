@@ -8,9 +8,7 @@
 import SwiftUI
 
 struct PostNotesTabView: View {
-    
     var body: some View{
-        
         TabView{
             GridView()
                 .tabItem {Label("Notes", systemImage: "note")}
@@ -24,7 +22,6 @@ struct PostNotesTabView: View {
         } 
         
         .tint(.brandPrimary)
-        
     }
 }
 

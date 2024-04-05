@@ -15,7 +15,7 @@ struct CustomTextField: View {
               //  .strokeBorder(Color.brandPrimary, lineWidth: 2)
                 .frame(width: 300, height: 50)
                 .foregroundStyle(.white)
-                .shadow(radius: 4, x: 4, y: 6)
+                .shadow(radius: 10, x: 4, y: 6)
                 .padding(.top, 10)
                 
         

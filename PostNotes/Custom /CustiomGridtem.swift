@@ -7,20 +7,12 @@
 
 import SwiftUI
 
-
-
 struct CustomGridItemView: View {
-  
     
     let item: Note
-
-  //  let item: CustomGridItem
     
-    var body: some View {
-        
-        
-        
-        VStack(alignment: .leading){
+ var body: some View {
+         VStack(alignment: .leading){
           HStack{
                 Text(item.title)
                     .font(.headline)
@@ -29,24 +21,28 @@ struct CustomGridItemView: View {
                     .fontWeight(.semibold)
                     .foregroundStyle(.white)
                     .padding(.horizontal, 10)
-                    .offset(CGSize(width: 0.0, height: -5.0))
-                
+                    
                 Spacer()
                 
-            }  .frame(height: 30)
+            }   .frame(height: 50)
             
                
-           
+            
                 Text(item.content)
-                    .font(.body)
+                    .multilineTextAlignment(.leading)
                     .lineLimit(nil)
                     .lineSpacing(4)
                     .padding(.horizontal, 7)
-                    .frame(width: 170,height: 100)
+                    .foregroundStyle(.primary)
+                    
+                    
+           
+                
           }
+     
+        .frame(width: 170, height: 170, alignment: .topLeading)
+      
         
-        .frame(width: 170, height: 170)
-            
             .background {
                 CustomNotepad()
             }
@@ -74,5 +70,5 @@ struct CustomGridItemView: View {
 
 
 #Preview {
-    CustomGridItemView(item: Note(title: "Holiday", content: "Activities"))
+    CustomGridItemView(item: Note(title: "Holiday", content: "Activities asjdhaskj dsakjshdkasjhd kasjh askdjhaskdjh aksdjh askdjha sdkjhakjshd kasjhdaksjhd aksjdh aksjdh aksjdha ksjdhak sjdha ksjdhak sdjh aksjdhaksjdh aksjdh sak"))
 }

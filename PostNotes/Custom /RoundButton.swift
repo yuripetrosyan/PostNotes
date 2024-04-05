@@ -24,7 +24,7 @@ struct RoundButton: View {
                 .frame(width: 60)
                 
                 .clipShape(Circle())
-                .shadow(radius: 3, x: 2, y: 3)
+                .shadow(radius: 9, x: 3, y: 3)
                 .overlay{
                     
                     Image(systemName: imageName)

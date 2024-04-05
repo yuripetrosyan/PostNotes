@@ -37,17 +37,16 @@ struct CustomNotepad: View {
             
             
             RoundedRectangle(cornerRadius: 25)
-               // .strokeBorder(Color.brandPrimary, lineWidth: 1)
-               // .shadow(radius: 5)
                 .frame(width: 170, height: 170)
                 .foregroundStyle(.white)
-               // .shadow(radius: 10)
+              
             
             
             TopRoundedRectangle(radius: 25)
                 .frame(width: 170, height: 50)
                 .offset(CGSize(width: 0.0, height: -60.0))
                 .foregroundColor(.brandPrimary)
+              //  .shadow(radius: 7, x: 3, y: 5)
             
         }
        

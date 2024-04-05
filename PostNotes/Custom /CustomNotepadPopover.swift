@@ -147,22 +147,48 @@ struct CustomNotepadPopoverLonger: View {
                     
                 VStack{
                     VStack{
-                        
-                        TextField("Title", text: $newNoteTitle,
-                                  prompt: Text("Title")
+                        HStack{
+                            TextField("Title", text: $newNoteTitle,
+                                      prompt: Text("Title")
+                                .fontWeight(.semibold)
+                                .fontDesign(.serif)
+                                .font(.title2)
+                                .foregroundColor(.white)
+                                      
+                            )
                             .fontWeight(.semibold)
                             .fontDesign(.serif)
                             .font(.title2)
                             .foregroundColor(.white)
-                                  
-                        )  
-                        .fontWeight(.semibold)
-                        .fontDesign(.serif)
-                        .font(.title2)
-                        .foregroundColor(.white)
-                            .frame(width: 230, height: 50)
-                            .padding()
+                            .frame(width: 180, height: 50)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
+                          //  .background(.red)
+                            
+                            Spacer()
+                            
+                            //Saves the note and opens in the detailed view
+                            Button(action: {
+                                //Saving the note and dismissing the popover
+                                onSave?(newNoteTitle, newNoteContent)
+                                isShowingPopover.toggle()
+                                
+                                
+                                
+                            }, label: {
+                                Image(systemName: "square.and.arrow.up.circle.fill")
+                                    .resizable()
+                                    .frame(width: 25, height: 25)
+                                    .foregroundStyle(.white)
+                                
+                            }).frame(width: 30, height: 50)
+                           // .background(.red)
+
+                        }
+                        .frame(width: 230, height: 50)
+                        .padding()
+
+                        
+                        
                         
                         Spacer()
                         
@@ -173,10 +199,8 @@ struct CustomNotepadPopoverLonger: View {
                             
                                
                                 .frame(width: 240, height: 210, alignment: .topLeading)
-                                .background(.red)
                                 .multilineTextAlignment(.leading)
                                 .foregroundStyle(.brandPrimary)
-                                .font(.headline)
                                 .padding(.top, -30)
                             
                             //  .padding(20)
@@ -221,7 +245,6 @@ struct CustomNotepadPopoverLonger: View {
                                 onSave?(newNoteTitle, newNoteContent)
                                 isShowingPopover.toggle()
                                 //Instantly dismiss the keyboard
-                                
                                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                                 
                                 
