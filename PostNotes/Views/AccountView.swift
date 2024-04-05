@@ -42,7 +42,7 @@ struct AccountView: View {
                        
                 
                 }
-                .shadow(color: .primary, radius: glowIsOn ? 3 : 0)
+                .shadow(color: .brandPrimary.opacity(0.8), radius: glowIsOn ? 3 : 0)
                 
                 .onTapGesture {
                     withAnimation(.bouncy){

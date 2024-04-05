@@ -13,9 +13,7 @@ struct GridView: View {
     @State var selectedNote: Note? = nil
     @State var searchedText: String = ""
     @State private var items: [Note]
-    
-    
-    
+ 
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -23,16 +21,18 @@ struct GridView: View {
     // Load notes when the view appears
     init() {
         self._items = State(initialValue: NoteManager.shared.loadNotes())
-        
+
     }
     
     //Test
     // Load notes when the view appears
-       init(items: [Note]) {
-           self._items = State(initialValue: items)
-       }
+    init(items: [Note]) {
+        self._items = State(initialValue: items)
+    }
+    
     
     //MARK: - body
+    
     
     var body: some View {
         ZStack{
@@ -51,36 +51,50 @@ struct GridView: View {
                         //Spacer()
                         
                         LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
-                            ForEach(items) { note in
-                                NavigationLink(destination: DetailedVIew(item: note, items: $items))  {
-                                    CustomGridItemView(item: note)
-                                        .contextMenu {
-                                            Button {
+                            
+                            // Check if items array is empty
+                            if items.isEmpty {
+                                // Adding the button
+                                firstNoteAdd()
+                                    .onTapGesture {
+                                            isShowingPopover.toggle()
+                                    }
+                            }else{
+                                
+                                
+                                ForEach(items) { note in
+                                    NavigationLink(destination: DetailedVIew(item: note, items: $items))  {
+                                        CustomGridItemView(item: note)
+                                            .contextMenu {
+                                                Button {
+                                                    
+                                                } label: {
+                                                    Label("Add to Favorites", systemImage: "star")
+                                                }
+                                                Button{
+                                                    
+                                                }  label: {
+                                                    Label("Edit", systemImage: "pencil")
+                                                }
                                                 
-                                            } label: {
-                                                Label("Add to Favorites", systemImage: "star")
-                                            }
-                                            Button{
                                                 
-                                            }  label: {
-                                                Label("Edit", systemImage: "pencil")
+                                                Button(action: {
+                                                    NoteManager.shared.deleteNote(note, from: &items)
+                                                }) {
+                                                    Label("Delete", systemImage: "trash")
+                                                }
                                             }
-                                            
-                                            
-                                            Button(action: {
-                                                NoteManager.shared.deleteNote(note, from: &items)
-                                            }) {
-                                                Label("Delete", systemImage: "trash")
-                                            }
-                                        }
-                                    
+                                        
+                                    }
                                 }
+                                
                             }
                         }.foregroundStyle(.brandPrimary)
                         
                         
-                        .padding()
+                            .padding()
                     }
+                    
                     //Round button here
                     VStack{
                         Spacer()
@@ -111,23 +125,28 @@ struct GridView: View {
                         }
                     }
                 }
+                //hide tool bar for this
+               // .toolbarBackground(.hidden, for: .tabBar)
             }
             
             if isShowingPopover{
+                    
+                    //So that background won't animate
+                    CustomNotepadPopoverLonger(isShowingPopover: $isShowingPopover, onSave: { title, content in
+                        onAddNewNote(title: title, content: content)
+                    })
+                    
+                    .transition(.offset(x: 70, y: 140))
+                    .animation(.bouncy)
+
+                    .background(.ultraThinMaterial)
                 
-               CustomNotepadPopoverLonger(isShowingPopover: $isShowingPopover, onSave: { title, content in
-                    onAddNewNote(title: title, content: content)
-                })
-                
-                
-                
-                .transition(.move(edge: .bottom))
-                .animation(.smooth)
-                .background(.ultraThinMaterial)
-                
+    
             }
             
-        }.onDisappear {
+        }
+        
+        .onDisappear {
             // Save notes when the view disappears
             NoteManager.shared.saveNotes(self.items)
         }
@@ -147,13 +166,17 @@ struct ContentView_Previews: PreviewProvider {
 }
 
 
-struct ContentView_Previews2: PreviewProvider {
-    static var previews: some View {
-        let sampleNotes: [Note] = [
-            Note(title: "Sample Note 1", content: "This is the content of sample note 1. It is extra good as the whole experience is giving me "),
-            Note(title: "Sample Note 2", content: "This is the content of sample note 2. To be fully aware of the thing that gives to the whoel "),
-            Note(title: "Sample Note 3", content: "This is the content of sample note 3. Yes")
-        ]
-        return GridView(items: sampleNotes)
-    }
-}
+
+
+
+
+//struct ContentView_Previews2: PreviewProvider {
+//    static var previews: some View {
+//        let sampleNotes: [Note] = [
+//            Note(title: "Sample Note 1", content: "This is the content of sample note 1. It is extra good as the whole experience is giving me "),
+//            Note(title: "Sample Note 2", content: "This is the content of sample note 2. To be fully aware of the thing that gives to the whoel "),
+//            Note(title: "Sample Note 3", content: "This is the content of sample note 3. Yes")
+//        ]
+//        return GridView(items: sampleNotes)
+//    }
+//}

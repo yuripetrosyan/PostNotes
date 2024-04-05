@@ -19,7 +19,7 @@ struct PostNotesTabView: View {
             AccountView()
                 .tabItem {Label("Account", systemImage: "person")}
             
-        } 
+        }
         
         .tint(.brandPrimary)
     }
@@ -28,3 +28,6 @@ struct PostNotesTabView: View {
 #Preview {
     PostNotesTabView()
 }
+
+
+

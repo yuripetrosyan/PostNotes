@@ -138,7 +138,7 @@ struct CustomNotepadPopoverLonger: View {
     @State var newNoteContent: String = ""
     @Binding var isShowingPopover: Bool
     var onSave: ((String, String) -> Void)?
-    
+
     
     var body: some View {
         GeometryReader { geo in
@@ -226,6 +226,9 @@ struct CustomNotepadPopoverLonger: View {
                                 //Instantly dismiss the keyboard
                                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                                 
+                             
+                                   
+                                
                                 
                                 
                                 
@@ -247,6 +250,7 @@ struct CustomNotepadPopoverLonger: View {
                                 //Instantly dismiss the keyboard
                                 UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                                 
+                               
                                 
                             }) {
                                 Text("Save")
@@ -271,6 +275,8 @@ struct CustomNotepadPopoverLonger: View {
                     
                     .offset(CGSize(width: 0.0, height: -20.0))
                 }
+                //test
+                
                 .frame(width: geo.size.width * 0.7, height: 400)
                 
                 
