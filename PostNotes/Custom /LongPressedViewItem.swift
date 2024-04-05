@@ -11,14 +11,11 @@ import SwiftUI
 struct LongPressedViewItem: View {
     
     let item: Note
-
     var body: some View {
-        
         
         VStack(alignment: .leading){
             HStack{
                 Text(item.title)
-                    
                     .font(.title)
                     .fontDesign(.serif)
                     .fontWeight(.semibold)
@@ -53,11 +50,11 @@ struct LongPressedViewItem: View {
             
             
         }
-        
         .frame(width: 300, height: 250)
             
             .background {
                 LongPressedView()
+                    
             }
 
         
@@ -83,6 +80,9 @@ struct LongPressedView: View {
 
                 
         }.shadow(radius: 5, x: 3, y: 5)
+        //?
+    
+
     }
 }
 

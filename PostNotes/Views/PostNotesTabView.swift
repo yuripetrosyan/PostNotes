@@ -6,9 +6,6 @@
 //
 
 import SwiftUI
-//import CoreData
-//import UserNotifications
-
 
 struct PostNotesTabView: View {
     
@@ -23,7 +20,6 @@ struct PostNotesTabView: View {
             
             AccountView()
                 .tabItem {Label("Account", systemImage: "person")}
-
             
         } 
         

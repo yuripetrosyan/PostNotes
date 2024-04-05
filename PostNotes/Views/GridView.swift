@@ -9,12 +9,15 @@ import SwiftUI
 
 struct GridView: View {
     
-    @State var isShowingLongPress = false
+    //@State var isShowingLongPress = false
     @State var isShowingPopover = false
     @State var selectedNote: Note? = nil
     @State var searchedText: String = ""
-    @State private var items: [Note] = [ ]
-
+    @State private var items: [Note]
+    
+    //@State private var newTitle: String = ""
+    //@State private var newContent: String = ""
+    
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -61,7 +64,7 @@ struct GridView: View {
                                             }  label: {
                                                 Label("Edit", systemImage: "pencil")
                                             }
-                                           
+                                            
                                             
                                             Button(action: {
                                                 NoteManager.shared.deleteNote(note, from: &items)
@@ -69,7 +72,7 @@ struct GridView: View {
                                                 Label("Delete", systemImage: "trash")
                                             }
                                         }
-
+                                    
                                 }
                             }
                         }
@@ -110,14 +113,27 @@ struct GridView: View {
             
             if isShowingPopover{
                 
-                CustomNotepadPopover(popoverName: "Note Title", popoverDescription: "Write the title of your note", isShowingPopover: $isShowingPopover){ newTitle in
-                    items.append(Note(title: newTitle, content: ""))
-                    
-                    NoteManager.shared.saveNotes(items) // Save notes here
-                    
-                }
+                //                CustomNotepadPopover(popoverName: "Note Title", popoverDescription: "Write the title of your note", isShowingPopover: $isShowingPopover){ newTitle in
+                //                    items.append(Note(title: newTitle, content: ""))
+                //
+                //
+                //
+                //
+                //
+                //
+                //                }
                 
-               
+                
+//                CustomNotepadPopoverLonger(isShowingPopover: $isShowingPopover) { newTitle, newContent in
+//                    onSave?(newTitle, newContent)
+//                }
+                
+                CustomNotepadPopoverLonger(isShowingPopover: $isShowingPopover, onSave: { title, content in
+                    onAddNewNote(title: title, content: content)
+                })
+
+                
+                
                 .transition(.move(edge: .bottom))
                 .animation(.smooth)
                 .background(.ultraThinMaterial)
@@ -129,8 +145,13 @@ struct GridView: View {
             NoteManager.shared.saveNotes(self.items)
         }
     }
+    func onAddNewNote(title: String, content: String) {
+       items.append(Note(title: title, content: content))
+     }
+
 }
 
+   
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
@@ -138,3 +159,4 @@ struct ContentView_Previews: PreviewProvider {
     }
 }
 
+    

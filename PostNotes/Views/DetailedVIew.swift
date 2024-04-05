@@ -84,10 +84,10 @@ struct DetailedVIew: View {
     
 }
 
-//
+
 //#Preview {
-//    DetailedVIew(item: MockData.sampleNote)
+//    DetailedVIew(item: MockData.sampleNote, items: .constant)
 //}
-
-
+//
+//
 
