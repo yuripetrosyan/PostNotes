@@ -22,6 +22,7 @@
 		9268125B2BB1D2D10048822D /* Custom3circles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268125A2BB1D2D10048822D /* Custom3circles.swift */; };
 		926812772BB1D6C30048822D /* foldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812762BB1D6C20048822D /* foldersView.swift */; };
 		92C0D2952BC095E300CBD080 /* firstNoteAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D2942BC095E300CBD080 /* firstNoteAdd.swift */; };
+		92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */; };
 		92C877D62BB341F6000E9BBB /* CustomPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C877D52BB341F6000E9BBB /* CustomPopover.swift */; };
 		92C877D82BB442A2000E9BBB /* CustomNotepadWide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C877D72BB442A2000E9BBB /* CustomNotepadWide.swift */; };
 		92C877DA2BB445B1000E9BBB /* CustomNotepadPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C877D92BB445B1000E9BBB /* CustomNotepadPopover.swift */; };
@@ -48,6 +49,7 @@
 		9268125A2BB1D2D10048822D /* Custom3circles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom3circles.swift; sourceTree = "<group>"; };
 		926812762BB1D6C20048822D /* foldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foldersView.swift; sourceTree = "<group>"; };
 		92C0D2942BC095E300CBD080 /* firstNoteAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstNoteAdd.swift; sourceTree = "<group>"; };
+		92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		92C877D52BB341F6000E9BBB /* CustomPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopover.swift; sourceTree = "<group>"; };
 		92C877D72BB442A2000E9BBB /* CustomNotepadWide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotepadWide.swift; sourceTree = "<group>"; };
 		92C877D92BB445B1000E9BBB /* CustomNotepadPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotepadPopover.swift; sourceTree = "<group>"; };
@@ -112,8 +114,9 @@
 		925FF02B2BAF6AD300F8EE87 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				9268125A2BB1D2D10048822D /* Custom3circles.swift */,
 				92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */,
+				9268125A2BB1D2D10048822D /* Custom3circles.swift */,
+				92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				92CF50A32BBDB5BD00BC2A49 /* Note.swift in Sources */,
 				92C877DA2BB445B1000E9BBB /* CustomNotepadPopover.swift in Sources */,
 				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
+				92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */,
 				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
 				92C877D82BB442A2000E9BBB /* CustomNotepadWide.swift in Sources */,
 				92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */,

@@ -49,28 +49,14 @@ struct foldersView: View {
                     .listRowSpacing(6)
                     .navigationTitle("Folders").navigationBarTitleDisplayMode(.inline).tint(.brandPrimary)
                     
-                    
+                    .toolbar{
+                        ToolbarItem(placement: .topBarTrailing) {
+                            Image(systemName: "folder.badge.plus")
+                        }
+                    }
                 }
                 
-                VStack{
-                    Spacer()
-                    HStack{
-                        Spacer()
-                        
-              
-                        Button(action: {isShowingPopover.toggle()}, label: {
-                            RoundButton(imageName: "folder.badge.plus")
-                        })
-                            
-                        
-                       
-                            .padding()
-                        
-                    }
-                    .padding()
-                    
-                    
-                }
+            
                 
             }
         }

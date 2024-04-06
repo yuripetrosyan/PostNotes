@@ -39,26 +39,30 @@ struct GridView: View {
             NavigationStack{
                 ZStack{
                     ScrollView {
-                        TextField("Search", text: $searchedText)
-                            .padding()
-                            .frame(height: 40)
-                            .background(.ultraThinMaterial)
-                            .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            .shadow(radius: 5, x: 3, y: 5)
-                            .padding(.horizontal)
-                            .padding(.top, 10)
+
+                            TextField("Search", text: $searchedText)
+                                .padding()
+                                .frame(height: 40)
+                                .background(.ultraThinMaterial)
+                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                                .shadow(radius: 5, x: 3, y: 5)
+                                .padding(.horizontal)
+                                .padding(.top, 10)
+                            
                         
-                        //Spacer()
-                        
+                            
                         LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
                             
                             // Check if items array is empty
                             if items.isEmpty {
                                 // Adding the button
+
                                 firstNoteAdd()
+                                
                                     .onTapGesture {
-                                            isShowingPopover.toggle()
+                                        isShowingPopover.toggle()
                                     }
+                                    
                             }else{
                                 
                                 
@@ -69,25 +73,27 @@ struct GridView: View {
                                                 Button {
                                                     
                                                 } label: {
-                                                    Label("Add to Favorites", systemImage: "star")
+                                                    Label("Favorite", systemImage: "heart")
                                                 }
                                                 Button{
                                                     
                                                 }  label: {
-                                                    Label("Edit", systemImage: "pencil")
+                                                    Label("Edit", systemImage: "pencil")}
+                                                Button {
+                                                    
+                                                } label: {
+                                                    Label("Share", systemImage: "square.and.arrow.up")
                                                 }
-                                                
-                                                
-                                                Button(action: {
+                                                Divider()
+
+                                                                                
+                                                Button(role: .destructive) {
                                                     NoteManager.shared.deleteNote(note, from: &items)
-                                                }) {
-                                                    Label("Delete", systemImage: "trash")
-                                                }
+                                                } label: {
+                                                    Label("Delete", systemImage: "trash")}
                                             }
-                                        
                                     }
                                 }
-                                
                             }
                         }.foregroundStyle(.brandPrimary)
                         
@@ -95,35 +101,30 @@ struct GridView: View {
                             .padding()
                     }
                     
-                    //Round button here
-                    VStack{
-                        Spacer()
-                        HStack{
-                            Spacer()
-                            Button(action: {isShowingPopover.toggle()}, label: {RoundButton(imageName: "pencil")})
-                            
-                                .padding()
-                        }
-                        .padding()
-                    }
+                    
                 }
                 .navigationTitle("My Notes").navigationBarTitleDisplayMode(.inline)
                 
                 .toolbar {
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        NavigationLink(destination: SettingsView()) {
-                            Image(systemName: "gear")
-                                .imageScale(.large)
-                                .tint(.brandPrimary)
-                        }
-                    }
-                    
+                  
+    
                     ToolbarItem(placement: .topBarLeading) {
                         NavigationLink(destination: foldersView()){
                             Image(systemName: "folder")
                                 .tint(.brandPrimary)
                         }
                     }
+                    
+                    ToolbarItem(placement: .topBarTrailing) {
+                            Image(systemName: "plus")
+                                .tint(.brandPrimary)
+                                .onTapGesture {
+                                    isShowingPopover.toggle()
+                                }
+                        
+                    }
+                    
+                    
                 }
                 //hide tool bar for this
                // .toolbarBackground(.hidden, for: .tabBar)
@@ -159,6 +160,7 @@ struct GridView: View {
 
 
 
+
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         GridView()
@@ -170,13 +172,13 @@ struct ContentView_Previews: PreviewProvider {
 
 
 
-//struct ContentView_Previews2: PreviewProvider {
-//    static var previews: some View {
-//        let sampleNotes: [Note] = [
-//            Note(title: "Sample Note 1", content: "This is the content of sample note 1. It is extra good as the whole experience is giving me "),
-//            Note(title: "Sample Note 2", content: "This is the content of sample note 2. To be fully aware of the thing that gives to the whoel "),
-//            Note(title: "Sample Note 3", content: "This is the content of sample note 3. Yes")
-//        ]
-//        return GridView(items: sampleNotes)
-//    }
-//}
+struct ContentView_Previews2: PreviewProvider {
+    static var previews: some View {
+        let sampleNotes: [Note] = [
+            Note(title: "Sample Note 1", content: "This is the content of sample note 1. It is extra good as the whole experience is giving me "),
+            Note(title: "", content: "This is the content of sample note 2. To be fully aware of the thing that gives to the whoel "),
+            Note(title: "Sample Note 3", content: "This is the content of sample note 3. Yes")
+        ]
+        return GridView(items: sampleNotes)
+    }
+}
