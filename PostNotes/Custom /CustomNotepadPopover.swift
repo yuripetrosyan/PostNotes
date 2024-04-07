@@ -167,27 +167,27 @@ struct CustomNotepadPopoverLonger: View {
                             Spacer()
                             
                             //Saves the note and opens in the detailed view
-                            Button(action: {
+                //            Button(action: {
                                 //Saving the note and dismissing the popover
-                                onSave?(newNoteTitle, newNoteContent)
-                                isShowingPopover.toggle()
+//                                onSave?(newNoteTitle, newNoteContent)
+//                                isShowingPopover.toggle()
+//                                
                                 
                                 
-                                
-                            }, label: {
-                                Image(systemName: "square.and.arrow.up.circle.fill")
-                                    .resizable()
-                                    .frame(width: 25, height: 25)
-                                    .foregroundStyle(.white)
-                                
-                            }).frame(width: 30, height: 50)
+                            //}, label: //{
+//                                Image(systemName: "square.and.arrow.up.circle.fill")
+//                                    .resizable()
+//                                    .frame(width: 25, height: 25)
+//                                    .foregroundStyle(.white)
+//                                
+//                            }).frame(width: 30, height: 50)
                            // .background(.red)
 
                         }
-                        .frame(width: 230, height: 50)
+   .frame(width: 230, height: 50)
                         .padding()
-
-                        
+//
+//                        
                         
                         
                         Spacer()

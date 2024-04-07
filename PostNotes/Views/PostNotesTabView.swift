@@ -1,5 +1,5 @@
 //
-//  ContentView.swift
+//  ContentView.swiftx
 //  loginapp
 //
 //  Created by Yuri Petrosyan on 23/03/2024.
@@ -34,6 +34,8 @@ import SwiftUI
 struct PostNotesTabView: View {
     @State private var tabSelected: Tab = .house
     
+    
+   
     init() {
         //will not reserve space on the screen for tabview
         UITabBar.appearance().isHidden = true

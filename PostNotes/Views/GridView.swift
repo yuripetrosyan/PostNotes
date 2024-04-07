@@ -18,6 +18,15 @@ struct GridView: View {
         GridItem(.flexible()),
         GridItem(.flexible())
     ]
+    
+    //-----------------------------------------------------------
+    //MARK: - Test for Swift Data
+    //SwiftData path to the context
+    @Environment(\.modelContext) private var context //we can operate add delete ... through this context
+    //------------------------------------------------------------
+    
+    
+    
     // Load notes when the view appears
     init() {
         self._items = State(initialValue: NoteManager.shared.loadNotes())
@@ -38,34 +47,24 @@ struct GridView: View {
         ZStack{
             NavigationStack{
                 ZStack{
+                    
+                    
+                    
+                    
                     ScrollView {
-
-                            TextField("Search", text: $searchedText)
-                                .padding()
-                                .frame(height: 40)
-                                .background(.ultraThinMaterial)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                                .shadow(radius: 5, x: 3, y: 5)
-                                .padding(.horizontal)
-                                .padding(.top, 10)
-                            
+                                            
                         
-                            
                         LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
                             
                             // Check if items array is empty
                             if items.isEmpty {
                                 // Adding the button
-
-                                firstNoteAdd()
                                 
+                                firstNoteAdd()
                                     .onTapGesture {
                                         isShowingPopover.toggle()
-                                    }
-                                    
+                                                  }
                             }else{
-                                
-                                
                                 ForEach(items) { note in
                                     NavigationLink(destination: DetailedVIew(item: note, items: $items))  {
                                         CustomGridItemView(item: note)
@@ -85,8 +84,8 @@ struct GridView: View {
                                                     Label("Share", systemImage: "square.and.arrow.up")
                                                 }
                                                 Divider()
-
-                                                                                
+                                                
+                                                
                                                 Button(role: .destructive) {
                                                     NoteManager.shared.deleteNote(note, from: &items)
                                                 } label: {
@@ -95,20 +94,38 @@ struct GridView: View {
                                     }
                                 }
                             }
-                        }.foregroundStyle(.brandPrimary)
+                        }
                         
-                        
-                            .padding()
+                        .foregroundStyle(.brandPrimary)
+                        .padding()
+                        .padding(.top, 55)
                     }
-                    
-                    
+                    VStack{
+                        
+                       
+                        SearchBar(text: $searchedText)
+//                        TextField(text: $searchedText) {
+//                            Image(systemName: "plus")
+//                            
+//                            
+//                        }
+//                            .padding()
+//                            .frame(height: 40)
+//                            .background(.ultraThinMaterial)
+//                            .clipShape(RoundedRectangle(cornerRadius: 25.0))
+//                            .shadow(radius: 5, x: 3, y: 5)
+//                            .padding(.horizontal)
+//                            .padding(.top, 10)
+//                        
+//                       
+                        
+                        Spacer()
+                    }
                 }
                 .navigationTitle("My Notes").navigationBarTitleDisplayMode(.inline)
-                
-                .toolbar {
-                  
     
-                    ToolbarItem(placement: .topBarLeading) {
+                .toolbar {
+                   ToolbarItem(placement: .topBarLeading) {
                         NavigationLink(destination: foldersView()){
                             Image(systemName: "folder")
                                 .tint(.brandPrimary)
@@ -119,7 +136,9 @@ struct GridView: View {
                             Image(systemName: "plus")
                                 .tint(.brandPrimary)
                                 .onTapGesture {
-                                    isShowingPopover.toggle()
+                                    withAnimation(Animation.smooth){
+                                        isShowingPopover.toggle()
+                                    }
                                 }
                         
                     }
@@ -137,9 +156,8 @@ struct GridView: View {
                         onAddNewNote(title: title, content: content)
                     })
                     
-                    .transition(.offset(x: 70, y: 140))
-                    .animation(.bouncy)
-
+                    .transition(.offset(x: 0, y: -140))
+                    .animation(.smooth)
                     .background(.ultraThinMaterial)
                 
     
@@ -155,6 +173,7 @@ struct GridView: View {
     func onAddNewNote(title: String, content: String) {
         items.append(Note(title: title, content: content))
     }
+    
     
 }
 
@@ -172,13 +191,13 @@ struct ContentView_Previews: PreviewProvider {
 
 
 
-struct ContentView_Previews2: PreviewProvider {
-    static var previews: some View {
-        let sampleNotes: [Note] = [
-            Note(title: "Sample Note 1", content: "This is the content of sample note 1. It is extra good as the whole experience is giving me "),
-            Note(title: "", content: "This is the content of sample note 2. To be fully aware of the thing that gives to the whoel "),
-            Note(title: "Sample Note 3", content: "This is the content of sample note 3. Yes")
-        ]
-        return GridView(items: sampleNotes)
-    }
-}
+//struct ContentView_Previews2: PreviewProvider {
+//    static var previews: some View {
+//        let sampleNotes: [Note] = [
+//            Note(title: "Sample Note 1", content: "This is the content of sample note 1. It is extra good as the whole experience is giving me "),
+//            Note(title: "", content: "This is the content of sample note 2. To be fully aware of the thing that gives to the whoel "),
+//            Note(title: "Sample Note 3", content: "This is the content of sample note 3. Yes")
+//        ]
+//        return GridView(items: sampleNotes)
+//    }
+//}

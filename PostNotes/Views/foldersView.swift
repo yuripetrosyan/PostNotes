@@ -9,7 +9,7 @@ import SwiftUI
 
 struct foldersView: View {
     
-    var folders = ["Recent Notes", "All Noted", "Starred Notes", "Trash"]
+    var folders = ["Recent Notes", "All Notes", "Starred Notes", "Trash"]
     @State var isShowingPopover = false
     @State var newFolderName: String = ""
     
@@ -25,6 +25,10 @@ struct foldersView: View {
                                     Text("Notes on the phone")){
                             ForEach(folders, id: \.self){ folderName in
                                 CustomFolderCell(name: folderName)
+                                
+                
+                                
+                                
                                     .swipeActions(allowsFullSwipe: true){
                                         HStack{
                                             Button{ }label: {

@@ -51,17 +51,18 @@ struct TriangleLoader: View {
     @State var circleOffset: CGSize = CGSize(width: 0, height: 0)
     
     let animationDuration: TimeInterval = 0.7
-    var circleColor: Color = Color.blue
+    var circleColor: Color = Color.red
     
     // MARK:- views
     var body: some View {
         ZStack {
-            Color.background
-                .edgesIgnoringSafeArea(.all)
+         //   Color.black
+           //     .edgesIgnoringSafeArea(.all)
             ZStack {
                 TriangleShape()
+                   
                     .trim(from: strokeStart, to: strokeEnd)
-                    .stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round, miterLimit: 8))
+                    .stroke(style: StrokeStyle(lineWidth: 10, lineCap: .round, lineJoin: .round, miterLimit: 8)).foregroundStyle(.black)
                 Circle()
                     .offset(circleOffset)
                     .foregroundColor(circleColor)
@@ -127,6 +128,6 @@ struct TriangleLoader: View {
 struct TriangleLoader_Previews: PreviewProvider {
     static var previews: some View {
         TriangleLoader()
-            .colorScheme(.dark)
+            .colorScheme(.light)
     }
 }

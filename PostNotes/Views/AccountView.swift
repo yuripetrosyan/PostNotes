@@ -36,8 +36,8 @@ struct AccountView: View {
                         .fontDesign(.serif)
                         .fontWeight(.semibold)
                     
-                    Text("Ai")
-                        .font(.custom("ARCADECLASSIC", size: labelPressed ? 40 : 20))
+                   // Text("Ai")
+                       // .font(.custom("ARCADECLASSIC", size: labelPressed ? 40 : 20))
                        
                        
                 

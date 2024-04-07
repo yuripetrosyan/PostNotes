@@ -18,10 +18,11 @@ struct Custom3circles: View {
         }
         .foregroundStyle(.white)
             .frame(height: 30)
+        
             
     }
 }
 
 #Preview {
-    Custom3circles()
+    Custom3circles().background(.red)
 }

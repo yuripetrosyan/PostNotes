@@ -7,6 +7,7 @@
 
 import SwiftUI
 import UserNotifications
+import SwiftData
 
 @main
 struct PostNotesApp: App {
@@ -19,8 +20,9 @@ struct PostNotesApp: App {
                 
                 print(error.localizedDescription)
             }
-            //d
-        })
+
+        }
+        )
     }
     
     
@@ -29,6 +31,7 @@ struct PostNotesApp: App {
         WindowGroup {
             PostNotesTabView()
         }
+      //  .modelContainer(for: Note.self)
     }
 }
 

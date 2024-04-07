@@ -28,7 +28,7 @@ struct CustomTabBar: View {
         case .house:
             return .brandPrimary
         case .magnifyingglass:
-            return .indigo
+            return .red
         case .plus:
             return .brandPrimary
         case .person:
@@ -45,9 +45,12 @@ struct CustomTabBar: View {
                 ForEach(Tab.allCases, id: \.rawValue) { tab in
                     Spacer()
                     Image(systemName: selectedTab == tab ? fillImage : tab.rawValue)
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(height: 23)
                         .scaleEffect(tab == selectedTab ? 1.25 : 1.0)
                         .foregroundColor(tab == selectedTab ? tabColor : .gray)
-                        .font(.system(size: 22))
+                        .font(.system(size: 23))
                         .onTapGesture {
                             withAnimation(.easeInOut(duration: 0.2)) {
                                 selectedTab = tab

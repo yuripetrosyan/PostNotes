@@ -21,8 +21,12 @@
 		926812592BB0DD140048822D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812582BB0DD140048822D /* SettingsView.swift */; };
 		9268125B2BB1D2D10048822D /* Custom3circles.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9268125A2BB1D2D10048822D /* Custom3circles.swift */; };
 		926812772BB1D6C30048822D /* foldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812762BB1D6C20048822D /* foldersView.swift */; };
+		9296A3152BC2CE0F003EF306 /* DataItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9296A3142BC2CE0F003EF306 /* DataItem.swift */; };
 		92C0D2952BC095E300CBD080 /* firstNoteAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D2942BC095E300CBD080 /* firstNoteAdd.swift */; };
 		92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */; };
+		92C0D2B32BC1AD9700CBD080 /* TriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D2AF2BC1AD9700CBD080 /* TriangleShape.swift */; };
+		92C0D2B42BC1AD9700CBD080 /* TriangleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D2B12BC1AD9700CBD080 /* TriangleLoader.swift */; };
+		92C0D2B62BC1B5D400CBD080 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D2B52BC1B5D400CBD080 /* SearchBar.swift */; };
 		92C877D62BB341F6000E9BBB /* CustomPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C877D52BB341F6000E9BBB /* CustomPopover.swift */; };
 		92C877D82BB442A2000E9BBB /* CustomNotepadWide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C877D72BB442A2000E9BBB /* CustomNotepadWide.swift */; };
 		92C877DA2BB445B1000E9BBB /* CustomNotepadPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C877D92BB445B1000E9BBB /* CustomNotepadPopover.swift */; };
@@ -32,7 +36,22 @@
 		92CF50A52BBDC35300BC2A49 /* LongPressedViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CF50A42BBDC35300BC2A49 /* LongPressedViewItem.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		92166DDD2BC1D1200027511B /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		92166DCA2BC1D11F0027511B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		92166DCC2BC1D11F0027511B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
 		925798202BB21D1D00254FB4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		925FF0192BAF6ABD00F8EE87 /* PostNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,8 +67,12 @@
 		926812582BB0DD140048822D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		9268125A2BB1D2D10048822D /* Custom3circles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Custom3circles.swift; sourceTree = "<group>"; };
 		926812762BB1D6C20048822D /* foldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = foldersView.swift; sourceTree = "<group>"; };
+		9296A3142BC2CE0F003EF306 /* DataItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataItem.swift; sourceTree = "<group>"; };
 		92C0D2942BC095E300CBD080 /* firstNoteAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstNoteAdd.swift; sourceTree = "<group>"; };
 		92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
+		92C0D2AF2BC1AD9700CBD080 /* TriangleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
+		92C0D2B12BC1AD9700CBD080 /* TriangleLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleLoader.swift; sourceTree = "<group>"; };
+		92C0D2B52BC1B5D400CBD080 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		92C877D52BB341F6000E9BBB /* CustomPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopover.swift; sourceTree = "<group>"; };
 		92C877D72BB442A2000E9BBB /* CustomNotepadWide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotepadWide.swift; sourceTree = "<group>"; };
 		92C877D92BB445B1000E9BBB /* CustomNotepadPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotepadPopover.swift; sourceTree = "<group>"; };
@@ -71,10 +94,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		92166DC92BC1D11F0027511B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				92166DCA2BC1D11F0027511B /* WidgetKit.framework */,
+				92166DCC2BC1D11F0027511B /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		925FF0102BAF6ABD00F8EE87 = {
 			isa = PBXGroup;
 			children = (
 				925FF01B2BAF6ABD00F8EE87 /* PostNotes */,
+				92166DC92BC1D11F0027511B /* Frameworks */,
 				925FF01A2BAF6ABD00F8EE87 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -92,7 +125,7 @@
 			children = (
 				92C973512BB0A41C0080C2C0 /* Info.plist */,
 				92C973432BB09DF60080C2C0 /* Views */,
-				92C973442BB09E160080C2C0 /* Model */,
+				92C973442BB09E160080C2C0 /* DataModel */,
 				925FF0362BAF6BB700F8EE87 /* Custom  */,
 				925FF02B2BAF6AD300F8EE87 /* Extras */,
 				92C973452BB09E210080C2C0 /* Utilities */,
@@ -117,6 +150,7 @@
 				92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */,
 				9268125A2BB1D2D10048822D /* Custom3circles.swift */,
 				92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */,
+				92C0D2B22BC1AD9700CBD080 /* TriangleLoader */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -133,8 +167,26 @@
 				92CF50A42BBDC35300BC2A49 /* LongPressedViewItem.swift */,
 				92C877D52BB341F6000E9BBB /* CustomPopover.swift */,
 				92C0D2942BC095E300CBD080 /* firstNoteAdd.swift */,
+				92C0D2B52BC1B5D400CBD080 /* SearchBar.swift */,
 			);
 			path = "Custom ";
+			sourceTree = "<group>";
+		};
+		92C0D2B02BC1AD9700CBD080 /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				92C0D2AF2BC1AD9700CBD080 /* TriangleShape.swift */,
+			);
+			path = Support;
+			sourceTree = "<group>";
+		};
+		92C0D2B22BC1AD9700CBD080 /* TriangleLoader */ = {
+			isa = PBXGroup;
+			children = (
+				92C0D2B02BC1AD9700CBD080 /* Support */,
+				92C0D2B12BC1AD9700CBD080 /* TriangleLoader.swift */,
+			);
+			path = TriangleLoader;
 			sourceTree = "<group>";
 		};
 		92C973432BB09DF60080C2C0 /* Views */ = {
@@ -151,12 +203,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		92C973442BB09E160080C2C0 /* Model */ = {
+		92C973442BB09E160080C2C0 /* DataModel */ = {
 			isa = PBXGroup;
 			children = (
 				92CF50A22BBDB5BD00BC2A49 /* Note.swift */,
+				9296A3142BC2CE0F003EF306 /* DataItem.swift */,
 			);
-			path = Model;
+			path = DataModel;
 			sourceTree = "<group>";
 		};
 		92C973452BB09E210080C2C0 /* Utilities */ = {
@@ -176,6 +229,7 @@
 				925FF0152BAF6ABD00F8EE87 /* Sources */,
 				925FF0162BAF6ABD00F8EE87 /* Frameworks */,
 				925FF0172BAF6ABD00F8EE87 /* Resources */,
+				92166DDD2BC1D1200027511B /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -239,6 +293,7 @@
 			files = (
 				925FF0352BAF6B9300F8EE87 /* CustomTextField.swift in Sources */,
 				925FF0312BAF6B3500F8EE87 /* SearchView.swift in Sources */,
+				92C0D2B42BC1AD9700CBD080 /* TriangleLoader.swift in Sources */,
 				9268125B2BB1D2D10048822D /* Custom3circles.swift in Sources */,
 				92C877D62BB341F6000E9BBB /* CustomPopover.swift in Sources */,
 				92CF50A32BBDB5BD00BC2A49 /* Note.swift in Sources */,
@@ -246,11 +301,14 @@
 				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
 				92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */,
 				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
+				9296A3152BC2CE0F003EF306 /* DataItem.swift in Sources */,
 				92C877D82BB442A2000E9BBB /* CustomNotepadWide.swift in Sources */,
 				92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */,
+				92C0D2B32BC1AD9700CBD080 /* TriangleShape.swift in Sources */,
 				925798212BB21D1D00254FB4 /* RoundButton.swift in Sources */,
 				926812772BB1D6C30048822D /* foldersView.swift in Sources */,
 				926812592BB0DD140048822D /* SettingsView.swift in Sources */,
+				92C0D2B62BC1B5D400CBD080 /* SearchBar.swift in Sources */,
 				925FF02D2BAF6AE800F8EE87 /* GridView.swift in Sources */,
 				92C0D2952BC095E300CBD080 /* firstNoteAdd.swift in Sources */,
 				9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */,

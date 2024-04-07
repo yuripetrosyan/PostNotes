@@ -10,12 +10,15 @@ import SwiftUI
 struct  SearchView: View {
     var body: some View {
         VStack{
-            ProgressView()
-                .tint(.brandPrimary)
             
-            Text("AI search")
+            
+            TriangleLoader()
+                .scaleEffect(CGSize(width: 0.5, height: 0.5))
+            
+            
             
         }
+        
     }
 }
 
