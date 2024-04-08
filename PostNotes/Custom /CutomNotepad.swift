@@ -45,7 +45,9 @@ struct CustomNotepad: View {
             TopRoundedRectangle(radius: 25)
                 .frame(width: 170, height: 50)
                 .offset(CGSize(width: 0.0, height: -60.0))
-                .foregroundColor(.brandPrimary)
+                .foregroundColor(.brandOnly)
+                    
+                    //UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0))
               //  .shadow(radius: 7, x: 3, y: 5)
             
         }

@@ -153,13 +153,14 @@ struct CustomNotepadPopoverLonger: View {
                                 .fontWeight(.semibold)
                                 .fontDesign(.serif)
                                 .font(.title2)
-                                .foregroundColor(.white)
+                                .foregroundColor(.primary1)
                                       
                             )
+                            
                             .fontWeight(.semibold)
                             .fontDesign(.serif)
                             .font(.title2)
-                            .foregroundColor(.white)
+                           //.foregroundColor(.white)
                             .frame(width: 180, height: 50)
                             .clipShape(RoundedRectangle(cornerRadius: 10))
                           //  .background(.red)
@@ -258,7 +259,7 @@ struct CustomNotepadPopoverLonger: View {
                                     .frame(width: 100,height: 40)
                                     .fontWeight(.semibold)
                                     .fontDesign(.rounded)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(.primary1)
                                     .background(RoundedRectangle(cornerRadius: 20)
                                         .foregroundStyle(.brandPrimary))
                                 

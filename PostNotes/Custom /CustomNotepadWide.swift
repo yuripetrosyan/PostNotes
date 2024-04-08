@@ -29,6 +29,7 @@ struct CustomNotepadWide: View {
 
 
 struct CustomNotepadWideLonger: View {
+    
    
     var body: some View {
         
@@ -37,7 +38,7 @@ struct CustomNotepadWideLonger: View {
             
             RoundedRectangle(cornerRadius: 25.0)
                 .frame(width: 270, height: 400)
-                .foregroundStyle(.white)//.opacity(0.7)
+                .foregroundStyle(.primary1)//.opacity(0.7)
             
             TopRoundedRectangle(radius: 25)
                 .frame(width: 270, height: 80)
@@ -50,10 +51,10 @@ struct CustomNotepadWideLonger: View {
     }
 }
 
-
-#Preview {
-    CustomNotepadWide()
-}
+//
+//#Preview {
+//    CustomNotepadWide()
+//}
 
 #Preview {
     CustomNotepadWideLonger()

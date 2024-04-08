@@ -33,7 +33,7 @@ struct CustomGridItemView: View {
                     .lineLimit(nil)
                     .lineSpacing(4)
                     .padding(.horizontal, 7)
-                    .foregroundStyle(.primary)
+                    .foregroundStyle(.black)
                     
                     
            

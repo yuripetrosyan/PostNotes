@@ -8,6 +8,9 @@
 import SwiftUI
 
 struct SearchBar: View {
+    
+    @State private var shadowOn = false
+
     @Binding var text: String
 
     @State private var isEditing = false
@@ -20,6 +23,8 @@ struct SearchBar: View {
                 .padding(.horizontal, 25)
                 .background(.ultraThinMaterial)
                 .cornerRadius(25)
+                .shadow(color: shadowOn ? .indigo : .brandSecondary,
+                    radius: shadowOn ? 40 : 8, x: shadowOn ? 3 : 5, y:shadowOn ? 3 : 6)
                 .overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")
@@ -38,20 +43,26 @@ struct SearchBar: View {
                         }
                     }
                 )
-            
-            
+                
+                
+
                 .padding(.horizontal, 20)
                 .onTapGesture {
                     self.isEditing = true
+                    withAnimation(.easeInOut(duration: 0.5)){
+                        shadowOn.toggle()
+                        
+                    }
                 }
 
             if isEditing {
                 
                 Button(action: {
                     
-                    withAnimation(.smooth){
+                    withAnimation(.easeInOut(duration: 0.5)){
                         self.isEditing = false
                         self.text = ""
+                        shadowOn = false
                     }
                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                 }) {

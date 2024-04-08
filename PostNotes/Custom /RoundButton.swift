@@ -11,20 +11,20 @@ struct RoundButton: View {
     
     let imageName: String
     
-    
+    @State private var shadowOn = false
     var body: some View {
         
         
-    //    ZStack{
+    
             
             
             
             Circle()
                 .foregroundStyle(.ultraThinMaterial)
                 .frame(width: 60)
-                
                 .clipShape(Circle())
-                .shadow(radius: 9, x: 3, y: 3)
+                .shadow(radius: shadowOn ? 9 : 7, x: shadowOn ? 2 : 5, y:shadowOn ? 3 : 6)
+        
                 .overlay{
                     
                     Image(systemName: imageName)
@@ -33,9 +33,13 @@ struct RoundButton: View {
                         .frame(width: 30, height: 30)
                         .foregroundStyle(.brandPrimary)
                     
+                }.onTapGesture {
+                    withAnimation(.smooth){
+                        shadowOn.toggle()
+                    }
                 }
             
-     //   }
+     
     }
 }
 
