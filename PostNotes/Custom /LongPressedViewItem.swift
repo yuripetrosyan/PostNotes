@@ -91,5 +91,5 @@ struct LongPressedView: View {
 
 
 #Preview {
-    LongPressedViewItem(item: Note(title: "Holiday", content: "I spent my holidays in a nice place. I had a week there and each day was like a,I had a week there and each day was like a,I had a week there and each day was like a "))
+    LongPressedViewItem(item: Note(title: "Holiday", content: "I spent my holidays in a nice place. I had a week there and each day was like a,I had a week there and each day was like a,I had a week there and each day was like a ", date: .now))
 }

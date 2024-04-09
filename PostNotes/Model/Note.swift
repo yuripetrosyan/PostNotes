@@ -14,8 +14,6 @@ import SwiftData
 //    var title: String
 //    var content: String
 //}
-
-
 //class NoteManager {
 //    static let shared = NoteManager()
 //    private let key = "notes"
@@ -48,8 +46,6 @@ import SwiftData
 //        }
 //    }
 //}
-
-
 
 //struct MockData {
 //    

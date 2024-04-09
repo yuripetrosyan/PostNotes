@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import UserNotifications
 import SwiftData
 
 @main
@@ -14,27 +13,19 @@ struct PostNotesApp: App {
     
     
     
-    init(){
-        UNUserNotificationCenter.current().requestAuthorization(options: [.sound, .alert, .badge], completionHandler:  { (granted, error) in
-            if let error = error {
-                
-                print(error.localizedDescription)
-            }
-
-        }
-        )
-    }
-    
-    
-    
     var body: some Scene {
         WindowGroup {
             PostNotesTabView()
         }
-      //  .modelContainer(for: Note.self)
+        .modelContainer(for: Note.self)
+    }
+    
+    
+    
+    init() {
+        print(URL.applicationSupportDirectory.path(percentEncoded: false))
     }
 }
-
 
 #Preview{
     PostNotesTabView()

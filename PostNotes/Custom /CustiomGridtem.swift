@@ -70,5 +70,5 @@ struct CustomGridItemView: View {
 
 
 #Preview {
-    CustomGridItemView(item: Note(title: "Holiday", content: "Activities asjdhaskj dsakjshdkasjhd kasjh askdjhaskdjh aksdjh askdjha sdkjhakjshd kasjhdaksjhd aksjdh aksjdh aksjdha ksjdhak sjdha ksjdhak sdjh aksjdhaksjdh aksjdh sak"))
+    CustomGridItemView(item: Note(title: "Holiday", content: "Activities asjdhaskj dsakjshdkasjhd kasjh askdjhaskdjh aksdjh askdjha sdkjhakjshd kasjhdaksjhd aksjdh aksjdh aksjdha ksjdhak sjdha ksjdhak sdjh aksjdhaksjdh aksjdh sak", date: .now))
 }

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SwiftData
 
 
 struct PostNotesTabView: View {
@@ -15,6 +16,10 @@ struct PostNotesTabView: View {
     init() {
         //will not reserve space on the screen for tabview
         UITabBar.appearance().isHidden = true
+        
+        
+        print(URL.applicationSupportDirectory.path(percentEncoded: false))
+        
     }
     
     var body: some View {
@@ -27,7 +32,7 @@ struct PostNotesTabView: View {
                         case .magnifyingglass:
                             SearchView()
                         case .plus:
-                CustomNotepadPopoverLonger(isShowingPopover: .constant(true))
+                CustomNotepadPopoverLonger()
                         case .person:
                             AccountView()
                         case .gearshape:

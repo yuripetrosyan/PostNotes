@@ -125,7 +125,7 @@
 			children = (
 				92C973512BB0A41C0080C2C0 /* Info.plist */,
 				92C973432BB09DF60080C2C0 /* Views */,
-				92C973442BB09E160080C2C0 /* DataModel */,
+				92C973442BB09E160080C2C0 /* Model */,
 				925FF0362BAF6BB700F8EE87 /* Custom  */,
 				925FF02B2BAF6AD300F8EE87 /* Extras */,
 				92C973452BB09E210080C2C0 /* Utilities */,
@@ -203,13 +203,13 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
-		92C973442BB09E160080C2C0 /* DataModel */ = {
+		92C973442BB09E160080C2C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				92CF50A22BBDB5BD00BC2A49 /* Note.swift */,
 				9296A3142BC2CE0F003EF306 /* DataItem.swift */,
 			);
-			path = DataModel;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		92C973452BB09E210080C2C0 /* Utilities */ = {

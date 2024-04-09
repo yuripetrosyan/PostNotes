@@ -17,17 +17,12 @@ struct foldersView: View {
         ZStack{
         NavigationStack{
             ZStack{
-                
                 VStack{
                     List{
-                        
                         Section(header:
                                     Text("Notes on the phone")){
                             ForEach(folders, id: \.self){ folderName in
                                 CustomFolderCell(name: folderName)
-                                
-                
-                                
                                 
                                     .swipeActions(allowsFullSwipe: true){
                                         HStack{
@@ -64,9 +59,6 @@ struct foldersView: View {
                 
             }
         }
-            if isShowingPopover{
-//                CustomNotepadPopover(searchedText: newFolderName, popoverName: "Name", popoverDescription: "Write the name of your new folder", isShowingPopover: $isShowingPopover).background(.ultraThinMaterial)
-            }
         
         
         
