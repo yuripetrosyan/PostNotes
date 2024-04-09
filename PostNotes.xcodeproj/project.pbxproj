@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D22BC54C6C00E10EB3 /* SignUpView.swift */; };
 		9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257981E2BB2195400254FB4 /* PostNotesApp.swift */; };
 		925798212BB21D1D00254FB4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925798202BB21D1D00254FB4 /* RoundButton.swift */; };
 		925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */; };
@@ -27,13 +28,12 @@
 		92C0D2B32BC1AD9700CBD080 /* TriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D2AF2BC1AD9700CBD080 /* TriangleShape.swift */; };
 		92C0D2B42BC1AD9700CBD080 /* TriangleLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D2B12BC1AD9700CBD080 /* TriangleLoader.swift */; };
 		92C0D2B62BC1B5D400CBD080 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D2B52BC1B5D400CBD080 /* SearchBar.swift */; };
-		92C877D62BB341F6000E9BBB /* CustomPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C877D52BB341F6000E9BBB /* CustomPopover.swift */; };
 		92C877D82BB442A2000E9BBB /* CustomNotepadWide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C877D72BB442A2000E9BBB /* CustomNotepadWide.swift */; };
 		92C877DA2BB445B1000E9BBB /* CustomNotepadPopover.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C877D92BB445B1000E9BBB /* CustomNotepadPopover.swift */; };
 		92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */; };
 		92C973502BB0A3870080C2C0 /* ARCADECLASSIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */; };
+		92CC639E2BC547E300D53101 /* FlatGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC639D2BC547E300D53101 /* FlatGlassView.swift */; };
 		92CF50A32BBDB5BD00BC2A49 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CF50A22BBDB5BD00BC2A49 /* Note.swift */; };
-		92CF50A52BBDC35300BC2A49 /* LongPressedViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CF50A42BBDC35300BC2A49 /* LongPressedViewItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -52,6 +52,7 @@
 /* Begin PBXFileReference section */
 		92166DCA2BC1D11F0027511B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		92166DCC2BC1D11F0027511B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		923551D22BC54C6C00E10EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
 		925798202BB21D1D00254FB4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		925FF0192BAF6ABD00F8EE87 /* PostNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -73,14 +74,13 @@
 		92C0D2AF2BC1AD9700CBD080 /* TriangleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
 		92C0D2B12BC1AD9700CBD080 /* TriangleLoader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleLoader.swift; sourceTree = "<group>"; };
 		92C0D2B52BC1B5D400CBD080 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
-		92C877D52BB341F6000E9BBB /* CustomPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPopover.swift; sourceTree = "<group>"; };
 		92C877D72BB442A2000E9BBB /* CustomNotepadWide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotepadWide.swift; sourceTree = "<group>"; };
 		92C877D92BB445B1000E9BBB /* CustomNotepadPopover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNotepadPopover.swift; sourceTree = "<group>"; };
 		92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedVIew.swift; sourceTree = "<group>"; };
 		92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = ARCADECLASSIC.TTF; sourceTree = "<group>"; };
 		92C973512BB0A41C0080C2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		92CC639D2BC547E300D53101 /* FlatGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatGlassView.swift; sourceTree = "<group>"; };
 		92CF50A22BBDB5BD00BC2A49 /* Note.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
-		92CF50A42BBDC35300BC2A49 /* LongPressedViewItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LongPressedViewItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +147,7 @@
 		925FF02B2BAF6AD300F8EE87 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
+				92CC639D2BC547E300D53101 /* FlatGlassView.swift */,
 				92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */,
 				9268125A2BB1D2D10048822D /* Custom3circles.swift */,
 				92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */,
@@ -164,10 +165,9 @@
 				92C877D72BB442A2000E9BBB /* CustomNotepadWide.swift */,
 				925FF0342BAF6B9300F8EE87 /* CustomTextField.swift */,
 				925798202BB21D1D00254FB4 /* RoundButton.swift */,
-				92CF50A42BBDC35300BC2A49 /* LongPressedViewItem.swift */,
-				92C877D52BB341F6000E9BBB /* CustomPopover.swift */,
 				92C0D2942BC095E300CBD080 /* firstNoteAdd.swift */,
 				92C0D2B52BC1B5D400CBD080 /* SearchBar.swift */,
+				923551D22BC54C6C00E10EB3 /* SignUpView.swift */,
 			);
 			path = "Custom ";
 			sourceTree = "<group>";
@@ -291,17 +291,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */,
 				925FF0352BAF6B9300F8EE87 /* CustomTextField.swift in Sources */,
 				925FF0312BAF6B3500F8EE87 /* SearchView.swift in Sources */,
 				92C0D2B42BC1AD9700CBD080 /* TriangleLoader.swift in Sources */,
 				9268125B2BB1D2D10048822D /* Custom3circles.swift in Sources */,
-				92C877D62BB341F6000E9BBB /* CustomPopover.swift in Sources */,
 				92CF50A32BBDB5BD00BC2A49 /* Note.swift in Sources */,
 				92C877DA2BB445B1000E9BBB /* CustomNotepadPopover.swift in Sources */,
 				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
 				92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */,
 				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
 				9296A3152BC2CE0F003EF306 /* DataItem.swift in Sources */,
+				92CC639E2BC547E300D53101 /* FlatGlassView.swift in Sources */,
 				92C877D82BB442A2000E9BBB /* CustomNotepadWide.swift in Sources */,
 				92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */,
 				92C0D2B32BC1AD9700CBD080 /* TriangleShape.swift in Sources */,
@@ -314,7 +315,6 @@
 				9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */,
 				925FF03A2BAF709600F8EE87 /* CutomNotepad.swift in Sources */,
 				925FF0332BAF6B5B00F8EE87 /* CustiomGridtem.swift in Sources */,
-				92CF50A52BBDC35300BC2A49 /* LongPressedViewItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -21,10 +21,10 @@ struct SearchBar: View {
             TextField("Search", text: $text)
                 .padding(10)
                 .padding(.horizontal, 25)
-                .background(.ultraThinMaterial)
+                .background(.ultraThinMaterial.shadow(.inner(color: .gray.opacity(0.4), radius: 6)))
                 .cornerRadius(25)
-                .shadow(color: shadowOn ? .indigo : .brandSecondary,
-                    radius: shadowOn ? 40 : 8, x: shadowOn ? 3 : 5, y:shadowOn ? 3 : 6)
+                .shadow(color: shadowOn ? .indigo : .brandSecondary.opacity(0.5),
+                    radius: shadowOn ? 40 : 8, x: shadowOn ? 3 : 3, y:shadowOn ? 3 : 3)
                 .overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")

@@ -60,7 +60,7 @@ struct CustomTabBar: View {
                 }
             }
             .frame(width: nil, height: 60)
-            .background(.ultraThinMaterial)
+            .background(.ultraThinMaterial.shadow(.inner(color: .gray.opacity(0.4), radius: 6)))
             .cornerRadius(25)
             .padding()
             

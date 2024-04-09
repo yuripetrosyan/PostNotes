@@ -7,12 +7,30 @@
 
 import SwiftUI
 
-struct FlatGlassView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+
+struct FlatGlassView : ViewModifier {
+    func body(content: Content) -> some View {
+        if #available(iOS 15.0, *) {
+            content
+                .foregroundStyle(.brandPrimary)
+                .padding()
+                .frame(height: 50)
+                .background(.ultraThinMaterial.shadow(.inner(color: .gray.opacity(0.3) ,radius: 7)))
+                .cornerRadius(14)
+               
+        } else {
+            // Fallback on earlier versions
+            content
+                .foregroundStyle(.brandPrimary)
+                .padding()
+                .frame(height: 50)
+                .cornerRadius(14)
+            
+        }
     }
 }
 
-#Preview {
-    FlatGlassView()
-}
+
+
+
+#Preview{FlatSignUpView(sheetIsOn: .constant(true))}

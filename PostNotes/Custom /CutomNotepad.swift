@@ -38,7 +38,9 @@ struct CustomNotepad: View {
             
             RoundedRectangle(cornerRadius: 25)
                 .frame(width: 170, height: 170)
-                .foregroundStyle(.white)
+               .foregroundStyle(.white)
+               // .foregroundStyle(.ultraThinMaterial.shadow(.inner(radius: 5)))
+            
               
             
             
@@ -52,7 +54,7 @@ struct CustomNotepad: View {
             
         }
        
-        .shadow(radius: 5, x: 3, y: 5)
+        .shadow(radius: 6, x: 3, y: 4)
         .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 25))
                       
                           

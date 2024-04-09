@@ -10,14 +10,13 @@ import SwiftData
 
 struct GridView: View {
     
-
-    @Query(sort: \Note.date) var items: [Note]
+    
+    @Query(sort: \Note.date, order: .reverse) var items: [Note]
     @State var isShowingPopover = false
     @State var selectedNote: Note? = nil
     @State var searchedText: String = ""
- //   @State private var filteredNotes: [Note] = []
+    //   @State private var filteredNotes: [Note] = []
     
-    // var items: [Note] = []
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -25,77 +24,85 @@ struct GridView: View {
     ]
     
     
-    
-    
     //MARK: - body
     
     
     var body: some View {
-        
         NavigationStack{
             ZStack{
-                
-                ScrollView {
-                    LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
-                        
-                        // Check if items array is empty
-                        if items.isEmpty {
-                            // Add first note if it's empty
-                            firstNoteAdd()
-                                .onTapGesture {
-                                    
-                                    isShowingPopover.toggle()
-                                }
-                            
-                        }else{
-                            ForEach(items, id: \.id) { note in
-                                NavigationLink(destination: DetailedVIew(item: note) { _ in })  {
-                                    CustomGridItemView(item: note)
-                                        .contextMenu {
-                                            Button {
-                                                
-                                            } label: {
-                                                Label("Favorite", systemImage: "heart")
-                                            }
-                                            Button{
-                                                
-                                            }  label: {
-                                                Label("Edit", systemImage: "pencil")}
-                                            Button {
-                                                
-                                            } label: {
-                                                Label("Share", systemImage: "square.and.arrow.up")
-                                            }
-                                            Divider()
-                                            
-                                            
-                                            Button(role: .destructive) {
-                                                //Delete note here
-                                                
-                                                
-                                                
-                                                // NoteManager.shared.deleteNote(note, from: &items)
-                                            } label: {
-                                                Label("Delete", systemImage: "trash")}
+               ZStack{
+                  
+                    ScrollView {
+                        LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
+                            // Check if items array is empty
+                            if items.isEmpty {
+                                // Add first note if it's empty
+                                firstNoteAdd()
+                                    .onTapGesture {
+                                        withAnimation(Animation.smooth){
+                                            isShowingPopover.toggle()
                                         }
+                                    }
+                                
+                            }else{
+                                ForEach(items, id: \.id) { note in
+                                    NavigationLink(destination: DetailedVIew(item: note) { _ in })  {
+                                        CustomGridItemView(item: note)
+                                            .contextMenu {
+                                                Button {
+                                                    
+                                                } label: {
+                                                    Label("Favorite", systemImage: "heart")
+                                                }
+                                                Button{
+                                                    
+                                                }  label: {
+                                                    Label("Edit", systemImage: "pencil")}
+                                                Button {
+                                                    
+                                                } label: {
+                                                    Label("Share", systemImage: "square.and.arrow.up")
+                                                }
+                                                Divider()
+                                                
+                                                
+                                                Button(role: .destructive) {
+                                                    //Delete note here
+                                                    
+                                                    
+                                                    
+                                                    // NoteManager.shared.deleteNote(note, from: &items)
+                                                } label: {
+                                                    Label("Delete", systemImage: "trash")}
+                                            }
+                                    }
                                 }
                             }
                         }
+                        
+                        .foregroundStyle(.brandPrimary)
+                        .padding()
+                        .padding(.top, 55)
                     }
-                    
-                    .foregroundStyle(.brandPrimary)
-                    .padding()
-                    .padding(.top, 55)
+                    VStack{
+                        SearchBar(text: $searchedText)
+                        Spacer()
+                    }
+                }.opacity(isShowingPopover ? 0.5 : 1)
+                //showing add popover
+                
+                if isShowingPopover{
+                    CustomNotepadPopoverLonger(isShowingPopover: $isShowingPopover)
+                        
                 }
-                VStack{
-                    SearchBar(text: $searchedText)
-                    Spacer()
-                }
+                
+                
+                
             }
             .navigationTitle("My Notes").navigationBarTitleDisplayMode(.inline)
-            .sheet(isPresented: $isShowingPopover, content: {
-                CustomNotepadPopoverLonger()
-            })
+            //              .sheet(isPresented: $isShowingPopover, content: {
+            //                CustomNotepadPopoverLonger()
+            //            })
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                     NavigationLink(destination: foldersView()){
@@ -119,15 +126,17 @@ struct GridView: View {
             }
             
         }
-       
+        
         
     }
     
     
-    }
+}
+
 
 #Preview {
     GridView()
+    
 }
 
 

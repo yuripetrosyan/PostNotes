@@ -32,7 +32,7 @@ struct PostNotesTabView: View {
                         case .magnifyingglass:
                             SearchView()
                         case .plus:
-                CustomNotepadPopoverLonger()
+                CustomNotepadPopoverLonger(isShowingPopover: .constant(true))
                         case .person:
                             AccountView()
                         case .gearshape:
@@ -50,6 +50,7 @@ struct PostNotesTabView: View {
 }
 
 #Preview {
+    
     PostNotesTabView()
         .previewInterfaceOrientation(.portrait)
 }

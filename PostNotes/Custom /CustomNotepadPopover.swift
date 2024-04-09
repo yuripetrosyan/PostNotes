@@ -4,7 +4,6 @@
 //
 //  Created by Yuri Petrosyan on 27/03/2024.
 //
-
 import SwiftUI
 import SwiftData
 
@@ -12,9 +11,12 @@ import SwiftData
 
 struct CustomNotepadPopoverLonger: View {
     
+   
+    
     @Environment(\.modelContext) var context
     @Environment(\.dismiss) private var dismiss
 
+    @Binding var isShowingPopover: Bool
     
     @State var newNoteTitle: String = ""
     @State var newNoteContent: String = ""
@@ -53,6 +55,9 @@ struct CustomNotepadPopoverLonger: View {
                             
                             TextEditor(text: $newNoteContent)
                                 .frame(width: 240, height: 210, alignment: .topLeading)
+                                // .clipShape(RoundedRectangle(cornerRadius: 10))
+                               // .colorMultiply(.gray.opacity(0.01))
+                                .scrollContentBackground(.hidden)
                                 .multilineTextAlignment(.leading)
                                 .foregroundStyle(.brandPrimary)
                                 .padding(.top, -30)
@@ -70,8 +75,10 @@ struct CustomNotepadPopoverLonger: View {
                             HStack{
                                 Button(action:
                                         {
-                                    dismiss()
-                                
+                                   
+                                    withAnimation(Animation.smooth){
+                                        isShowingPopover = false
+                                    }
                                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                                     
                                 }) {
@@ -94,8 +101,9 @@ struct CustomNotepadPopoverLonger: View {
                                     
                                     try! context.save()
                                     
-                                    
-                                    dismiss()
+                                    withAnimation(Animation.smooth){
+                                        isShowingPopover = false
+                                    }
                                     
                                     UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
                                     
@@ -135,12 +143,15 @@ struct CustomNotepadPopoverLonger: View {
                 
                 
             }
-        }
+        }.transition(.scale.combined(with: .move(edge: .bottom)))
     }
 }
 
 
-
 #Preview{
-    CustomNotepadPopoverLonger()
+   // CustomNotepadPopoverLonger(isShowingPopover: .constant(true))
+    GridView()
 }
+
+
+ 
