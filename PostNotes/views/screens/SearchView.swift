@@ -10,13 +10,8 @@ import SwiftUI
 struct  SearchView: View {
     var body: some View {
         VStack{
-            
-            
             TriangleLoader()
                 .scaleEffect(CGSize(width: 0.5, height: 0.5))
-            
-            
-            
         }
         
     }

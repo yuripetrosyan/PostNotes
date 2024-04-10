@@ -17,7 +17,7 @@ struct PostNotesApp: App {
         WindowGroup {
             PostNotesTabView()
         }
-        .modelContainer(for: Note.self)
+        .modelContainer(for: [Note.self])
     }
     
     

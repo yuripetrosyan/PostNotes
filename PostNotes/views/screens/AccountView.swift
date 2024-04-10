@@ -91,6 +91,7 @@ struct AccountView: View {
                             .onTapGesture {
                                 withAnimation(Animation.smooth){
                                     sheetIsOn.toggle()
+                                        
                                 }
                             }
                     
@@ -109,6 +110,7 @@ struct AccountView: View {
             if sheetIsOn{
                 FlatSignUpView(sheetIsOn: $sheetIsOn)
                     .transition(.move(edge: .bottom))
+                    
             }
             
             

@@ -14,7 +14,7 @@ struct CustomNotepadPopoverLonger: View {
    
     
     @Environment(\.modelContext) var context
-    @Environment(\.dismiss) private var dismiss
+  //  @Environment(\.dismiss) private var dismiss
 
     @Binding var isShowingPopover: Bool
     
@@ -37,7 +37,7 @@ struct CustomNotepadPopoverLonger: View {
                                     .fontDesign(.serif)
                                     .font(.title2)
                                     .foregroundColor(.primary1)
-                                )
+                                ).foregroundColor(.primary1)
                                 
                                 .fontWeight(.semibold)
                                 .fontDesign(.serif)
@@ -51,18 +51,19 @@ struct CustomNotepadPopoverLonger: View {
                             .frame(width: 230, height: 50)
                             .padding()
                             
-                            Spacer()
+                           // Spacer()
                             
                             TextEditor(text: $newNoteContent)
-                                .frame(width: 240, height: 210, alignment: .topLeading)
+                                .frame(minWidth: 250, minHeight: 210, alignment: .topLeading)
                                 // .clipShape(RoundedRectangle(cornerRadius: 10))
-                               // .colorMultiply(.gray.opacity(0.01))
+                                .offset(y: -20)
+                                //.colorMultiply(.red)
                                 .scrollContentBackground(.hidden)
                                 .multilineTextAlignment(.leading)
                                 .foregroundStyle(.brandPrimary)
-                                .padding(.top, -30)
                             
-                            //  .padding(20)
+                            
+                              .padding(20)
                             Spacer()
                             
                         }
@@ -149,8 +150,8 @@ struct CustomNotepadPopoverLonger: View {
 
 
 #Preview{
-   // CustomNotepadPopoverLonger(isShowingPopover: .constant(true))
-    GridView()
+    CustomNotepadPopoverLonger(isShowingPopover: .constant(true))
+    //GridView()
 }
 
 

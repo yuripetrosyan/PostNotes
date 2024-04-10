@@ -16,9 +16,6 @@ struct CustomNotepadWide: View {
     }
 }
 
-
-
-
 struct CustomNotepadWideLonger: View {
     var body: some View {
         ZStack{

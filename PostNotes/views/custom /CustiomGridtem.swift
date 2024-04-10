@@ -9,8 +9,7 @@ import SwiftUI
 
 struct CustomGridItemView: View {
     
-    let item: Note
-    
+let item: Note
  var body: some View {
          VStack(alignment: .leading){
           HStack{

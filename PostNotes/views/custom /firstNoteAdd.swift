@@ -19,12 +19,12 @@ struct firstNoteAdd: View {
         ZStack{
             RoundedRectangle(cornerRadius: 25)
                 .frame(width: 170, height: 170)
-                .foregroundStyle(.white).opacity(0.3)
+                .foregroundStyle(.white).opacity(0.9)
             
             TopRoundedRectangle(radius: 25)
                 .frame(width: 170, height: 50)
                 .offset(CGSize(width: 0.0, height: -60.0))
-                .foregroundColor(.brandPrimary)
+                .foregroundColor(.black)
         }
             
             

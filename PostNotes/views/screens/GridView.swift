@@ -10,11 +10,14 @@ import SwiftData
 
 struct GridView: View {
     
-    
+    @Environment(\.modelContext) var context
     @Query(sort: \Note.date, order: .reverse) var items: [Note]
+    
     @State var isShowingPopover = false
-    @State var selectedNote: Note? = nil
+    @State var folderNameFilter: String? = nil
     @State var searchedText: String = ""
+    @State private var showingConfirmation = false
+
     //   @State private var filteredNotes: [Note] = []
     
     
@@ -31,6 +34,8 @@ struct GridView: View {
         NavigationStack{
             ZStack{
                ZStack{
+                   
+    
                   
                     ScrollView {
                         LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
@@ -67,12 +72,16 @@ struct GridView: View {
                                                 
                                                 
                                                 Button(role: .destructive) {
-                                                    //Delete note here
                                                     
-                                                    
-                                                    
-                                                    // NoteManager.shared.deleteNote(note, from: &items)
-                                                } label: {
+                                                    //      Delete note here
+                                                        context.delete(note)
+                                                   
+                                                } 
+                                           
+                                            
+                                            
+                                            
+                                            label: {
                                                     Label("Delete", systemImage: "trash")}
                                             }
                                     }
@@ -105,10 +114,10 @@ struct GridView: View {
             //            })
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
-                    NavigationLink(destination: foldersView()){
+                 //   NavigationLink(destination: FoldersView()){
                         Image(systemName: "folder")
                             .tint(.brandPrimary)
-                    }
+                   // }
                 }
                 
                 ToolbarItem(placement: .topBarTrailing) {
@@ -130,14 +139,16 @@ struct GridView: View {
         
     }
     
+  }
     
-}
+
 
 
 #Preview {
     GridView()
     
 }
+
 
 
 

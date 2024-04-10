@@ -14,14 +14,8 @@ struct FlatSignUpView: View {
     @Binding var sheetIsOn: Bool
     
     var body: some View {
-//        ZStack{
-//            Image(.backgroundPhoto)
-//                .resizable()
-//                .ignoresSafeArea()
-//
-      
-          
-                VStack{
+ 
+            VStack{
                     
                     HStack{
                         Text("Sign up")
@@ -35,10 +29,9 @@ struct FlatSignUpView: View {
                         Spacer()
                         Image(systemName: "xmark")
                             .padding()
-                           // .background(Circle().frame(width: 30, height: 30).foregroundStyle(.ultraThinMaterial.shadow(.inner(radius: 3))))
                             .onTapGesture {
-                                withAnimation(Animation.smooth(duration: 0.3)){
-                                    sheetIsOn = false
+                                withAnimation(Animation.smooth){
+                                    sheetIsOn.toggle()
                                 }
                             }
                     }
@@ -76,7 +69,6 @@ struct FlatSignUpView: View {
                 Button {
                     //TODO:- add action
                 } label: {
-                    ZStack {
                         Text("Next")
                             .bold()
                             .frame(maxWidth: .infinity, maxHeight: 50)
@@ -86,24 +78,28 @@ struct FlatSignUpView: View {
                             .cornerRadius(14)
                             .padding(.bottom, 8)
                             .padding(.horizontal, 30)
-                    }
+                    
+                           
+                    
                 }
                 
             }
-                .transition(.scale.combined(with: .move(edge: .bottom)))
+            
             .padding()
             .background(.ultraThinMaterial.shadow(.inner(color: .gray.opacity(0.6) ,radius: 5)))
             .foregroundColor(Color.primary.opacity(0.35))
             .foregroundStyle(.ultraThinMaterial)
             .cornerRadius(35)
+           // .transition(.scale)
+        
             .padding(.horizontal, 30)
             .padding(.vertical)
         
-       // }
+        }
     }
-}
+
 
 #Preview {
-    FlatSignUpView(sheetIsOn: .constant(true))
-    //AccountView()
+    //FlatSignUpView(sheetIsOn: .constant(true))
+    AccountView()
 }

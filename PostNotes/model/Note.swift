@@ -59,10 +59,15 @@ class Note {
     var title: String
     var content: String
     var date: Date
+    var folder: String // Add this property
+
     
-    init(title: String, content: String, date: Date) {
+    init(title: String, content: String, date: Date, folder: String = ""
+    ){
         self.title = title
         self.content = content
         self.date = date
+        self.folder = folder
+
     }
 }
