@@ -11,7 +11,7 @@ import SwiftData
 struct GridView: View {
     
     @Environment(\.modelContext) var context
-    @Query(sort: \Note.date, order: .reverse) var items: [Note]
+    @Query(sort: \Note.date, order: .reverse) var items: [Note]    
     
     @State var isShowingPopover = false
     @State var folderNameFilter: String? = nil
@@ -35,9 +35,7 @@ struct GridView: View {
             ZStack{
                ZStack{
                    
-    
-                  
-                    ScrollView {
+                   ScrollView {
                         LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
                             // Check if items array is empty
                             if items.isEmpty {
@@ -97,9 +95,8 @@ struct GridView: View {
                         SearchBar(text: $searchedText)
                         Spacer()
                     }
-                }.opacity(isShowingPopover ? 0.5 : 1)
+               }.opacity(isShowingPopover ? 0.2 : 1)
                 //showing add popover
-                
                 if isShowingPopover{
                     CustomNotepadPopoverLonger(isShowingPopover: $isShowingPopover)
                         
@@ -108,10 +105,7 @@ struct GridView: View {
                 
                 
             }
-            .navigationTitle("My Notes").navigationBarTitleDisplayMode(.inline)
-            //              .sheet(isPresented: $isShowingPopover, content: {
-            //                CustomNotepadPopoverLonger()
-            //            })
+            .navigationTitle("All Notes").navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .topBarLeading) {
                  //   NavigationLink(destination: FoldersView()){

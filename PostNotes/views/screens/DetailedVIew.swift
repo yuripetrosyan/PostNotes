@@ -70,9 +70,4 @@ struct DetailedVIew_Previews: PreviewProvider {
         return DetailedVIew(item: sampleNote) { _ in }
     }
 }
-
-//#Preview {
-//    let sampleNote = Note(title: "Sample Title", content: "Sample Content", date: .now)
-//
-//    DetailedVIew(item: sampleNote)
-//}
+///

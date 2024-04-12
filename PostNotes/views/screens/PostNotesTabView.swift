@@ -32,7 +32,8 @@ struct PostNotesTabView: View {
                         case .magnifyingglass:
                             SearchView()
                         case .plus:
-                CustomNotepadPopoverLonger(isShowingPopover: .constant(true))
+                    //    CustomNotepadPopoverLonger(isShowingPopover: .constant(true))
+                GridView(isShowingPopover: true)
                         case .person:
                             AccountView()
                         case .gearshape:

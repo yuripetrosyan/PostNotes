@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		921DE6FA2BC9641200B7C007 /* ChatMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE6F92BC9641200B7C007 /* ChatMessage.swift */; };
+		921DE6FC2BC964FD00B7C007 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE6FB2BC964FD00B7C007 /* Constants.swift */; };
+		921DE6FE2BC965AD00B7C007 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE6FD2BC965AD00B7C007 /* MessageView.swift */; };
 		923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D22BC54C6C00E10EB3 /* SignUpView.swift */; };
 		923551D52BC5AC8000E10EB3 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D42BC5AC8000E10EB3 /* Folder.swift */; };
 		9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257981E2BB2195400254FB4 /* PostNotesApp.swift */; };
@@ -53,6 +56,9 @@
 /* Begin PBXFileReference section */
 		92166DCA2BC1D11F0027511B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		92166DCC2BC1D11F0027511B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		921DE6F92BC9641200B7C007 /* ChatMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatMessage.swift; sourceTree = "<group>"; };
+		921DE6FB2BC964FD00B7C007 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		921DE6FD2BC965AD00B7C007 /* MessageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageView.swift; sourceTree = "<group>"; };
 		923551D22BC54C6C00E10EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		923551D42BC5AC8000E10EB3 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
@@ -183,6 +189,7 @@
 				92CC639D2BC547E300D53101 /* FlatGlassView.swift */,
 				92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */,
 				9268125A2BB1D2D10048822D /* Custom3circles.swift */,
+				921DE6FD2BC965AD00B7C007 /* MessageView.swift */,
 			);
 			path = "custom ";
 			sourceTree = "<group>";
@@ -219,6 +226,7 @@
 				92CF50A22BBDB5BD00BC2A49 /* Note.swift */,
 				9296A3142BC2CE0F003EF306 /* DataItem.swift */,
 				923551D42BC5AC8000E10EB3 /* Folder.swift */,
+				921DE6F92BC9641200B7C007 /* ChatMessage.swift */,
 			);
 			path = model;
 			sourceTree = "<group>";
@@ -226,6 +234,7 @@
 		92C973452BB09E210080C2C0 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				921DE6FB2BC964FD00B7C007 /* Constants.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -314,9 +323,11 @@
 				92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */,
 				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
 				9296A3152BC2CE0F003EF306 /* DataItem.swift in Sources */,
+				921DE6FE2BC965AD00B7C007 /* MessageView.swift in Sources */,
 				92CC639E2BC547E300D53101 /* FlatGlassView.swift in Sources */,
 				92C877D82BB442A2000E9BBB /* CustomNotepadWide.swift in Sources */,
 				92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */,
+				921DE6FA2BC9641200B7C007 /* ChatMessage.swift in Sources */,
 				92C0D2B32BC1AD9700CBD080 /* TriangleShape.swift in Sources */,
 				925798212BB21D1D00254FB4 /* RoundButton.swift in Sources */,
 				926812772BB1D6C30048822D /* FoldersView.swift in Sources */,
@@ -327,6 +338,7 @@
 				9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */,
 				925FF03A2BAF709600F8EE87 /* CutomNotepad.swift in Sources */,
 				925FF0332BAF6B5B00F8EE87 /* CustiomGridtem.swift in Sources */,
+				921DE6FC2BC964FD00B7C007 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
