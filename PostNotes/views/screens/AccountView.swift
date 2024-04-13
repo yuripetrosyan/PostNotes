@@ -29,11 +29,12 @@ struct AccountView: View {
             VStack{
                 HStack {
                     Text("PostNotes")
+                       // .font(.custom("Urbanist", size: 36))
                         .font(.custom("ARCADECLASSIC", size: 36))
                         .fontDesign(.serif)
                         .fontWeight(.semibold)
-                    // Text("Ai")
-                    // .font(.custom("ARCADECLASSIC", size: labelPressed ? 40 : 20))
+                     Text("Ai")
+                     .font(.custom("ARCADECLASSIC", size: labelPressed ? 40 : 20))
                     
                 }
                 .shadow(color: .brandPrimary.opacity(0.8), radius: glowIsOn ? 3 : 0)

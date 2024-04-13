@@ -46,6 +46,8 @@ struct CustomNotepadPopoverLonger: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                                 
                                 Spacer()
+                                
+                                
                             }
                             
                             .frame(width: 230, height: 50)

@@ -96,6 +96,7 @@ struct GridView: View {
                         Spacer()
                     }
                }.opacity(isShowingPopover ? 0.2 : 1)
+                
                 //showing add popover
                 if isShowingPopover{
                     CustomNotepadPopoverLonger(isShowingPopover: $isShowingPopover)
@@ -107,12 +108,20 @@ struct GridView: View {
             }
             .navigationTitle("All Notes").navigationBarTitleDisplayMode(.inline)
             .toolbar {
+                
+               
+                
                 ToolbarItem(placement: .topBarLeading) {
                  //   NavigationLink(destination: FoldersView()){
                         Image(systemName: "folder")
                             .tint(.brandPrimary)
                    // }
                 }
+                
+             
+                
+                    
+            
                 
                 ToolbarItem(placement: .topBarTrailing) {
                     Image(systemName: "plus")

@@ -30,7 +30,8 @@ struct PostNotesTabView: View {
                         case .house:
                             GridView()
                         case .magnifyingglass:
-                            SearchView()
+                           SearchView()
+               // WelcomePageSearch()
                         case .plus:
                     //    CustomNotepadPopoverLonger(isShowingPopover: .constant(true))
                 GridView(isShowingPopover: true)

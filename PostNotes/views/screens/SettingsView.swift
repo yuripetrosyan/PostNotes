@@ -13,21 +13,42 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationStack{
-        Form{
-            Section {
-//             
-//                ColorPicker("Customise the notes", selection: .constant(.red))
-//                
-            } header: {
-                Text("General")
-            }
+            ScrollView{
+                
+                VStack(alignment: .center){
+                    Image(._030Da420F864A1Cf5C1Bfe2B6B7754B3)
+                        .resizable()
+                        .frame(width: 200, height: 200)
+                        .padding(30)
+                    
+                    Text("Name Surname")
+                        .font(.custom("Urbanist", fixedSize: 36))
+                        .fontWeight(.semibold)
+                        .padding(10)
+                    
+                    Text("Amsterdam, The Netherlands")
+                        .font(.footnote)
+                    
+                }
             
-        }.navigationTitle("Settings").navigationBarTitleDisplayMode(.inline).tint(.brandPrimary)
+            
+            
+            Form{
+                Section {
+                    //
+                    //                ColorPicker("Customise the notes", selection: .constant(.red))
+                    //
+                } header: {
+                    Text("General")
+                }
+                
+            }.navigationTitle("Settings").navigationBarTitleDisplayMode(.inline).tint(.brandPrimary)
+        }
     }
         
     }
 }
 
-//#Preview {
-   // SettingsView(colorScheme: .constant(.red))
-//}
+#Preview {
+    SettingsView()
+}

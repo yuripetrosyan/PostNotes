@@ -5,8 +5,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>ARCADECLASSIC.TTF</string>
+		<string>Urbanist-VariableFont_wght.ttf</string>
 	</array>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
 </dict>
 </plist>
