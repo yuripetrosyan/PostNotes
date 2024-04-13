@@ -13,14 +13,15 @@ struct GridView: View {
     @Environment(\.modelContext) var context
     @Query(sort: \Note.date, order: .reverse) var items: [Note]    
     
+    var category: String? // category optional
+
+    
     @State var isShowingPopover = false
     @State var folderNameFilter: String? = nil
     @State var searchedText: String = ""
     @State private var showingConfirmation = false
 
-    //   @State private var filteredNotes: [Note] = []
-    
-    
+      
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -31,6 +32,9 @@ struct GridView: View {
     
     
     var body: some View {
+        
+
+        
         NavigationStack{
             ZStack{
                ZStack{
@@ -48,7 +52,7 @@ struct GridView: View {
                                     }
                                 
                             }else{
-                                ForEach(items, id: \.id) { note in
+                                ForEach(items.filter { category == nil || $0.category == category }, id: \.id) { note in
                                     NavigationLink(destination: DetailedVIew(item: note) { _ in })  {
                                         CustomGridItemView(item: note)
                                             .contextMenu {
@@ -106,18 +110,19 @@ struct GridView: View {
                 
                 
             }
-            .navigationTitle("All Notes").navigationBarTitleDisplayMode(.inline)
+            .navigationTitle(category ?? "All Notes")
+            .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 
                
                 
-                ToolbarItem(placement: .topBarLeading) {
-                 //   NavigationLink(destination: FoldersView()){
-                        Image(systemName: "folder")
-                            .tint(.brandPrimary)
-                   // }
-                }
-                
+//                ToolbarItem(placement: .topBarLeading) {
+//                    NavigationLink(destination: FoldersView(categories: FoldersManager.shared.folders)){
+//                        Image(systemName: "folder")
+//                            .tint(.brandPrimary)
+//                    }
+//                }
+//                
              
                 
                     
@@ -137,7 +142,7 @@ struct GridView: View {
                 
             }
             
-        }
+        }.navigationBarBackButtonHidden()
         
         
     }

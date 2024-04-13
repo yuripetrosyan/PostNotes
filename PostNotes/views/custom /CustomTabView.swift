@@ -11,8 +11,8 @@ import SwiftUI
 
 enum Tab: String, CaseIterable {
     case house = "house"
+    case plus  = "folder"
     case magnifyingglass = "magnifyingglass.circle"
-    case plus  = "plus.app"
     case person = "person"
     case gearshape = "gearshape"
 }
@@ -27,10 +27,11 @@ struct CustomTabBar: View {
         switch selectedTab {
         case .house:
             return .brandPrimary
-        case .magnifyingglass:
-            return .red
         case .plus:
             return .brandPrimary
+        case .magnifyingglass:
+            return .red
+       
         case .person:
             return .brandPrimary
         case .gearshape:

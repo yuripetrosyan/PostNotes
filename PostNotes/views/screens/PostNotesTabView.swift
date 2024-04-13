@@ -11,7 +11,7 @@ import SwiftData
 
 struct PostNotesTabView: View {
     @State private var tabSelected: Tab = .house
-    
+
     
     init() {
         //will not reserve space on the screen for tabview
@@ -28,13 +28,12 @@ struct PostNotesTabView: View {
             // Based on the selected tab, display the corresponding view
             switch tabSelected {
                         case .house:
-                            GridView()
+                // GridView with refreshGrid as a parameter
+                        GridView()
                         case .magnifyingglass:
                            SearchView()
-               // WelcomePageSearch()
                         case .plus:
-                    //    CustomNotepadPopoverLonger(isShowingPopover: .constant(true))
-                GridView(isShowingPopover: true)
+                FoldersView(categories: FoldersManager.shared.folders)
                         case .person:
                             AccountView()
                         case .gearshape:

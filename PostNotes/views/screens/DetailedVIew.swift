@@ -6,7 +6,8 @@ struct DetailedVIew: View {
     @State private var editedTitle: String
     @State private var editedContent: String
     var updateNote: (Note) -> Void // Closure to update the note
-    
+    @State private var selectedCategory = ""
+
     
     init(item: Note, updateNote: @escaping (Note) -> Void) {
         self.item = item
@@ -35,9 +36,18 @@ struct DetailedVIew: View {
                                 
                                 Spacer()
                                 VStack {
-                                    Custom3circles()
-                                        .frame(width: 80, height: 800)
-                                    Spacer()
+//                                    Custom3circles()
+//                                        .frame(width: 80, height: 800)
+//                                   
+                                    Text(selectedCategory)
+                                    
+//                                    Picker("Select the category", selection: $selectedCategory) {
+//                                        ForEach(FoldersManager.shared.folders, id: \.self) { folder in
+//                                            Text(folder)
+//                                        }
+//                                    }
+//                                    .pickerStyle(.menu)
+//                                    .tint(.brandSecondary)
                                 }
                             }
                             .padding()
@@ -66,8 +76,8 @@ struct DetailedVIew: View {
 
 struct DetailedVIew_Previews: PreviewProvider {
     static var previews: some View {
-        let sampleNote = Note(title: "Sample Title", content: "Sample Content", date: .now)
+        let sampleNote = Note(title: "Sample Title", content: "Sample Content", date: .now, category: "Favourite")
         return DetailedVIew(item: sampleNote) { _ in }
     }
 }
-///
+

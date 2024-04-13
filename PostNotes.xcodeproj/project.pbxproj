@@ -35,7 +35,7 @@
 		921DE72F2BC9DA0300B7C007 /* WelcomePageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE72E2BC9DA0300B7C007 /* WelcomePageSearch.swift */; };
 		921DE7312BC9DF6800B7C007 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE7302BC9DF6800B7C007 /* ChatView.swift */; };
 		923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D22BC54C6C00E10EB3 /* SignUpView.swift */; };
-		923551D52BC5AC8000E10EB3 /* Folder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D42BC5AC8000E10EB3 /* Folder.swift */; };
+		923551D52BC5AC8000E10EB3 /* FolderManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D42BC5AC8000E10EB3 /* FolderManager.swift */; };
 		9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257981E2BB2195400254FB4 /* PostNotesApp.swift */; };
 		925798212BB21D1D00254FB4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925798202BB21D1D00254FB4 /* RoundButton.swift */; };
 		925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */; };
@@ -108,7 +108,7 @@
 		921DE72E2BC9DA0300B7C007 /* WelcomePageSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageSearch.swift; sourceTree = "<group>"; };
 		921DE7302BC9DF6800B7C007 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		923551D22BC54C6C00E10EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		923551D42BC5AC8000E10EB3 /* Folder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Folder.swift; sourceTree = "<group>"; };
+		923551D42BC5AC8000E10EB3 /* FolderManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderManager.swift; sourceTree = "<group>"; };
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
 		925798202BB21D1D00254FB4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		925FF0192BAF6ABD00F8EE87 /* PostNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -321,7 +321,7 @@
 			children = (
 				92CF50A22BBDB5BD00BC2A49 /* Note.swift */,
 				9296A3142BC2CE0F003EF306 /* DataItem.swift */,
-				923551D42BC5AC8000E10EB3 /* Folder.swift */,
+				923551D42BC5AC8000E10EB3 /* FolderManager.swift */,
 				921DE6F92BC9641200B7C007 /* ChatMessage.swift */,
 			);
 			path = model;
@@ -435,7 +435,7 @@
 				92C0D2B42BC1AD9700CBD080 /* TriangleLoader.swift in Sources */,
 				9268125B2BB1D2D10048822D /* Custom3circles.swift in Sources */,
 				92CF50A32BBDB5BD00BC2A49 /* Note.swift in Sources */,
-				923551D52BC5AC8000E10EB3 /* Folder.swift in Sources */,
+				923551D52BC5AC8000E10EB3 /* FolderManager.swift in Sources */,
 				92C877DA2BB445B1000E9BBB /* CustomNotepadPopover.swift in Sources */,
 				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
 				92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */,

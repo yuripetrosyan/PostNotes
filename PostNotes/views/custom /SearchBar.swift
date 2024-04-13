@@ -16,22 +16,26 @@ struct SearchBar: View {
     @State private var isEditing = false
 
     var body: some View {
+       
+            
         HStack {
-
+            
+            
+            
             TextField("Search", text: $text)
                 .padding(10)
                 .padding(.horizontal, 25)
                 .background(.ultraThinMaterial.shadow(.inner(color: .gray.opacity(0.4), radius: 6)))
                 .cornerRadius(25)
                 .shadow(color: shadowOn ? .indigo : .brandSecondary.opacity(0.5),
-                    radius: shadowOn ? 40 : 8, x: shadowOn ? 3 : 3, y:shadowOn ? 3 : 3)
+                        radius: shadowOn ? 40 : 8, x: shadowOn ? 3 : 3, y:shadowOn ? 3 : 3)
                 .overlay(
                     HStack {
                         Image(systemName: "magnifyingglass")
                             .foregroundColor(.gray)
                             .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
                             .padding(.leading, 10)
-
+                        
                         if isEditing {
                             Button(action: {
                                 self.text = ""
@@ -43,9 +47,9 @@ struct SearchBar: View {
                         }
                     }
                 )
-                
-                
-
+            
+            
+            
                 .padding(.horizontal, 20)
                 .onTapGesture {
                     self.isEditing = true
@@ -54,7 +58,7 @@ struct SearchBar: View {
                         
                     }
                 }
-
+            
             if isEditing {
                 
                 Button(action: {
@@ -74,6 +78,10 @@ struct SearchBar: View {
                 //.animation(.default)
             }
         }.padding(.vertical)
+            
+            
+        
+    
     }
 }
 

@@ -68,6 +68,6 @@ let item: Note
 
 
 
-#Preview {
-    CustomGridItemView(item: Note(title: "Hi", content: "Hohoho", date: .now))
-}
+//#Preview {
+//    CustomGridItemView(item: Note(title: "Hi", content: "Hohoho", date: .now))
+//}
