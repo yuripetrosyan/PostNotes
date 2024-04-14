@@ -17,7 +17,7 @@ class FoldersManager {
             folders = savedFolders
         } else {
             // Initialize with default folders if no folders are saved
-            folders = ["All", "Favorites", "Archived", "Recent"]
+            folders = ["Important", "Favorites", "Archived", "Secondary"]
             saveFolders()
         }
     }

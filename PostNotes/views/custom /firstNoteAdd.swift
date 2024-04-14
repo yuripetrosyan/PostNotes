@@ -37,19 +37,19 @@ struct firstNoteAdd: View {
                 
                 Image(systemName: "plus.app.fill")
                     .resizable()
-                    .frame(width: 60, height: 60)
+                    .frame(width: 50, height: 50)
                     .foregroundColor(.brandPrimary).opacity(0.8)
                 
-                    .scaleEffect(pulsate ? 1 : 0.5)
+                    .scaleEffect(pulsate ? 1 : 0.8)
                     .opacity(value)
                     
-                    .onAppear{
-                        withAnimation(.easeInOut(duration: 1.2).repeatForever().speed(0.8))
-                        {
-                            self.value = 1
-                            self.pulsate.toggle()
-                        }
-                    }
+//                    .onAppear{
+//                        withAnimation(.interactiveSpring(duration: 1.2).repeatForever().speed(0.5))
+//                        {
+//                            self.value = 1
+//                            self.pulsate.toggle()
+//                        }
+//                    }
 
                 
             

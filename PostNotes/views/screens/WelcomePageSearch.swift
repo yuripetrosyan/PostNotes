@@ -63,7 +63,7 @@ struct WelcomePageSearch: View {
             
         }
             
-        }
+        }.navigationBarBackButtonHidden()
         
         
         

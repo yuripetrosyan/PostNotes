@@ -18,66 +18,69 @@ struct SearchBar: View {
     var body: some View {
        
             
-        HStack {
+        ZStack {
             
-            
-            
-            TextField("Search", text: $text)
-                .padding(10)
-                .padding(.horizontal, 25)
-                .background(.ultraThinMaterial.shadow(.inner(color: .gray.opacity(0.4), radius: 6)))
-                .cornerRadius(25)
-                .shadow(color: shadowOn ? .indigo : .brandSecondary.opacity(0.5),
-                        radius: shadowOn ? 40 : 8, x: shadowOn ? 3 : 3, y:shadowOn ? 3 : 3)
-                .overlay(
-                    HStack {
-                        Image(systemName: "magnifyingglass")
-                            .foregroundColor(.gray)
-                            .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading, 10)
-                        
-                        if isEditing {
-                            Button(action: {
-                                self.text = ""
-                            }) {
-                                Image(systemName: "multiply.circle.fill")
-                                    .foregroundColor(.gray)
-                                    .padding(.trailing, 8)
+            HStack {
+                
+                
+                
+                TextField("Search", text: $text)
+                    .padding(10)
+                    .padding(.horizontal, 25)
+                    .background(.thinMaterial.shadow(.inner(color: .gray.opacity(0.3), radius: 6)))
+                    .cornerRadius(25)
+                    .shadow(color: shadowOn ? .indigo : .gray.opacity(0.5),
+                            radius: shadowOn ? 40 : 3, x: shadowOn ? 3 : 2, y:shadowOn ? 3 : 3)
+                    .overlay(
+                        HStack {
+                            Image(systemName: "magnifyingglass")
+                                .foregroundColor(.gray)
+                                .frame(minWidth: 0, maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading, 10)
+                            
+                            if isEditing {
+                                Button(action: {
+                                    self.text = ""
+                                }) {
+                                    Image(systemName: "multiply.circle.fill")
+                                        .foregroundColor(.gray)
+                                        .padding(.trailing, 8)
+                                }
                             }
                         }
-                    }
-                )
-            
-            
-            
-                .padding(.horizontal, 20)
-                .onTapGesture {
-                    self.isEditing = true
-                    withAnimation(.easeInOut(duration: 0.5)){
-                        shadowOn.toggle()
-                        
-                    }
-                }
-            
-            if isEditing {
+                    )
                 
-                Button(action: {
-                    
-                    withAnimation(.easeInOut(duration: 0.5)){
-                        self.isEditing = false
-                        self.text = ""
-                        shadowOn = false
+                
+                
+                    .padding(.horizontal, 20)
+                    .onTapGesture {
+                        self.isEditing = true
+                        withAnimation(.easeInOut(duration: 0.5)){
+                            shadowOn.toggle()
+                            
+                        }
                     }
-                    UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
-                }) {
-                    Text("Cancel")
-                        .foregroundStyle(.brandPrimary)
+                
+                if isEditing {
+                    
+                    Button(action: {
+                        
+                        withAnimation(.easeInOut(duration: 0.5)){
+                            self.isEditing = false
+                            self.text = ""
+                            shadowOn = false
+                        }
+                        UIApplication.shared.sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
+                    }) {
+                        Text("Cancel")
+                            .foregroundStyle(.brandPrimary)
+                    }
+                    .padding(.trailing, 10)
+                    .transition(.move(edge: .trailing))
+                    //.animation(.default)
                 }
-                .padding(.trailing, 10)
-                .transition(.move(edge: .trailing))
-                //.animation(.default)
-            }
-        }.padding(.vertical)
+            }.padding(.vertical)
+        }
             
             
         

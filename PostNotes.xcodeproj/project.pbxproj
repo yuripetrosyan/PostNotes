@@ -210,8 +210,8 @@
 			isa = PBXGroup;
 			children = (
 				925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */,
-				925FF02C2BAF6AE800F8EE87 /* GridView.swift */,
 				921DE72D2BC9D9CB00B7C007 /* AI Chat */,
+				925FF02C2BAF6AE800F8EE87 /* GridView.swift */,
 				925FF02E2BAF6B1300F8EE87 /* AccountView.swift */,
 				92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */,
 				926812582BB0DD140048822D /* SettingsView.swift */,
@@ -603,7 +603,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -636,7 +635,6 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
-				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

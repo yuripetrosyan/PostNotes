@@ -17,7 +17,6 @@ struct DetailedVIew: View {
     }
     
     var body: some View {
-        NavigationView {
             VStack {
                 VStack {
                     Rectangle().frame(maxWidth: .infinity, maxHeight: 200)
@@ -68,7 +67,7 @@ struct DetailedVIew: View {
                 Spacer()
             }
             .ignoresSafeArea()
-        }
+        
         .tint(.white)
     }
 }

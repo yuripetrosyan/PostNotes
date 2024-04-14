@@ -21,7 +21,7 @@ struct GridView: View {
     @State var searchedText: String = ""
     @State private var showingConfirmation = false
 
-      
+    
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -35,8 +35,10 @@ struct GridView: View {
         
 
         
-        NavigationStack{
+      //  NavigationStack{
             ZStack{
+                
+               
                ZStack{
                    
                    ScrollView {
@@ -78,12 +80,7 @@ struct GridView: View {
                                                     //      Delete note here
                                                         context.delete(note)
                                                    
-                                                } 
-                                           
-                                            
-                                            
-                                            
-                                            label: {
+                                                } label: {
                                                     Label("Delete", systemImage: "trash")}
                                             }
                                     }
@@ -95,10 +92,12 @@ struct GridView: View {
                         .padding()
                         .padding(.top, 55)
                     }
+                   
                     VStack{
                         SearchBar(text: $searchedText)
                         Spacer()
                     }
+                   
                }.opacity(isShowingPopover ? 0.2 : 1)
                 
                 //showing add popover
@@ -112,23 +111,9 @@ struct GridView: View {
             }
             .navigationTitle(category ?? "All Notes")
             .navigationBarTitleDisplayMode(.inline)
+
             .toolbar {
-                
-               
-                
-//                ToolbarItem(placement: .topBarLeading) {
-//                    NavigationLink(destination: FoldersView(categories: FoldersManager.shared.folders)){
-//                        Image(systemName: "folder")
-//                            .tint(.brandPrimary)
-//                    }
-//                }
-//                
-             
-                
-                    
-            
-                
-                ToolbarItem(placement: .topBarTrailing) {
+                  ToolbarItem(placement: .topBarTrailing) {
                     Image(systemName: "plus")
                         .tint(.brandPrimary)
                         .onTapGesture {
@@ -139,10 +124,11 @@ struct GridView: View {
                     
                 }
                 
-                
+                 
+
             }
-            
-        }.navigationBarBackButtonHidden()
+            .navigationBarBackButtonHidden(true)
+      //  }.navigationBarBackButtonHidden()
         
         
     }
