@@ -137,15 +137,32 @@ struct GridView: View {
     
 
 
-
 #Preview {
     GridView()
-    
 }
 
+//
+//#Preview {
+//    //GridView()
+//    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//    let container = try! ModelContainer(for: Note.self, configurations: config)
+//    let note = Note(title: "Friday", content: "No tasks left", date: Date(), category: "")
+//    
+//    return GridView(category: "Al; Notes")
+//        .modelContainer(container)
+//
+//}
 
 
-
+//#Preview {
+//    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//    let container = try! ModelContainer(for: User.self, configurations: config)
+//
+//    let user = User(name: "Test User")
+//    return EditingView(user: user)
+//        .modelContainer(container)
+//}
+//
 
 
 

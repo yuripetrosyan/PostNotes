@@ -50,7 +50,7 @@ struct CustomTabBar: View {
                         .aspectRatio(contentMode: .fit)
                         .frame(height: 23)
                         .scaleEffect(tab == selectedTab ? 1.25 : 1.0)
-                        .foregroundColor(tab == selectedTab ? tabColor : .gray)
+                        .foregroundColor(tab == selectedTab ? tabColor : .brandPrimary)
                         .font(.system(size: 23))
                         .onTapGesture {
                             withAnimation(.easeInOut(duration: 0.2)) {

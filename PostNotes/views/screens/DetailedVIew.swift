@@ -23,7 +23,7 @@ struct DetailedVIew: View {
                         .overlay {
                             HStack {
                                 TextField("", text: $editedTitle)
-                                    .foregroundStyle(.white)
+                                    .foregroundStyle(.primary1)
                                     .fontDesign(.serif)
                                     .font(.title)
                                     .onChange(of: editedTitle) { newValue in

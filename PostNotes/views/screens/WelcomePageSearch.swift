@@ -53,7 +53,7 @@ struct WelcomePageSearch: View {
                 }
                 .foregroundStyle(.primary1)
                 .padding()
-                .background(RoundedRectangle(cornerRadius: 25).foregroundStyle(.indigo))
+                .background(RoundedRectangle(cornerRadius: 25).foregroundStyle(.brandPrimary))
                 .padding(.horizontal, 30)
                 .padding(.bottom, 80)
                 

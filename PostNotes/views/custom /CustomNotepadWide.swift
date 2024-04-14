@@ -92,6 +92,6 @@ struct AddFolderPopover: View {
 
 #Preview {
    // CustomNotepadWide()
-    AddFolderPopover(isShowingFolderPopover: .constant(true))
-  //  CustomNotepadWideLonger()
+    //AddFolderPopover(isShowingFolderPopover: .constant(true))
+    CustomNotepadWideLonger()
 }
