@@ -6,3 +6,14 @@
 //
 
 import Foundation
+
+
+class MessageStore: ObservableObject {
+    @Published var messages: [Message] = []
+
+
+    func deleteMessage(with id: UUID) {
+       
+        
+    }
+}

@@ -17,6 +17,12 @@ enum Tab: String, CaseIterable {
     case gearshape = "gearshape"
 }
 
+public enum Visibility {
+    case automatic
+    case hidden
+    case visible
+}
+
 struct CustomTabBar: View {
     
     @Binding var selectedTab: Tab

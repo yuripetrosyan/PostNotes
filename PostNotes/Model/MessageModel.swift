@@ -8,8 +8,8 @@
 import Foundation
 
 
-struct Message{
-    let id: String
+struct Message: Identifiable{
+    let id = UUID()
     let content: String
     let dateCreated: Date
     let sender: MessageSender
@@ -28,10 +28,10 @@ enum MessageSender{
 extension Message{
     static let sampleMessages = [
     
-        Message(id: UUID().uuidString, content: "a message sent by me", dateCreated: Date(), sender: .me),
-        Message(id: UUID().uuidString, content: "a message sent by gpt", dateCreated: Date(), sender: .gpt),
-        Message(id: UUID().uuidString, content: "another message sent by me", dateCreated: Date(), sender: .me),
-        Message(id: UUID().uuidString, content: "aanother message sent by gpt", dateCreated: Date(), sender: .gpt)
+        Message(content: "a message sent by me", dateCreated: Date(), sender: .me),
+        Message(content: "a message sent by gpt", dateCreated: Date(), sender: .gpt),
+        Message(content: "another message sent by me", dateCreated: Date(), sender: .me),
+        Message(content: "aanother message sent by gpt", dateCreated: Date(), sender: .gpt)
 
     
     

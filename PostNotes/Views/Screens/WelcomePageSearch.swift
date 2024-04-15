@@ -8,68 +8,59 @@
 import SwiftUI
 
 struct WelcomePageSearch: View {
+    
+    @Binding var sheetIsPresented:Bool
+    
     var body: some View {
         NavigationStack{
         VStack{
+            Spacer()
             VStack(alignment: .center){
-                Text("Your AI Assistant")
-                    .font(.title)
-                    .foregroundStyle(.indigo)
-                    .fontDesign(.rounded)
-                    .fontWeight(.medium)
-                    .padding()
-                
-                Text("Using this software,you can ask you questions and receive articles using  artificial intelligence assistant")
-                    .foregroundStyle(.primary.opacity(0.7))
-                    .multilineTextAlignment(.center)
-                    .font(.system(size: 15))
-                
-                
-            }
-            .padding(50)
-            
+                    Text("Your AI Assistant")
+                        .font(.title)
+                        .foregroundStyle(.indigo)
+                        .fontDesign(.rounded)
+                        .fontWeight(.medium)
+                        .padding()
+                    
+                    Text("Using this software,you can ask you questions and receive articles using  artificial intelligence assistant")
+                        .foregroundStyle(.primary.opacity(0.7))
+                        .multilineTextAlignment(.center)
+                        .font(.system(size: 15))}
+                 .padding(50)
             Spacer()
             
-            Image(.sun)
+            ZStack{
+                Image(.sun)
                 .resizable()
                 .frame(width: 320, height: 320)
-                .padding(.bottom, 40)
-            
-            Spacer()
-            
-            NavigationLink(destination: ChatView()){
-                HStack{
-                    
-                    Spacer()
-                    Text("Continue")
-                        .font(.system(size: 19))
-                        .fontWeight(.semibold)
-                        .fontDesign(.rounded)
-                    
-                    
-                    Spacer()
-                    
-                    Image(systemName: "arrow.right")
-                }
-                .foregroundStyle(.primary1)
-                .padding()
-                .background(RoundedRectangle(cornerRadius: 25).foregroundStyle(.brandPrimary))
-                .padding(.horizontal, 30)
-                .padding(.bottom, 80)
-                
-                
-            }
-            
-            
-        }
-            
-        }.navigationBarBackButtonHidden()
-        
-        
-        
-    }
+                .offset(y: 180)
+
+                  HStack{
+                        Spacer()
+                        Text("Continue")
+                            .font(.system(size: 19))
+                            .fontWeight(.semibold)
+                            .fontDesign(.rounded)
+                        Spacer()
+                        
+                        Image(systemName: "arrow.right")
+                    }
+                    .foregroundStyle(.brandPrimary)
+                    .padding()
+                    .background(RoundedRectangle(cornerRadius: 25).foregroundStyle(.ultraThinMaterial))
+                    .padding(.horizontal, 30)
+                    .offset(y: 30)
+                    .onTapGesture {
+                        sheetIsPresented.toggle()
+                    }
+                 
+             }
+         }
+    }.navigationBarBackButtonHidden()
+  }
 }
 
 #Preview {
-    WelcomePageSearch()
+    WelcomePageSearch(sheetIsPresented: .constant(true))
 }

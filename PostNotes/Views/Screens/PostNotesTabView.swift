@@ -35,7 +35,7 @@ struct PostNotesTabView: View {
                
             case .magnifyingglass:
                 //SearchView()
-                WelcomePageSearch()
+                WelcomePageSearch(sheetIsPresented: .constant(true))
             case .plus:
                 FoldersView(categories: FoldersViewModel.shared.folders)
             case .person:

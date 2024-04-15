@@ -9,34 +9,29 @@ import SwiftUI
 
 struct ChatView: View {
     
-    @State private var messageSent = ""
+    @State private var messageText = ""
     @State private var isShowingSuggestions = true
-    
+    @State var chatMessages: [Message] = []
+    @EnvironmentObject var store: MessageStore // Or pass down through views
+    @State private var sheetisPresented = true
     
     var body: some View {
-            
+      //  NavigationStack{
+     
             VStack{
                 // Button
                 HStack{
                     
-                    NavigationLink(destination: WelcomePageSearch()) {
-                        Image(systemName: "arrow.left")
-                            .foregroundStyle(.primary1)
-                    }
-                    
-                    
                     Image(.sun)
                         .resizable()
                         .frame(width: 45, height: 45)
-                    
-                    
                     
                     VStack(alignment: .leading){
                         Text("AI Assistant")
                             .font(.system(size: 20))
                             .fontWeight(.semibold)
                             .fontDesign(.rounded)
-                            .foregroundStyle(.brandSecondary)
+                            .foregroundStyle(.white.opacity(0.9))
                         
                         Text("Premium Subscriber")
                         //.font(.system(size: 17))
@@ -44,7 +39,8 @@ struct ChatView: View {
                             .fontWeight(.medium)
                             .fontDesign(.rounded)
                             .foregroundStyle(.indigo)
-                    }.padding(.vertical)
+                    }
+                    .padding(.vertical)
                     
                     Spacer()
                     
@@ -52,7 +48,7 @@ struct ChatView: View {
                         
                     }, label: {
                         Image(systemName: "square.and.arrow.up")
-                            .foregroundStyle(.brandSecondary)
+                            .foregroundStyle(.white.opacity(0.6))
                         
                     })
                     
@@ -64,68 +60,106 @@ struct ChatView: View {
                 .padding()
                 .offset(y: 30)
                 .frame(height: 150)
-                
-                .background(.brandPrimary)
-               
-              //  .padding(.horizontal)
-                  //  .padding()
+                .background(.brandOnly)
                 
                 
+                //Spacer()
                 
-                
-                
-                    
-                    
-                    
-                    
-                    //Spacer()
-                    
-                    VStack (spacing: 20){
+                ZStack{
+                    VStack{
+                        ScrollView{
+                            LazyVStack{
+                                ForEach(chatMessages, id: \.id){
+                                    message in MessageView(message: message).contextMenu(ContextMenu(menuItems: {
+                                        Button(role: .destructive) {
+                                            // Filter to update UI immediately
+                                            chatMessages = chatMessages.filter { $0.id != message.id }
+                                            
+                                            // Call the store to handle SwiftData persistence
+                                            store.deleteMessage(with: message.id)
+                                        }
+                                        
+                                    label: {
+                                        Label("Delete", systemImage: "trash")
+                                    }
+                                        
+                                        
+                                        
+                                        
+                                    }))}
+                            }.padding(.top, 40)
+                        }.frame(maxWidth: .infinity, maxHeight: 420)
                         
-                        Spacer()
-                        
-                        SuggestionView(messageSent: $messageSent, suggestionTitle: "Brainstorm names", suggestionContent: "for my fantasy football team with a frog theme")
-                        SuggestionView(messageSent: $messageSent, suggestionTitle: "Suggest some codenames", suggestionContent: "for a project introducing flexible work arrangements")
-                        SuggestionView(messageSent: $messageSent, suggestionTitle: "Explain why popcorn pops", suggestionContent: "to a kid who loves watching it in the microwave")
-                        
-                        Spacer()
-
-                    }.onTapGesture {
-
                     }
-                        
-                    Spacer()
                     
-                   
-                    HStack(spacing: 10){
-                        
-                        TextField("Ask anything", text: $messageSent, axis: .vertical)
-                            .padding(10)
-                            .lineLimit(5, reservesSpace: false)
-                            .background(RoundedRectangle(cornerRadius: 25).stroke(.brandPrimary, lineWidth: 0.5))
+                    if chatMessages.count == 0{
+                        VStack (spacing: 20){
                             
+                            Spacer()
+                            
+                            SuggestionView(messageSent: $messageText, suggestionTitle: "Brainstorm names", suggestionContent: "for my fantasy football team with a frog theme")
+                            SuggestionView(messageSent: $messageText, suggestionTitle: "Suggest some codenames", suggestionContent: "for a project introducing flexible work arrangements")
+                            SuggestionView(messageSent: $messageText, suggestionTitle: "Explain why popcorn pops", suggestionContent: "to a kid who loves watching it in the microwave")
+                            
+                            Spacer()
+                            
+                        }.onTapGesture {}
                         
-                        
-                        Button(action: /*@START_MENU_TOKEN@*/{}/*@END_MENU_TOKEN@*/, label: {
-                            Image(systemName: "arrow.up.circle.fill")
-                                .resizable()
-                                .frame(width: 35, height: 35)
-                                .foregroundStyle(.brandPrimary)
-                        })
-                        
-                        
-                    }   .padding()
-                        .padding(.bottom, 50)
-            }                 .ignoresSafeArea()
-
-           
+                    }
+                }
+                Spacer()
+                
+                
+                HStack(spacing: 10){
+                    
+                    TextField("Ask anything", text: $messageText){
+                        sendMessage()
+                    }
+                    .padding(10)
+                    .lineLimit(5, reservesSpace: false)
+                    .background(RoundedRectangle(cornerRadius: 25).stroke(.brandPrimary, lineWidth: 0.5))
+                    
+                    
+                    
+                    Button(action: {
+                        sendMessage()
+                    }, label: {
+                        Image(systemName: "arrow.up.circle.fill")
+                            .resizable()
+                            .frame(width: 35, height: 35)
+                            .foregroundStyle(.brandPrimary)
+                    })
+                    
+                    
+                }   .padding()
+                    .padding(.bottom, 70)
+            }           .edgesIgnoringSafeArea(.top)
             
-            .tint(.brandSecondary)
-               
+            
+            
+                .tint(.brandSecondary)
         
-
         
+            .navigationBarBackButtonHidden()
+        //}
+            .sheet(isPresented: $sheetisPresented, content: {
+            WelcomePageSearch(sheetIsPresented: $sheetisPresented)
+                    .presentationBackgroundInteraction(.enabled)
+                    .presentationBackground(.ultraThickMaterial)
+            })
+    
+            .presentationBackgroundInteraction(.enabled)
     }
+    func sendMessage(){
+        print(messageText)
+        chatMessages.append(Message(content: messageText, dateCreated: .now, sender: .me))
+        messageText = ""
+                
+    }
+    
+        
+    
+   
 }
 
 #Preview {
