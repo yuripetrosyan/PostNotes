@@ -9,7 +9,7 @@ import SwiftUI
 
 struct  SearchView: View {
     
-    @State var chatMessages: [ChatMessage] = ChatMessage.sampleMessages
+    @State var chatMessages: [Message] = Message.sampleMessages
     //@State var chatMessages: [ChatMessage] = []
     @State var messageText: String = ""
     @State private var glowIsOn = false
@@ -125,7 +125,7 @@ struct  SearchView: View {
     
     func sendMessage(){
         print(messageText)
-        chatMessages.append(ChatMessage(id: UUID().uuidString, content: messageText, dateCreated: .now, sender: .me))
+        chatMessages.append(Message(id: UUID().uuidString, content: messageText, dateCreated: .now, sender: .me))
         messageText = ""
         
     }

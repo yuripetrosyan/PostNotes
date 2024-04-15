@@ -16,7 +16,7 @@ struct PostNotesApp: App {
     var body: some Scene {
         WindowGroup {
             PostNotesTabView()
-                .environmentObject(FoldersManager.shared)
+                .environmentObject(FoldersViewModel.shared)
             
         }
         .modelContainer(for: [Note.self])

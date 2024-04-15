@@ -59,7 +59,7 @@ struct AddFolderPopover: View {
                         
                         Button("Save") {
                             print("Save")
-                            FoldersManager.shared.addFolder(name: folderName)
+                            FoldersViewModel.shared.addFolder(name: folderName)
                             
                             isShowingFolderPopover = false
                             

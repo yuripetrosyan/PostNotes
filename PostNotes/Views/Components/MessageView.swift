@@ -10,8 +10,8 @@ import SwiftUI
 struct MessageView: View {
     
     
-    @State var chatMessages: [ChatMessage] = ChatMessage.sampleMessages
-    @State var message: ChatMessage
+    @State var chatMessages: [Message] = Message.sampleMessages
+    @State var message: Message
     
     
     var body: some View {
@@ -42,5 +42,5 @@ struct MessageView: View {
 }
 
 #Preview {
-    MessageView(message: ChatMessage.sampleMessages[2])
+    MessageView(message: Message.sampleMessages[2])
 }

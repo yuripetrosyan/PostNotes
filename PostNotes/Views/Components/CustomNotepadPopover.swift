@@ -39,7 +39,7 @@ struct CustomNotepadPopoverLonger: View {
                                 .clipShape(RoundedRectangle(cornerRadius: 10))
                                 
                                 Picker("Select the category", selection: $selectedCategory) {
-                                    ForEach(FoldersManager.shared.folders, id: \.self) { folder in
+                                    ForEach(FoldersViewModel.shared.folders, id: \.self) { folder in
                                         Text(folder)
                                     }
                                 }
