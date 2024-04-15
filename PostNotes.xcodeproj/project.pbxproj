@@ -206,7 +206,7 @@
 			name = "AI Chat";
 			sourceTree = "<group>";
 		};
-		923551D82BC6F03B00E10EB3 /* screens */ = {
+		923551D82BC6F03B00E10EB3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */,
@@ -217,7 +217,7 @@
 				926812582BB0DD140048822D /* SettingsView.swift */,
 				926812762BB1D6C20048822D /* FoldersView.swift */,
 			);
-			path = screens;
+			path = Screens;
 			sourceTree = "<group>";
 		};
 		925FF0102BAF6ABD00F8EE87 = {
@@ -242,10 +242,10 @@
 			children = (
 				92C973512BB0A41C0080C2C0 /* Info.plist */,
 				9257981E2BB2195400254FB4 /* PostNotesApp.swift */,
-				92C973432BB09DF60080C2C0 /* views */,
-				92C973442BB09E160080C2C0 /* model */,
+				92C973432BB09DF60080C2C0 /* Views */,
+				92C973442BB09E160080C2C0 /* Model */,
 				92C973452BB09E210080C2C0 /* Utilities */,
-				925FF02B2BAF6AD300F8EE87 /* extras */,
+				925FF02B2BAF6AD300F8EE87 /* Extras */,
 				925FF0202BAF6ABE00F8EE87 /* Assets.xcassets */,
 				925FF0222BAF6ABE00F8EE87 /* Preview Content */,
 			);
@@ -260,17 +260,17 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
-		925FF02B2BAF6AD300F8EE87 /* extras */ = {
+		925FF02B2BAF6AD300F8EE87 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
 				92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */,
 				921DE7162BC99C7D00B7C007 /* Urbanist */,
 				92C0D2B22BC1AD9700CBD080 /* TriangleLoader */,
 			);
-			path = extras;
+			path = Extras;
 			sourceTree = "<group>";
 		};
-		925FF0362BAF6BB700F8EE87 /* custom  */ = {
+		925FF0362BAF6BB700F8EE87 /* Components */ = {
 			isa = PBXGroup;
 			children = (
 				925FF0322BAF6B5B00F8EE87 /* CustiomGridtem.swift */,
@@ -287,7 +287,7 @@
 				9268125A2BB1D2D10048822D /* Custom3circles.swift */,
 				921DE6FD2BC965AD00B7C007 /* MessageView.swift */,
 			);
-			path = "custom ";
+			path = Components;
 			sourceTree = "<group>";
 		};
 		92C0D2B02BC1AD9700CBD080 /* Support */ = {
@@ -307,16 +307,16 @@
 			path = TriangleLoader;
 			sourceTree = "<group>";
 		};
-		92C973432BB09DF60080C2C0 /* views */ = {
+		92C973432BB09DF60080C2C0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				923551D82BC6F03B00E10EB3 /* screens */,
-				925FF0362BAF6BB700F8EE87 /* custom  */,
+				923551D82BC6F03B00E10EB3 /* Screens */,
+				925FF0362BAF6BB700F8EE87 /* Components */,
 			);
-			path = views;
+			path = Views;
 			sourceTree = "<group>";
 		};
-		92C973442BB09E160080C2C0 /* model */ = {
+		92C973442BB09E160080C2C0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				92CF50A22BBDB5BD00BC2A49 /* Note.swift */,
@@ -324,7 +324,7 @@
 				923551D42BC5AC8000E10EB3 /* FolderManager.swift */,
 				921DE6F92BC9641200B7C007 /* ChatMessage.swift */,
 			);
-			path = model;
+			path = Model;
 			sourceTree = "<group>";
 		};
 		92C973452BB09E210080C2C0 /* Utilities */ = {
