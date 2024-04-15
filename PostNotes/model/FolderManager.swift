@@ -2,7 +2,7 @@
 
 import Foundation
 
-class FoldersManager {
+class FoldersManager: ObservableObject {
     static let shared = FoldersManager()
     
     // UserDefaults key for storing folder names
@@ -31,12 +31,14 @@ class FoldersManager {
     }
     
     // Remove a custom folder (excluding default folders)
-    func removeFolder(at index: Int) {
-        if index >= 4 && index < folders.count {
+    func removeFolder(name: String) {
+        let defaultFolders = ["Important", "Favorites", "Archived", "Secondary"]
+        if !defaultFolders.contains(name), let index = folders.firstIndex(of: name) {
             folders.remove(at: index)
             saveFolders()
         }
     }
+
     
     // Save folders to UserDefaults
     private func saveFolders() {

@@ -40,6 +40,7 @@ struct AddFolderPopover: View {
     
     @State private var folderName = ""
     @Binding var isShowingFolderPopover: Bool
+    var onSave: () -> Void
     
     var body: some View {
         ZStack{
@@ -61,6 +62,8 @@ struct AddFolderPopover: View {
                             FoldersManager.shared.addFolder(name: folderName)
                             
                             isShowingFolderPopover = false
+                            
+                            onSave()
 
                         }.fontWeight(.semibold)
                     }
