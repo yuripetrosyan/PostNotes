@@ -16,10 +16,11 @@ struct PostNotesApp: App {
     var body: some Scene {
         WindowGroup {
             PostNotesTabView()
+                .environmentObject(FoldersManager.shared)
+            
         }
         .modelContainer(for: [Note.self])
     }
-    
     
     
     init() {

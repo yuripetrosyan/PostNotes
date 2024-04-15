@@ -13,13 +13,14 @@ struct GridView: View {
     @Environment(\.modelContext) var context
     @Query(sort: \Note.date, order: .reverse) var items: [Note]    
     
+    var category: String? // category optional
+
+    @ObservedObject var foldersManager = FoldersManager.shared
     @State var isShowingPopover = false
     @State var folderNameFilter: String? = nil
     @State var searchedText: String = ""
     @State private var showingConfirmation = false
 
-    //   @State private var filteredNotes: [Note] = []
-    
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -31,8 +32,13 @@ struct GridView: View {
     
     
     var body: some View {
-        NavigationStack{
+        
+
+        
+      //  NavigationStack{
             ZStack{
+                
+               
                ZStack{
                    
                    ScrollView {
@@ -48,7 +54,7 @@ struct GridView: View {
                                     }
                                 
                             }else{
-                                ForEach(items, id: \.id) { note in
+                                ForEach(items.filter { category == nil || $0.category == category }, id: \.id) { note in
                                     NavigationLink(destination: DetailedVIew(item: note) { _ in })  {
                                         CustomGridItemView(item: note)
                                             .contextMenu {
@@ -74,12 +80,7 @@ struct GridView: View {
                                                     //      Delete note here
                                                         context.delete(note)
                                                    
-                                                } 
-                                           
-                                            
-                                            
-                                            
-                                            label: {
+                                                } label: {
                                                     Label("Delete", systemImage: "trash")}
                                             }
                                     }
@@ -91,11 +92,14 @@ struct GridView: View {
                         .padding()
                         .padding(.top, 55)
                     }
+                   
                     VStack{
                         SearchBar(text: $searchedText)
                         Spacer()
                     }
+                   
                }.opacity(isShowingPopover ? 0.2 : 1)
+                
                 //showing add popover
                 if isShowingPopover{
                     CustomNotepadPopoverLonger(isShowingPopover: $isShowingPopover)
@@ -105,16 +109,11 @@ struct GridView: View {
                 
                 
             }
-            .navigationTitle("All Notes").navigationBarTitleDisplayMode(.inline)
+            .navigationTitle(category ?? "All Notes")
+            .navigationBarTitleDisplayMode(.inline)
+
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                 //   NavigationLink(destination: FoldersView()){
-                        Image(systemName: "folder")
-                            .tint(.brandPrimary)
-                   // }
-                }
-                
-                ToolbarItem(placement: .topBarTrailing) {
+                  ToolbarItem(placement: .topBarTrailing) {
                     Image(systemName: "plus")
                         .tint(.brandPrimary)
                         .onTapGesture {
@@ -125,10 +124,11 @@ struct GridView: View {
                     
                 }
                 
-                
+                 
+
             }
-            
-        }
+            .navigationBarBackButtonHidden(true)
+      //  }.navigationBarBackButtonHidden()
         
         
     }
@@ -137,15 +137,32 @@ struct GridView: View {
     
 
 
-
 #Preview {
     GridView()
-    
 }
 
+//
+//#Preview {
+//    //GridView()
+//    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//    let container = try! ModelContainer(for: Note.self, configurations: config)
+//    let note = Note(title: "Friday", content: "No tasks left", date: Date(), category: "")
+//    
+//    return GridView(category: "Al; Notes")
+//        .modelContainer(container)
+//
+//}
 
 
-
+//#Preview {
+//    let config = ModelConfiguration(isStoredInMemoryOnly: true)
+//    let container = try! ModelContainer(for: User.self, configurations: config)
+//
+//    let user = User(name: "Test User")
+//    return EditingView(user: user)
+//        .modelContainer(container)
+//}
+//
 
 
 

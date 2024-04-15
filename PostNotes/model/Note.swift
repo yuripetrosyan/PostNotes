@@ -56,18 +56,18 @@ import SwiftData
 @Model
 class Note {
     
-    var title: String
-    var content: String
-    var date: Date
-    var folder: String // Add this property
+    var title: String = ""
+    var content: String = ""
+    var date: Date = Date()
+    var category: String = "" // Add category property
 
-    
-    init(title: String, content: String, date: Date, folder: String = ""
+    init(title: String, content: String, date: Date,  category: String
     ){
         self.title = title
         self.content = content
         self.date = date
-        self.folder = folder
+        self.category = category // Initialize category
 
+//folders here
     }
 }

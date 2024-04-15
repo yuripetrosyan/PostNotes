@@ -3,71 +3,77 @@ import SwiftUI
 struct DetailedVIew: View {
     
     let item: Note
-    @State private var editedTitle: String
-    @State private var editedContent: String
     var updateNote: (Note) -> Void // Closure to update the note
+    @State private var selectedCategory = ""
     
-    
+    //Temporary state for title and contenet
+    @State private var tempTitle: String
+    @State private var tempContent: String
+
     init(item: Note, updateNote: @escaping (Note) -> Void) {
         self.item = item
-        self._editedTitle = State(initialValue: item.title)
-        self._editedContent = State(initialValue: item.content)
         self.updateNote = updateNote
+        
+        _tempTitle = State(initialValue: item.title)
+        _tempContent = State(initialValue: item.content)
     }
     
     var body: some View {
-        NavigationView {
             VStack {
                 VStack {
                     Rectangle().frame(maxWidth: .infinity, maxHeight: 200)
                         .overlay {
                             HStack {
-                                TextField("", text: $editedTitle)
-                                    .foregroundStyle(.white)
+                                TextField("", text: $tempTitle)
+                                    .foregroundStyle(.primary1)
                                     .fontDesign(.serif)
                                     .font(.title)
-                                    .onChange(of: editedTitle) { newValue in
-                                        // Update the content of the note when edited
-                                        var updatedItem = item
-                                        updatedItem.title = newValue
-                                        updateNote(updatedItem)
-                                    }
+                                
                                 
                                 Spacer()
+                                
                                 VStack {
-                                    Custom3circles()
-                                        .frame(width: 80, height: 800)
-                                    Spacer()
-                                }
+                                 
+                                    Button("Save") {
+                                        let updatedNote = item
+                                                  updatedNote.title = tempTitle
+                                                  updatedNote.content = tempContent
+                                                  updateNote(updatedNote)
+                                    }.foregroundStyle(.brandSecondary)
+                                    
+                                    Text(selectedCategory)
+                                 }
                             }
                             .padding()
                             .padding(.top, 100)
                         }
                 }
                 
-                TextEditor(text: $editedContent)
+                TextEditor(text: $tempContent)
                     .foregroundStyle(.brandPrimary)
                     .padding()
-                    .onChange(of: editedContent) { newValue in
-                        // Update the content of the note when edited
-                        var updatedItem = item
-                        updatedItem.content = newValue
-                        updateNote(updatedItem)
-                    }
+                  
+                
                 
                 Spacer()
             }
             .ignoresSafeArea()
-        }
-        .tint(.white)
+            .tint(.white)
+            .onDisappear {
+                // Save changes when the view disappears
+                var updatedNote = item
+                updatedNote.title = tempTitle
+                updatedNote.content = tempContent
+                updateNote(updatedNote)
+            }
     }
 }
 
 
 struct DetailedVIew_Previews: PreviewProvider {
     static var previews: some View {
-        let sampleNote = Note(title: "Sample Title", content: "Sample Content", date: .now)
+        let sampleNote = Note(title: "Sample Title", content: "Sample Content", date: .now, category: "Favourite")
         return DetailedVIew(item: sampleNote) { _ in }
     }
 }
-///
+

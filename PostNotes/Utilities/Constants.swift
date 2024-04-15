@@ -9,7 +9,7 @@ import Foundation
 
 
 enum Constants{
-    
+
     //hide this later
     static let openAIAPIKey = ""
     

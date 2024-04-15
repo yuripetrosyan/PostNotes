@@ -1,7 +1,8 @@
 {
   "images" : [
     {
-      "filename" : "label1-2.png",
+      "compression-type" : "gpu-optimized-best",
+      "filename" : "IMG_4900.PNG",
       "idiom" : "universal",
       "scale" : "1x"
     },

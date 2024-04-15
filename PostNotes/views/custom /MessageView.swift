@@ -19,9 +19,10 @@ struct MessageView: View {
             Text(message.content)
                 .padding()
                 .frame(minWidth: 30)
+                .contentShape(.contextMenuPreview, Capsule())
                 .foregroundStyle(.white)
                 .fontWeight(.medium)
-                .padding(.vertical, -5)
+               // .padding(.vertical, -5)
             //when i send the message -> blue, when the gpt sends -> gray
                 .background(Capsule().foregroundStyle(message.sender == .me ? .blue : .gray))
             
@@ -30,12 +31,13 @@ struct MessageView: View {
                 .padding(.horizontal)
                 
             
-            
+              
             
             
             
             
         }
+
     }
 }
 

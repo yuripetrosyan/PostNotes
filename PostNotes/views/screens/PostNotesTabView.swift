@@ -11,7 +11,7 @@ import SwiftData
 
 struct PostNotesTabView: View {
     @State private var tabSelected: Tab = .house
-    
+    @State private var selectedCategory: String? = "All Notes"
     
     init() {
         //will not reserve space on the screen for tabview
@@ -27,26 +27,37 @@ struct PostNotesTabView: View {
             Spacer()
             // Based on the selected tab, display the corresponding view
             switch tabSelected {
-                        case .house:
-                            GridView()
-                        case .magnifyingglass:
-                            SearchView()
-                        case .plus:
-                    //    CustomNotepadPopoverLonger(isShowingPopover: .constant(true))
-                GridView(isShowingPopover: true)
-                        case .person:
-                            AccountView()
-                        case .gearshape:
-                            SettingsView()
-                        }
+            case .house:
+                // GridView with refreshGrid as a parameter
+                //GridView()
+                FoldersView(categories: FoldersManager.shared.folders, selectedCategory: $selectedCategory)
+
+               
+            case .magnifyingglass:
+                //SearchView()
+                WelcomePageSearch()
+            case .plus:
+                FoldersView(categories: FoldersManager.shared.folders)
+            case .person:
+                AccountView()
+            case .gearshape:
+                SettingsView()
+            }
             VStack{
                 
                 Spacer()
                 CustomTabBar(selectedTab: $tabSelected)
                     .padding(.bottom, -15)
-                 
+                
             }.ignoresSafeArea(.keyboard, edges: .bottom)
         }
+        
+        .onAppear {
+                    // Set selected category to "All Notes" when .house tab is selected
+                    if tabSelected == .house {
+                        selectedCategory = "All Notes"
+                    }
+                }
     }
 }
 
@@ -55,5 +66,5 @@ struct PostNotesTabView: View {
     PostNotesTabView()
         .previewInterfaceOrientation(.portrait)
 }
-       
+
 

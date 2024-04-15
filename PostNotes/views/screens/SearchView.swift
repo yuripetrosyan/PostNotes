@@ -30,6 +30,37 @@ struct  SearchView: View {
                     LazyVStack{
                         ForEach(chatMessages, id: \.id){
                             message in MessageView(message: message)
+                                .contextMenu{
+                                    Button {
+                                        
+                                    } label: {
+                                        Label("Favorite", systemImage: "heart")
+                                    }
+                                    Button{
+                                        
+                                    }  label: {
+                                        Label("Edit", systemImage: "pencil")}
+                                    Button {
+                                        
+                                    } label: {
+                                        Label("Share", systemImage: "square.and.arrow.up")
+                                    }
+                                    Divider()
+                                    
+                                    
+                                    Button(role: .destructive) {
+                                        
+                                        //      Delete note here
+                                        // context.delete(note)
+                                      //  chatMessages.remove(at: Int(UUID().uuidString) ?? 0)
+                                        
+                                        
+                                        
+                                    }
+                                label: {
+                                    Label("Delete", systemImage: "trash")}
+                                }
+                        
                             
                         }
                     }.padding(.top, 40)

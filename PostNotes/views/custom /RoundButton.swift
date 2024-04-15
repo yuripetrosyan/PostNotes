@@ -14,12 +14,7 @@ struct RoundButton: View {
     @State private var shadowOn = false
     var body: some View {
         
-        
-    
-            
-            
-            
-            Circle()
+        Circle()
                 .foregroundStyle(.ultraThinMaterial)
                 .frame(width: 60)
                 .clipShape(Circle())
