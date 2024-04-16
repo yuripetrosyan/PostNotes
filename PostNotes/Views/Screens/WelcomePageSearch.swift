@@ -30,14 +30,18 @@ struct WelcomePageSearch: View {
                  .padding(50)
             Spacer()
             
+            VStack{
+                
+                Spacer()
+            
             ZStack{
                 Image(.sun)
                 .resizable()
                 .frame(width: 320, height: 320)
-                .offset(y: 180)
+                .offset(y: 70)
 
-                  HStack{
-                        Spacer()
+                HStack{
+                 Spacer()
                         Text("Continue")
                             .font(.system(size: 19))
                             .fontWeight(.semibold)
@@ -50,12 +54,12 @@ struct WelcomePageSearch: View {
                     .padding()
                     .background(RoundedRectangle(cornerRadius: 25).foregroundStyle(.ultraThinMaterial))
                     .padding(.horizontal, 30)
-                    .offset(y: 30)
+                    
                     .onTapGesture {
                         sheetIsPresented.toggle()
                     }
-                 
-             }
+                }
+            }.frame(height: 100)
          }
     }.navigationBarBackButtonHidden()
   }

@@ -142,10 +142,11 @@ struct ChatView: View {
         
             .navigationBarBackButtonHidden()
         //}
-            .sheet(isPresented: $sheetisPresented, content: {
+            .fullScreenCover(isPresented: $sheetisPresented, content: {
             WelcomePageSearch(sheetIsPresented: $sheetisPresented)
                     .presentationBackgroundInteraction(.enabled)
                     .presentationBackground(.ultraThickMaterial)
+                    
             })
     
             .presentationBackgroundInteraction(.enabled)
