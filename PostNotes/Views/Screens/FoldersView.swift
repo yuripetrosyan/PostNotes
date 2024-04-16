@@ -5,7 +5,7 @@ struct FoldersView: View {
     
     var categories: [String]
     
-    @ObservedObject var folderManager = FoldersManager.shared
+    @ObservedObject var folderManager = FoldersViewModel.shared
     @State private var refreshID = UUID()
 
     
@@ -128,7 +128,7 @@ struct FoldersView: View {
     
     
     func deleteFolder(name: String) {
-        FoldersManager.shared.removeFolder(name: name)
+        FoldersViewModel.shared.removeFolder(name: name)
      //   refreshID = UUID() //Signal a change
     }
     

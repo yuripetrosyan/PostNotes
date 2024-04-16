@@ -2,8 +2,8 @@
 
 import Foundation
 
-class FoldersManager: ObservableObject {
-    static let shared = FoldersManager()
+class FoldersViewModel: ObservableObject {
+    static let shared = FoldersViewModel()
     
     // UserDefaults key for storing folder names
     private let foldersKey = "Folders"

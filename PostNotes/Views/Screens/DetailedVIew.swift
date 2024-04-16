@@ -61,7 +61,7 @@ struct DetailedVIew: View {
             .tint(.white)
             .onDisappear {
                 // Save changes when the view disappears
-                var updatedNote = item
+                let updatedNote = item
                 updatedNote.title = tempTitle
                 updatedNote.content = tempContent
                 updateNote(updatedNote)

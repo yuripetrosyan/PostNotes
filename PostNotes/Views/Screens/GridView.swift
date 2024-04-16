@@ -15,7 +15,7 @@ struct GridView: View {
     
     var category: String? // category optional
 
-    @ObservedObject var foldersManager = FoldersManager.shared
+    @ObservedObject var foldersManager = FoldersViewModel.shared
     @State var isShowingPopover = false
     @State var folderNameFilter: String? = nil
     @State var searchedText: String = ""

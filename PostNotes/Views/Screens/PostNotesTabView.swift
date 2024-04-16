@@ -30,14 +30,13 @@ struct PostNotesTabView: View {
             case .house:
                 // GridView with refreshGrid as a parameter
                 //GridView()
-                FoldersView(categories: FoldersManager.shared.folders, selectedCategory: $selectedCategory)
-
-               
+                FoldersView(categories: FoldersViewModel.shared.folders, selectedCategory: $selectedCategory)
             case .magnifyingglass:
                 //SearchView()
-                WelcomePageSearch()
+               ChatView()
+                    
             case .plus:
-                FoldersView(categories: FoldersManager.shared.folders)
+                FoldersView(categories: FoldersViewModel.shared.folders)
             case .person:
                 AccountView()
             case .gearshape:
