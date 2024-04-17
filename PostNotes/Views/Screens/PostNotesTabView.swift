@@ -33,8 +33,8 @@ struct PostNotesTabView: View {
                 FoldersView(categories: FoldersViewModel.shared.folders, selectedCategory: $selectedCategory)
             case .magnifyingglass:
                 //SearchView()
-               ChatView()
-                    
+                ChatView()
+                
             case .plus:
                 FoldersView(categories: FoldersViewModel.shared.folders)
             case .person:
@@ -42,15 +42,36 @@ struct PostNotesTabView: View {
             case .gearshape:
                 SettingsView()
             }
-            VStack{
+            
+            if tabSelected != .magnifyingglass{
+                VStack{
+                    
+                    Spacer()
+                    CustomTabBar(selectedTab: $tabSelected)
+                        .padding(.bottom, -15)
+                    
+                }.ignoresSafeArea(.keyboard, edges: .bottom)
+            }else{
+                VStack(alignment: .center){
+                    
+                    HStack(alignment: .center){
+                        Image(systemName: "chevron.left")
+                            .padding()
+                            .padding(.top, 25)
+                            .foregroundStyle(.white)
+                            .onTapGesture {
+                                tabSelected = .house
+                            }
+                        
+                        Spacer()
+                    }
+                  
+                    Spacer()
+                    
+                }
                 
-                Spacer()
-                CustomTabBar(selectedTab: $tabSelected)
-                    .padding(.bottom, -15)
-                
-            }.ignoresSafeArea(.keyboard, edges: .bottom)
+            }
         }
-        
         .onAppear {
                     // Set selected category to "All Notes" when .house tab is selected
                     if tabSelected == .house {

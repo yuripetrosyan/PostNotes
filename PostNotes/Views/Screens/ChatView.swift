@@ -51,12 +51,8 @@ struct ChatView: View {
                             .foregroundStyle(.white.opacity(0.6))
                         
                     })
-                    
-                    
-                    
-                    
-                    
                 }
+                .padding(.leading, 30)
                 .padding()
                 .offset(y: 30)
                 .frame(height: 150)
@@ -95,7 +91,7 @@ struct ChatView: View {
                     if chatMessages.count == 0{
                         VStack (spacing: 20){
                             
-                            Spacer()
+                           Spacer()
                             
                             SuggestionView(messageSent: $messageText, suggestionTitle: "Brainstorm names", suggestionContent: "for my fantasy football team with a frog theme")
                             SuggestionView(messageSent: $messageText, suggestionTitle: "Suggest some codenames", suggestionContent: "for a project introducing flexible work arrangements")
@@ -103,10 +99,11 @@ struct ChatView: View {
                             
                             Spacer()
                             
-                        }.onTapGesture {}
+                        }
                         
                     }
                 }
+                
                 Spacer()
                 
                 
@@ -114,6 +111,7 @@ struct ChatView: View {
                     
                     TextField("Ask anything", text: $messageText){
                         sendMessage()
+                        
                     }
                     .padding(10)
                     .lineLimit(5, reservesSpace: false)
@@ -132,7 +130,7 @@ struct ChatView: View {
                     
                     
                 }   .padding()
-                    .padding(.bottom, 70)
+                   // .padding(.bottom, 70)
             }           .edgesIgnoringSafeArea(.top)
             
             
@@ -141,7 +139,7 @@ struct ChatView: View {
         
         
             .navigationBarBackButtonHidden()
-        //}
+        
             .fullScreenCover(isPresented: $sheetisPresented, content: {
             WelcomePageSearch(sheetIsPresented: $sheetisPresented)
                     .presentationBackgroundInteraction(.enabled)
@@ -149,7 +147,6 @@ struct ChatView: View {
                     
             })
     
-            .presentationBackgroundInteraction(.enabled)
     }
     func sendMessage(){
         print(messageText)
@@ -164,7 +161,8 @@ struct ChatView: View {
 }
 
 #Preview {
-    ChatView()
+    //ChatView()
+    PostNotesTabView()
 }
 
 
