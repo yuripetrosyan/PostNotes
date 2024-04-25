@@ -10,8 +10,7 @@ import SwiftData
 
 @main
 struct PostNotesApp: App {
-    
-    
+  
     
     var body: some Scene {
         WindowGroup {

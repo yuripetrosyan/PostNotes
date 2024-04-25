@@ -77,3 +77,7 @@ struct DetailedVIew_Previews: PreviewProvider {
     }
 }
 
+
+//#Preview {
+//    DetailedVIew(item: .init(title: "Hi there", content: "This is the contnet", date: .now, category: "All"), updateNote: <#(Note) -> Void#>)
+//}

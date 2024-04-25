@@ -1,13 +1,13 @@
 {
-  "originHash" : "11b78eba97192d19796cff581fdf69b3e65b441188b1448a1b67e5d7b825a354",
+  "originHash" : "36ece777af2e1c0204ebe342a083c5b819ffeaa318585ae3e5d51c5424b43af4",
   "pins" : [
     {
-      "identity" : "alamofire",
+      "identity" : "glur",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Alamofire/Alamofire",
+      "location" : "https://github.com/joogps/Glur",
       "state" : {
-        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
-        "version" : "5.9.1"
+        "revision" : "9e00ff79da318f2c78b749b1027e54a9d4de2e33",
+        "version" : "1.0.4"
       }
     }
   ],
