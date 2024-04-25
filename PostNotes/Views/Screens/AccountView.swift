@@ -16,7 +16,7 @@ struct AccountView: View {
     @State private var glowIsOn = false
     @State private var username: String = ""
     @State private var password: String = ""
-     @State private var sheetIsOn = false
+    @State private var sheetIsOn = false
     
     var body: some View {
         NavigationStack{

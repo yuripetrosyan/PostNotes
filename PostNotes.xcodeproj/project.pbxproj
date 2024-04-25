@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920F43B82BDA658D0047680E /* Glur in Frameworks */ = {isa = PBXBuildFile; productRef = 920F43B72BDA658D0047680E /* Glur */; };
+		920F43C42BDA6F6B0047680E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920F43C32BDA6F6B0047680E /* KeychainHelper.swift */; };
 		921DE6FA2BC9641200B7C007 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE6F92BC9641200B7C007 /* MessageModel.swift */; };
 		921DE6FC2BC964FD00B7C007 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE6FB2BC964FD00B7C007 /* Constants.swift */; };
 		921DE6FE2BC965AD00B7C007 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE6FD2BC965AD00B7C007 /* MessageView.swift */; };
@@ -77,6 +79,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		920F43C32BDA6F6B0047680E /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		92166DCA2BC1D11F0027511B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		92166DCC2BC1D11F0027511B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		921DE6F92BC9641200B7C007 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
@@ -142,6 +145,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				920F43B82BDA658D0047680E /* Glur in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -336,6 +340,7 @@
 			isa = PBXGroup;
 			children = (
 				921DE6FB2BC964FD00B7C007 /* Constants.swift */,
+				920F43C32BDA6F6B0047680E /* KeychainHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -357,6 +362,9 @@
 			dependencies = (
 			);
 			name = PostNotes;
+			packageProductDependencies = (
+				920F43B72BDA658D0047680E /* Glur */,
+			);
 			productName = PostNotes;
 			productReference = 925FF0192BAF6ABD00F8EE87 /* PostNotes.app */;
 			productType = "com.apple.product-type.application";
@@ -385,6 +393,9 @@
 				Base,
 			);
 			mainGroup = 925FF0102BAF6ABD00F8EE87;
+			packageReferences = (
+				920F43B62BDA658C0047680E /* XCRemoteSwiftPackageReference "Glur" */,
+			);
 			productRefGroup = 925FF01A2BAF6ABD00F8EE87 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -447,6 +458,7 @@
 				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
 				921DE6FE2BC965AD00B7C007 /* MessageView.swift in Sources */,
 				92CC639E2BC547E300D53101 /* FlatGlassView.swift in Sources */,
+				920F43C42BDA6F6B0047680E /* KeychainHelper.swift in Sources */,
 				92C877D82BB442A2000E9BBB /* CustomNotepadWide.swift in Sources */,
 				92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */,
 				921DE6FA2BC9641200B7C007 /* MessageModel.swift in Sources */,
@@ -593,6 +605,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PostNotes/PostNotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PostNotes/Preview Content\"";
@@ -625,6 +638,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = PostNotes/PostNotes.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"PostNotes/Preview Content\"";
@@ -674,6 +688,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		920F43B62BDA658C0047680E /* XCRemoteSwiftPackageReference "Glur" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/joogps/Glur";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.4;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		920F43B72BDA658D0047680E /* Glur */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 920F43B62BDA658C0047680E /* XCRemoteSwiftPackageReference "Glur" */;
+			productName = Glur;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 925FF0112BAF6ABD00F8EE87 /* Project object */;
 }
