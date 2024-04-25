@@ -22,6 +22,9 @@ struct GridView: View {
     @State private var showingConfirmation = false
 
     
+    
+   
+    
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -73,10 +76,7 @@ struct GridView: View {
                                                     Label("Share", systemImage: "square.and.arrow.up")
                                                 }
                                                 Divider()
-                                                
-                                                
                                                 Button(role: .destructive) {
-                                                    
                                                     //      Delete note here
                                                         context.delete(note)
                                                    

@@ -7,11 +7,8 @@ struct FoldersView: View {
     
     @ObservedObject var folderManager = FoldersViewModel.shared
     @State private var refreshID = UUID()
-
-    
     @Binding var selectedCategory: String? // Binding for selected category
     @State private var isShowingFolderPopover = false
-    
     @Query(sort: \Note.date, order: .reverse) var items: [Note]
     var category: String? // category optional
     

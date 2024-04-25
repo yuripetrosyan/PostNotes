@@ -132,7 +132,9 @@ struct ChatView: View {
                 }   .padding()
                    // .padding(.bottom, 70)
             }           .edgesIgnoringSafeArea(.top)
-            
+            .onAppear {
+                    loadAndSaveAPIKey()
+                  }
             
             
                 .tint(.brandSecondary)
@@ -161,8 +163,8 @@ struct ChatView: View {
 }
 
 #Preview {
-    //ChatView()
-    PostNotesTabView()
+    ChatView()
+   // PostNotesTabView()
 }
 
 

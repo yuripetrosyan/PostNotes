@@ -22,7 +22,11 @@ struct PostNotesTabView: View {
         
     }
     
+    
+    
     var body: some View {
+        
+        
         ZStack{
             Spacer()
             // Based on the selected tab, display the corresponding view

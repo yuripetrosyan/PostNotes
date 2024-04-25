@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Glur
 
 struct SettingsView: View {
     @ObservedObject var settingsViewModel = SettingsViewModel()
@@ -13,21 +14,27 @@ struct SettingsView: View {
   //  @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
-            Form{
-                Section(header: Text("Appearance")) {
-                    Picker("Theme", selection: $settingsViewModel.selectedTheme) {
-                        ForEach(SettingsViewModel.Theme.allCases) { theme in
-                            Text(theme.rawValue).tag(theme)
-                        }
-                    }
-                    .onChange(of: settingsViewModel.selectedTheme) { _ in
-                        settingsViewModel.saveThemePreference()
-                    }
-                }
-                                
-            }
         
-    
+        ZStack(alignment: .topTrailing){
+            Image(._030Da420F864A1Cf5C1Bfe2B6B7754B3)
+                .resizable()
+                .frame(width: 200, height: 200)
+                .glur(radius: 1)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+            
+            HStack{
+                Spacer()
+                Text(Date().formatted(.dateTime.month().day()))
+               
+            }
+            
+            .foregroundColor(.white)
+            .font(.headline)
+            .padding()
+            
+           
+            
+        }.frame(width: 200, height: 200)
         
     }
 }
