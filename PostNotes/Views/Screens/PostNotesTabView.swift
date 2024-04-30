@@ -35,7 +35,7 @@ struct PostNotesTabView: View {
                 // GridView with refreshGrid as a parameter
                 //GridView()
                 FoldersView(categories: FoldersViewModel.shared.folders, selectedCategory: $selectedCategory)
-            case .magnifyingglass:
+            case .messageAI:
                 //SearchView()
                 ChatView()
                 
@@ -47,7 +47,7 @@ struct PostNotesTabView: View {
                 SettingsView()
             }
             
-            if tabSelected != .magnifyingglass{
+            if tabSelected != .messageAI{
                 VStack{
                     
                     Spacer()
