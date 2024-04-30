@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-import Glur
 
 struct SettingsView: View {
     @ObservedObject var settingsViewModel = SettingsViewModel()
@@ -19,7 +18,6 @@ struct SettingsView: View {
             Image(._030Da420F864A1Cf5C1Bfe2B6B7754B3)
                 .resizable()
                 .frame(width: 200, height: 200)
-                .glur(radius: 1)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
             
             HStack{
