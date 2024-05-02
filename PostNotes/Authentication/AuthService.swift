@@ -6,3 +6,17 @@
 //
 
 import Foundation
+import FirebaseFirestore
+import FirebaseAuth
+
+class AuthService {
+    
+    func checkUserExists() {
+        
+    }
+    
+    func login() {
+        
+    }
+    
+}

@@ -11,9 +11,7 @@ import SwiftUI
 
 struct AuthView: View {
     
-    //fun animations
-    @State private var emailText: String = ""
-    @State private var password: String = ""
+    @ObservedObject var viewModel: AuthViewModel = AuthViewModel()
     //@State private var sheetIsOn = false
     
     var body: some View {
@@ -34,27 +32,25 @@ struct AuthView: View {
                
                 CustomTextField()
                     .overlay{
-                        TextField("Email", text: $emailText)
+                        TextField("Email", text: $viewModel.emailText)
                             .textContentType(.username)
-                            .autocapitalization(.none)
+                            .textInputAutocapitalization(.never)
                             .padding(.horizontal)
                             .padding(.top, 10)
                     }
                 CustomTextField()
                     .overlay{
-                        SecureField("password", text: $password)
+                        SecureField("password", text: $viewModel.passwordText)
                             .textContentType(.password)
-                            .autocapitalization(.none)
+                            .textInputAutocapitalization(.never)
                             .padding(.horizontal)
                             .padding(.top, 10)
                     }
                 
                 Button(action: {
+                    viewModel.authenticate()
                     
-                    
-                },
-                       
-                       label: {
+                },label: {
                     Text("Sign in")
                         .fontWeight(.semibold)
                         .foregroundColor(.primary1)
