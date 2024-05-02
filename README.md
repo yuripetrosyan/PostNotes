@@ -1,4 +1,4 @@
-**PostNotes** is a note taking app that will let users use ai to make notes.
+**PostNotes** is a note taking app that lets users use ai to take notes.
 
 Notes have minimalistic and retro design resembling real life notepads.
 
