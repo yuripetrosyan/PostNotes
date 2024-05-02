@@ -109,9 +109,11 @@ struct FoldersView: View {
                     }
                 }
                 if isShowingFolderPopover{
-                    AddFolderPopover(isShowingFolderPopover: $isShowingFolderPopover, onSave: {
-                        updateFolders()
-                    })
+                    withAnimation(Animation.smooth){
+                        AddFolderPopover(isShowingFolderPopover: $isShowingFolderPopover, onSave: {
+                            updateFolders()
+                        })
+                    }
                 }
             }
         }//.navigationBarBackButtonHidden()
@@ -133,8 +135,6 @@ struct FoldersView: View {
 
 struct CustomFolderCell: View {
     var name: String
-    
-    
     var body: some View {
         HStack {
             ZStack {
@@ -157,6 +157,8 @@ struct CustomFolderCell: View {
         //  .background(.red)
         .frame(width: 310 ,height: 40)
         .shadow(radius: 5, x: 3, y: 5)
+      
+        
     }
 }
 

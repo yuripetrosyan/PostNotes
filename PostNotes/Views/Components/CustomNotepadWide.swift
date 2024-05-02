@@ -87,6 +87,7 @@ struct AddFolderPopover: View {
             
             
         }.frame(width: 270, height: 230)
+          
     }
 }
 
@@ -95,6 +96,6 @@ struct AddFolderPopover: View {
 
 #Preview {
    // CustomNotepadWide()
-    //AddFolderPopover(isShowingFolderPopover: .constant(true))
+//    AddFolderPopover(isShowingFolderPopover: .constant(true), onSave: <#() -> Void#>)
     CustomNotepadWideLonger()
 }
