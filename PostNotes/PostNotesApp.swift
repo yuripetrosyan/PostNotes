@@ -11,20 +11,27 @@ import SwiftData
 @main
 struct PostNotesApp: App {
   
+    @ObservedObject var appState: AppState = AppState()
     
     var body: some Scene {
+        
+        
         WindowGroup {
-            PostNotesTabView()
-                .environmentObject(FoldersViewModel.shared)
-            
+            if appState.isLoggedIn{
+                PostNotesTabView()
+                    .environmentObject(FoldersViewModel.shared)
+            }else {
+                AuthView()
+                    .environmentObject(appState)
+            }
         }
         .modelContainer(for: [Note.self])
     }
     
     
-    init() {
+   // init() {
        // print(URL.applicationSupportDirectory.path(percentEncoded: false))
-    }
+    //}
 }
 
 #Preview{
