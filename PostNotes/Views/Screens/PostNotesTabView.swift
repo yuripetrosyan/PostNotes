@@ -37,7 +37,8 @@ struct PostNotesTabView: View {
                 FoldersView(categories: FoldersViewModel.shared.folders, selectedCategory: $selectedCategory)
             case .messageAI:
                 //SearchView()
-                ChatView()
+                //ChatView()
+                ChatListView()
                 
             case .plus:
                 FoldersView(categories: FoldersViewModel.shared.folders)
@@ -47,7 +48,10 @@ struct PostNotesTabView: View {
                 SettingsView()
             }
             
-            if tabSelected != .messageAI{
+            
+            //Use this to hide tabbar while in chat with ai
+            
+          //  if tabSelected != .messageAI{
                 VStack{
                     
                     Spacer()
@@ -55,26 +59,26 @@ struct PostNotesTabView: View {
                         .padding(.bottom, -15)
                     
                 }.ignoresSafeArea(.keyboard, edges: .bottom)
-            }else{
-                VStack(alignment: .center){
-                    
-                    HStack(alignment: .center){
-                        Image(systemName: "chevron.left")
-                            .padding()
-                            .padding(.top, 25)
-                            .foregroundStyle(.white)
-                            .onTapGesture {
-                                tabSelected = .house
-                            }
-                        
-                        Spacer()
-                    }
-                  
-                    Spacer()
-                    
-                }
-                
-            }
+//            }else{
+//                VStack(alignment: .center){
+//                    
+//                    HStack(alignment: .center){
+//                        Image(systemName: "chevron.left")
+//                            .padding()
+//                            .padding(.top, 25)
+//                            .foregroundStyle(.white)
+//                            .onTapGesture {
+//                                tabSelected = .house
+//                            }
+//                        
+//                        Spacer()
+//                    }
+//                  
+//                    Spacer()
+//                    
+//                }
+//                
+//            }
         }
         .onAppear {
                     // Set selected category to "All Notes" when .house tab is selected

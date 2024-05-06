@@ -16,6 +16,8 @@
 		921341E52BE431CD00B92692 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 921341E42BE431CD00B92692 /* FirebaseFirestore */; };
 		921341E72BE431CD00B92692 /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 921341E62BE431CD00B92692 /* FirebaseFirestoreSwift */; };
 		921341E92BE5183500B92692 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921341E82BE5183500B92692 /* AppState.swift */; };
+		921341EC2BE958C000B92692 /* ChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921341EB2BE958C000B92692 /* ChatListView.swift */; };
+		921341EE2BE958CB00B92692 /* ChatListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921341ED2BE958CB00B92692 /* ChatListViewModel.swift */; };
 		921DE6FA2BC9641200B7C007 /* MessageModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE6F92BC9641200B7C007 /* MessageModel.swift */; };
 		921DE6FC2BC964FD00B7C007 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE6FB2BC964FD00B7C007 /* Constants.swift */; };
 		921DE6FE2BC965AD00B7C007 /* MessageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE6FD2BC965AD00B7C007 /* MessageView.swift */; };
@@ -92,6 +94,8 @@
 		921341DC2BE4274B00B92692 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		921341DF2BE42C1200B92692 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		921341E82BE5183500B92692 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
+		921341EB2BE958C000B92692 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
+		921341ED2BE958CB00B92692 /* ChatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
 		92166DCA2BC1D11F0027511B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		92166DCC2BC1D11F0027511B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		921DE6F92BC9641200B7C007 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
@@ -174,6 +178,15 @@
 				921341DC2BE4274B00B92692 /* AuthService.swift */,
 			);
 			path = Authentication;
+			sourceTree = "<group>";
+		};
+		921341EA2BE958AB00B92692 /* ChatList */ = {
+			isa = PBXGroup;
+			children = (
+				921341EB2BE958C000B92692 /* ChatListView.swift */,
+				921341ED2BE958CB00B92692 /* ChatListViewModel.swift */,
+			);
+			path = ChatList;
 			sourceTree = "<group>";
 		};
 		92166DC92BC1D11F0027511B /* Frameworks */ = {
@@ -267,9 +280,10 @@
 			children = (
 				9257981E2BB2195400254FB4 /* PostNotesApp.swift */,
 				921341E82BE5183500B92692 /* AppState.swift */,
-				921341DE2BE4276A00B92692 /* Authentication */,
+				921341EA2BE958AB00B92692 /* ChatList */,
 				92C973432BB09DF60080C2C0 /* Views */,
 				92C973442BB09E160080C2C0 /* Model */,
+				921341DE2BE4276A00B92692 /* Authentication */,
 				926705012BCD61AD00372250 /* ViewModel */,
 				92C973452BB09E210080C2C0 /* Utilities */,
 				925FF02B2BAF6AD300F8EE87 /* Extras */,
@@ -482,6 +496,7 @@
 				92CF50A32BBDB5BD00BC2A49 /* NoteModel.swift in Sources */,
 				926705032BCD621600372250 /* SettingsViewModel.swift in Sources */,
 				923551D52BC5AC8000E10EB3 /* FolderViewModel.swift in Sources */,
+				921341EE2BE958CB00B92692 /* ChatListViewModel.swift in Sources */,
 				92C877DA2BB445B1000E9BBB /* CustomNotepadPopover.swift in Sources */,
 				926705072BCDE32400372250 /* MessageStore.swift in Sources */,
 				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
@@ -507,6 +522,7 @@
 				921341DD2BE4274B00B92692 /* AuthService.swift in Sources */,
 				921DE72F2BC9DA0300B7C007 /* WelcomePageSearch.swift in Sources */,
 				9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */,
+				921341EC2BE958C000B92692 /* ChatListView.swift in Sources */,
 				925FF03A2BAF709600F8EE87 /* CutomNotepad.swift in Sources */,
 				925FF0332BAF6B5B00F8EE87 /* CustiomGridtem.swift in Sources */,
 				921DE6FC2BC964FD00B7C007 /* Constants.swift in Sources */,
