@@ -12,8 +12,6 @@ struct FoldersView: View {
     @Query(sort: \Note.date, order: .reverse) var items: [Note]
     var category: String? // category optional
     
-    
-    
     init(categories: [String], selectedCategory: Binding<String?> = .constant(nil)) {
         self.categories = categories
         self._selectedCategory = selectedCategory
@@ -22,6 +20,7 @@ struct FoldersView: View {
     var body: some View {
         NavigationView {
             ZStack {
+                
                 VStack {
                     
                     
@@ -108,6 +107,11 @@ struct FoldersView: View {
                         
                     }
                 }
+                
+                Color(.white)
+                        .ignoresSafeArea()
+                        .opacity(isShowingFolderPopover ? 0.7 : 0)
+                
                 if isShowingFolderPopover{
                     withAnimation(Animation.smooth){
                         AddFolderPopover(isShowingFolderPopover: $isShowingFolderPopover, onSave: {
@@ -115,6 +119,8 @@ struct FoldersView: View {
                         })
                     }
                 }
+              
+
             }
         }//.navigationBarBackButtonHidden()
         
