@@ -48,8 +48,14 @@ struct ChatListView: View {
                                 
                             }
                             
-                            
-                            
+                        }
+                        .swipeActions {
+                            Button(role: .destructive) {
+                                viewModel.deleteChate(chat: chat)
+                            } label: {
+                                Label("Delete", systemImage: "trash.fill")
+                            }
+
                         }
                     }
                 }// .scrollContentBackground(.hidden)
@@ -62,7 +68,7 @@ struct ChatListView: View {
         .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    //action here
+                    viewModel.showProfile()
                 } label: {
                     Image(systemName: "person")
                 }
@@ -70,7 +76,7 @@ struct ChatListView: View {
             }
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
-                    //action here
+                    viewModel.createChat()
                 } label: {
                     Image(systemName: "plus")
                 }

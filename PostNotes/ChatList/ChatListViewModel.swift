@@ -12,7 +12,7 @@ class ChatListViewModel: ObservableObject {
     
     @Published var chats: [AppChat] = []
     @Published var loadingState: ChatListState = .none
-    
+    @Published var isShowingProfileView = false
     func fetchData(){
         self.chats = [
             AppChat(id: "1", topic: "Topic", model: .gpt3_5_turbo, lastMessageSent: Date(), owner: "123"),
@@ -21,6 +21,18 @@ class ChatListViewModel: ObservableObject {
             AppChat(id: "4", topic: "Health", model: .gpt4, lastMessageSent: Date(), owner: "1423")
         ]
         self.loadingState = .resultsFound
+    }
+    
+    func createChat(){
+        
+    }
+    
+    func showProfile(){
+        isShowingProfileView = true
+    }
+    
+    func deleteChate(chat: AppChat){
+       
     }
     
 }
