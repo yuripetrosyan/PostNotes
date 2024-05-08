@@ -17,12 +17,14 @@ struct PostNotesApp: App {
         
         
         WindowGroup {
-            if appState.isLoggedIn{
-                PostNotesTabView()
-                    .environmentObject(FoldersViewModel.shared)
-            }else {
-                AuthView()
-                    .environmentObject(appState)
+            NavigationStack(path: $appState.navigationPath) {
+                if appState.isLoggedIn {
+                    PostNotesTabView()
+                        .environmentObject(appState)
+                } else {
+                    AuthView()
+                        .environmentObject(appState)
+                }
             }
         }
         .modelContainer(for: [Note.self])

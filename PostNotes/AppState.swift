@@ -13,6 +13,7 @@ import Firebase
 class AppState: ObservableObject {
 
     @Published var currentUser: User?
+    @Published var navigationPath = NavigationPath()
     
     var isLoggedIn: Bool {
         return currentUser != nil
@@ -25,5 +26,7 @@ class AppState: ObservableObject {
         }
        
     }
+    
+    
 }
 

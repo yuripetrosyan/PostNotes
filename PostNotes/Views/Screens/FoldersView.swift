@@ -20,11 +20,7 @@ struct FoldersView: View {
     var body: some View {
         NavigationView {
             ZStack {
-                
                 VStack {
-                    
-                    
-                    
                     ScrollView(.horizontal) {
                         LazyHStack {
                             
@@ -59,10 +55,7 @@ struct FoldersView: View {
                         
                         
                         List {
-                            
-                            
-                            
-                            Section(header: Text("Notes on the phone")) {
+                             Section(header: Text("Notes on the phone")) {
                                 ForEach(categories, id: \.self) { category in
                                     NavigationLink(destination: GridView(category: category)) {
                                         CustomFolderCell(name: category)
@@ -95,7 +88,22 @@ struct FoldersView: View {
                 
                 
                 
-                .navigationTitle("Folders").navigationBarTitleDisplayMode(.inline)
+                
+                
+                Color(.white)
+                        .ignoresSafeArea()
+                        .opacity(isShowingFolderPopover ? 0.7 : 0)
+                
+                if isShowingFolderPopover{
+                    withAnimation(Animation.smooth){
+                        AddFolderPopover(isShowingFolderPopover: $isShowingFolderPopover, onSave: {
+                            updateFolders()
+                        })
+                   }
+                }
+              
+
+            }.navigationTitle("Folders").navigationBarTitleDisplayMode(.inline)
                 .toolbar{
                     ToolbarItem(placement: .topBarTrailing){
                         Image(systemName: "folder.badge.plus")
@@ -107,21 +115,6 @@ struct FoldersView: View {
                         
                     }
                 }
-                
-                Color(.white)
-                        .ignoresSafeArea()
-                        .opacity(isShowingFolderPopover ? 0.7 : 0)
-                
-                if isShowingFolderPopover{
-                    withAnimation(Animation.smooth){
-                        AddFolderPopover(isShowingFolderPopover: $isShowingFolderPopover, onSave: {
-                            updateFolders()
-                        })
-                    }
-                }
-              
-
-            }
         }//.navigationBarBackButtonHidden()
         
         
@@ -160,8 +153,11 @@ struct CustomFolderCell: View {
             // .padding(.trailing, -30)
             Spacer()
         }
+        
+       // .frame(width: 320 ,height: 60)
+        .padding(-10)
         //  .background(.red)
-        .frame(width: 310 ,height: 40)
+      //  .frame(width: 310 ,height: 40)
         .shadow(radius: 5, x: 3, y: 5)
       
         

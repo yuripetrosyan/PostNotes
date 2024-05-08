@@ -33,8 +33,8 @@ struct PostNotesTabView: View {
             switch tabSelected {
             case .house:
                 // GridView with refreshGrid as a parameter
-                //GridView()
-                FoldersView(categories: FoldersViewModel.shared.folders, selectedCategory: $selectedCategory)
+                GridView()
+                //FoldersView(categories: FoldersViewModel.shared.folders, selectedCategory: $selectedCategory)
             case .messageAI:
                 //SearchView()
                 //ChatView()
@@ -49,8 +49,7 @@ struct PostNotesTabView: View {
             }
             
             
-            //Use this to hide tabbar while in chat with ai
-            
+        //Use this to hide tabbar while in chat with ai
           //  if tabSelected != .messageAI{
                 VStack{
                     

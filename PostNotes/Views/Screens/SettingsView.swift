@@ -14,25 +14,23 @@ struct SettingsView: View {
     
     var body: some View {
         
-        ZStack(alignment: .topTrailing){
-            Image(._030Da420F864A1Cf5C1Bfe2B6B7754B3)
-                .resizable()
-                .frame(width: 200, height: 200)
-                .clipShape(RoundedRectangle(cornerRadius: 20))
+        VStack{
+          
             
-            HStack{
-                Spacer()
-                Text(Date().formatted(.dateTime.month().day()))
-               
-            }
-            
-            .foregroundColor(.white)
-            .font(.headline)
+
+            Button(action: {
+                
+                
+            }, label: {
+                Text("Logout")
+                    .font(.headline)
+                    .foregroundStyle(.brandSecondary)
+            })
             .padding()
+            .background(.brandPrimary)
+            .clipShape(Capsule(style: .continuous))
             
-           
-            
-        }.frame(width: 200, height: 200)
+        }
         
     }
 }

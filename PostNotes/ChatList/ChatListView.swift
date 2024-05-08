@@ -11,7 +11,6 @@ struct ChatListView: View {
     @StateObject var viewModel = ChatListViewModel()
     
     var body: some View {
-        
         Group{
             //3 loading states
             switch viewModel.loadingState {
@@ -19,7 +18,7 @@ struct ChatListView: View {
             case .loading, .none:
                 VStack{
                     ProgressView()
-                    Text("Loadingn your chats...")
+                    Text("Loading your chats...")
                         .padding(.top, 20)
                 }
                 //case with no chats
@@ -37,22 +36,62 @@ struct ChatListView: View {
                                     Spacer()
                                     Text(chat.model?.rawValue ?? "")
                                         .font(.caption2)
+                                        .fontWeight(.semibold)
+                                        .foregroundStyle(chat.model?.tintColor ?? .white)
+                                        .padding(6)
+                                        .background((chat.model?.tintColor ?? .white).opacity(0.1))
+                                        .clipShape(Capsule(style: .continuous))
                                 }
+                                Text(chat.lastMessageTimeAgo)
+                                    .font(.caption)
+                                    .foregroundStyle(.gray)
+                                
                             }
+                            
+                            
+                            
                         }
-                        
                     }
-                }
+                }// .scrollContentBackground(.hidden)
+                // .listRowSeparator(.hidden)
+                .listRowSpacing(5)
             }
             
-        }.onAppear{
+        }
+        .navigationTitle("Chats")
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    //action here
+                } label: {
+                    Image(systemName: "person")
+                }
+                
+            }
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    //action here
+                } label: {
+                    Image(systemName: "plus")
+                }
+                
+            }
+        })
+        .onAppear{
             if viewModel.loadingState == .none{
                 viewModel.fetchData()
+                
+                
             }
         }
+        
     }
 }
 
 #Preview {
     ChatListView()
 }
+
+
+
+
