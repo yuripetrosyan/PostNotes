@@ -16,7 +16,12 @@ struct AuthView: View {
     @EnvironmentObject var appState: AppState
     
     var body: some View {
-        
+        ZStack{
+            Image(.backgroundPhoto)
+                .resizable()
+                .ignoresSafeArea()
+                .aspectRatio(contentMode: .fill)
+               
         
         VStack{
             HStack {
@@ -76,14 +81,14 @@ struct AuthView: View {
             //                HStack(spacing: 5){
             //                    Text("No account?")
             //                        .font(.footnote)
-            //                    
+            //
             //                        Text("Create one!")
             //                            .fontWeight(.semibold)
             //                            .font(.footnote)
             //                            .onTapGesture {
             //                                withAnimation(Animation.smooth){
             //                                    sheetIsOn.toggle()
-            //                                        
+            //
             //                                }
             //                            }
             //                    }
@@ -92,6 +97,8 @@ struct AuthView: View {
         }
         .padding(.top, 40)
         .padding(.horizontal)
+        
+    }
         
         
         //            if sheetIsOn{

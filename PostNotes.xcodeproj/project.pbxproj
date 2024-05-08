@@ -324,10 +324,10 @@
 				925798202BB21D1D00254FB4 /* RoundButton.swift */,
 				92C0D2942BC095E300CBD080 /* firstNoteAdd.swift */,
 				92C0D2B52BC1B5D400CBD080 /* SearchBar.swift */,
-				923551D22BC54C6C00E10EB3 /* SignUpView.swift */,
-				92CC639D2BC547E300D53101 /* FlatGlassView.swift */,
 				92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */,
 				921DE6FD2BC965AD00B7C007 /* MessageView.swift */,
+				923551D22BC54C6C00E10EB3 /* SignUpView.swift */,
+				92CC639D2BC547E300D53101 /* FlatGlassView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";

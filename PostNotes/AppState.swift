@@ -27,6 +27,15 @@ class AppState: ObservableObject {
        
     }
     
-    
+    func logout() {
+          do {
+              try Auth.auth().signOut()
+              currentUser = nil
+              navigationPath = NavigationPath() // Reset the navigation stack
+          } catch {
+              print("Logout Error: ", error)
+
+          }
+      }
 }
 

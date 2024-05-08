@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SettingsView: View {
     @ObservedObject var settingsViewModel = SettingsViewModel()
+    @EnvironmentObject var appState: AppState
 
   //  @Environment(\.colorScheme) var colorScheme
     
@@ -19,8 +20,7 @@ struct SettingsView: View {
             
 
             Button(action: {
-                
-                
+                appState.logout()
             }, label: {
                 Text("Logout")
                     .font(.headline)
