@@ -45,7 +45,7 @@
 		921DE72B2BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7142BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf */; };
 		921DE72C2BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */; };
 		921DE72F2BC9DA0300B7C007 /* WelcomePageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE72E2BC9DA0300B7C007 /* WelcomePageSearch.swift */; };
-		921DE7312BC9DF6800B7C007 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE7302BC9DF6800B7C007 /* ChatView.swift */; };
+		921DE7312BC9DF6800B7C007 /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE7302BC9DF6800B7C007 /* ChatsView.swift */; };
 		923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D22BC54C6C00E10EB3 /* SignUpView.swift */; };
 		923551D52BC5AC8000E10EB3 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */; };
 		9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257981E2BB2195400254FB4 /* PostNotesApp.swift */; };
@@ -73,6 +73,9 @@
 		92C973502BB0A3870080C2C0 /* ARCADECLASSIC.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */; };
 		92CC639E2BC547E300D53101 /* FlatGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC639D2BC547E300D53101 /* FlatGlassView.swift */; };
 		92CF50A32BBDB5BD00BC2A49 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CF50A22BBDB5BD00BC2A49 /* NoteModel.swift */; };
+		92FC18C32BED0DAD0091469C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FC18C22BED0DAD0091469C /* ChatView.swift */; };
+		92FC18C62BED0DD40091469C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FC18C52BED0DD40091469C /* ProfileView.swift */; };
+		92FC18C82BED0E470091469C /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FC18C72BED0E470091469C /* ChatViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -126,7 +129,7 @@
 		921DE7142BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		921DE72E2BC9DA0300B7C007 /* WelcomePageSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageSearch.swift; sourceTree = "<group>"; };
-		921DE7302BC9DF6800B7C007 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		921DE7302BC9DF6800B7C007 /* ChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
 		923551D22BC54C6C00E10EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
@@ -156,6 +159,9 @@
 		92C973512BB0A41C0080C2C0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		92CC639D2BC547E300D53101 /* FlatGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatGlassView.swift; sourceTree = "<group>"; };
 		92CF50A22BBDB5BD00BC2A49 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		92FC18C22BED0DAD0091469C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
+		92FC18C52BED0DD40091469C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		92FC18C72BED0E470091469C /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,7 +255,7 @@
 			isa = PBXGroup;
 			children = (
 				921DE72E2BC9DA0300B7C007 /* WelcomePageSearch.swift */,
-				921DE7302BC9DF6800B7C007 /* ChatView.swift */,
+				921DE7302BC9DF6800B7C007 /* ChatsView.swift */,
 			);
 			name = "AI Chat";
 			sourceTree = "<group>";
@@ -290,6 +296,8 @@
 			children = (
 				9257981E2BB2195400254FB4 /* PostNotesApp.swift */,
 				921341E82BE5183500B92692 /* AppState.swift */,
+				92FC18C42BED0DBB0091469C /* Profile */,
+				92FC18C12BED0D9A0091469C /* Chat */,
 				921341EA2BE958AB00B92692 /* ChatList */,
 				92C973432BB09DF60080C2C0 /* Views */,
 				92C973442BB09E160080C2C0 /* Model */,
@@ -397,6 +405,23 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		92FC18C12BED0D9A0091469C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				92FC18C22BED0DAD0091469C /* ChatView.swift */,
+				92FC18C72BED0E470091469C /* ChatViewModel.swift */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		92FC18C42BED0DBB0091469C /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				92FC18C52BED0DD40091469C /* ProfileView.swift */,
+			);
+			path = Profile;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -501,6 +526,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				92FC18C32BED0DAD0091469C /* ChatView.swift in Sources */,
+				92FC18C62BED0DD40091469C /* ProfileView.swift in Sources */,
 				923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */,
 				925FF0352BAF6B9300F8EE87 /* CustomTextField.swift in Sources */,
 				92C0D2B42BC1AD9700CBD080 /* TriangleLoader.swift in Sources */,
@@ -517,6 +544,7 @@
 				921DE6FE2BC965AD00B7C007 /* MessageView.swift in Sources */,
 				921341DB2BE4273900B92692 /* AuthViewModel.swift in Sources */,
 				92CC639E2BC547E300D53101 /* FlatGlassView.swift in Sources */,
+				92FC18C82BED0E470091469C /* ChatViewModel.swift in Sources */,
 				920F43C42BDA6F6B0047680E /* KeychainHelper.swift in Sources */,
 				92C877D82BB442A2000E9BBB /* CustomNotepadWide.swift in Sources */,
 				92C9734B2BB09ECA0080C2C0 /* DetailedVIew.swift in Sources */,
@@ -528,7 +556,7 @@
 				926812592BB0DD140048822D /* SettingsView.swift in Sources */,
 				921341E92BE5183500B92692 /* AppState.swift in Sources */,
 				92C0D2B62BC1B5D400CBD080 /* SearchBar.swift in Sources */,
-				921DE7312BC9DF6800B7C007 /* ChatView.swift in Sources */,
+				921DE7312BC9DF6800B7C007 /* ChatsView.swift in Sources */,
 				925FF02D2BAF6AE800F8EE87 /* GridView.swift in Sources */,
 				92C0D2952BC095E300CBD080 /* firstNoteAdd.swift in Sources */,
 				921341DD2BE4274B00B92692 /* AuthService.swift in Sources */,

@@ -83,6 +83,12 @@ struct ChatListView: View {
                 
             }
         })
+        .sheet(isPresented: $viewModel.isShowingProfileView, content: {
+            ProfileView()
+        })
+        .navigationDestination(for: String.self, destination: { chatId in
+            ChatView(viewModel: .init(chatId: chatId))
+        })
         .onAppear{
             if viewModel.loadingState == .none{
                 viewModel.fetchData()
