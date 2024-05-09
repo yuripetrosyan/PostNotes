@@ -25,15 +25,21 @@ struct AuthView: View {
         
         VStack{
             HStack {
-                Text("PostNotes")
-                // .font(.custom("Urbanist", size: 36))
-                    .font(.custom("ARCADECLASSIC", size: 36))
-                    .fontDesign(.serif)
-                    .fontWeight(.semibold)
+                
+                    DefaultAnimationAnimationModifier()
+                  
+//                Text("PostNotes")
+//                // .font(.custom("Urbanist", size: 36))
+//                    .font(.system(size: 36))
+//                    .fontDesign(.serif)
+//                    .fontWeight(.semibold)
+
                 Text("Ai")
                     .font(.custom("ARCADECLASSIC", size: 20))
                 
-            }
+            }  .padding(.bottom, 20)
+            
+            
             
             
             CustomTextField()
@@ -54,6 +60,23 @@ struct AuthView: View {
                             .padding(.horizontal)
                             .padding(.top, 10)
                     }
+                
+                
+            }else{
+//                Button(action: {
+//                    viewModel.authenticate(appState: appState)
+//                    
+//                },label: {
+//                    Image(systemName: "arrow.right")
+//                        .fontWeight(.semibold)
+//                        .foregroundColor(.primary1)
+//                        .padding()
+//                        .frame(width: 50, height:  50)
+//                        .background(Color.brandPrimary)
+//                        .cornerRadius(30)
+//                        .padding(.horizontal)
+//                        .shadow(radius: 5, x: 3, y: 3)
+//                }).padding()
             }
             
             

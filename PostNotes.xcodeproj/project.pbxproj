@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		920594F02BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920594EF2BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift */; };
 		920F43C42BDA6F6B0047680E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920F43C32BDA6F6B0047680E /* KeychainHelper.swift */; };
 		921341D92BE4272200B92692 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921341D82BE4272200B92692 /* AuthView.swift */; };
 		921341DB2BE4273900B92692 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921341DA2BE4273900B92692 /* AuthViewModel.swift */; };
@@ -88,6 +89,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		920594EF2BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAnimationAnimationModifier.swift; sourceTree = "<group>"; };
 		920F43C32BDA6F6B0047680E /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		921341D82BE4272200B92692 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		921341DA2BE4273900B92692 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -170,6 +172,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		920594EE2BECD52F005D09D8 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				920594EF2BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
 		921341DE2BE4276A00B92692 /* Authentication */ = {
 			isa = PBXGroup;
 			children = (
@@ -316,6 +326,7 @@
 		925FF0362BAF6BB700F8EE87 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				920594EE2BECD52F005D09D8 /* Animations */,
 				925FF0322BAF6B5B00F8EE87 /* CustiomGridtem.swift */,
 				92C877D92BB445B1000E9BBB /* CustomNotepadPopover.swift */,
 				925FF0392BAF709500F8EE87 /* CutomNotepad.swift */,
@@ -499,6 +510,7 @@
 				921341EE2BE958CB00B92692 /* ChatListViewModel.swift in Sources */,
 				92C877DA2BB445B1000E9BBB /* CustomNotepadPopover.swift in Sources */,
 				926705072BCDE32400372250 /* MessageStore.swift in Sources */,
+				920594F02BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift in Sources */,
 				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
 				92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */,
 				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
