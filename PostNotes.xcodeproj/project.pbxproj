@@ -296,12 +296,9 @@
 			children = (
 				9257981E2BB2195400254FB4 /* PostNotesApp.swift */,
 				921341E82BE5183500B92692 /* AppState.swift */,
-				92FC18C42BED0DBB0091469C /* Profile */,
-				92FC18C12BED0D9A0091469C /* Chat */,
-				921341EA2BE958AB00B92692 /* ChatList */,
+				92FC18C92BED16FB0091469C /* GPT */,
 				92C973432BB09DF60080C2C0 /* Views */,
 				92C973442BB09E160080C2C0 /* Model */,
-				921341DE2BE4276A00B92692 /* Authentication */,
 				926705012BCD61AD00372250 /* ViewModel */,
 				92C973452BB09E210080C2C0 /* Utilities */,
 				925FF02B2BAF6AD300F8EE87 /* Extras */,
@@ -420,6 +417,17 @@
 				92FC18C52BED0DD40091469C /* ProfileView.swift */,
 			);
 			path = Profile;
+			sourceTree = "<group>";
+		};
+		92FC18C92BED16FB0091469C /* GPT */ = {
+			isa = PBXGroup;
+			children = (
+				921341DE2BE4276A00B92692 /* Authentication */,
+				92FC18C12BED0D9A0091469C /* Chat */,
+				921341EA2BE958AB00B92692 /* ChatList */,
+				92FC18C42BED0DBB0091469C /* Profile */,
+			);
+			path = GPT;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
