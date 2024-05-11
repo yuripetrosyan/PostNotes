@@ -20,6 +20,9 @@ struct ChatView: View {
                         .listRowSeparator(.hidden)
                         .listRowBackground(Color.clear)
                         .id(message.id)
+                        .onChange(of: viewModel.messages){
+                        newValue in scrollToButtom(scrollView: scrollView)
+                        }
                 }
                 .background(Color(uiColor: .systemGroupedBackground))
                 .listStyle(.plain)
@@ -34,8 +37,11 @@ struct ChatView: View {
     
     func scrollToButtom(scrollView: ScrollViewProxy){
         guard !viewModel.messages.isEmpty, let lastMessage = viewModel.messages.last else { return }
-        
-        scrollView.scrollTo(lastMessage.id)
+       
+        withAnimation {
+            scrollView.scrollTo(lastMessage.id)
+        }
+       
         
         
     }
