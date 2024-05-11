@@ -1,7 +1,6 @@
 **PostNotes** is a note taking app that lets users use ai to take notes.
 
-Notes have minimalistic and retro design resembling real life notepads.
-
+Notes have minimalistic and retro design resembling real life notepads. The app uses FireStore to create and store user information and chats.
 
 
 <img src="https://github.com/yuripetrosyan/PostNotes/assets/73176415/90d04f81-7af6-46c0-8d89-94dfba6d312e" data-canonical-src="https://github.com/yuripetrosyan/PostNotes/assets/73176415/90d04f81-7af6-46c0-8d89-94dfba6d312e" width="800" />
