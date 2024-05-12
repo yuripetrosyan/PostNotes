@@ -12,7 +12,6 @@ import SwiftUI
 struct AuthView: View {
     
     @ObservedObject var viewModel: AuthViewModel = AuthViewModel()
-    //@State private var sheetIsOn = false
     @EnvironmentObject var appState: AppState
     
     var body: some View {
