@@ -9,6 +9,7 @@ import Foundation
 import OpenAI
 import FirebaseFirestoreSwift
 import FirebaseFirestore
+import SwiftUI
 
 class ChatViewModel: ObservableObject {
     @Published var chat: AppChat?
@@ -17,6 +18,9 @@ class ChatViewModel: ObservableObject {
     @Published var selectedModel: ChatModel = .gpt3_5_turbo
     
     let chatId: String
+    
+    @AppStorage("openai_api_key") var apiKey = ""
+    
     let db = Firestore.firestore()
     
     init(chatId: String) {
@@ -65,7 +69,7 @@ class ChatViewModel: ObservableObject {
         }
     }
     private func generateResponse(for message: AppMessage) async throws {
-        let openAI = OpenAI(apiToken: "YOUR_API_KEY")
+        let openAI = OpenAI(apiToken: apiKey)
 
         // Construct the queryMessages array outside the map closure
         let queryMessages: [ChatQuery.ChatCompletionMessageParam] = messages
