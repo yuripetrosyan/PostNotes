@@ -25,19 +25,11 @@ struct AuthView: View {
         
         VStack{
             HStack {
-                
-                    DefaultAnimationAnimationModifier()
-                  
-//                Text("PostNotes")
-//                // .font(.custom("Urbanist", size: 36))
-//                    .font(.system(size: 36))
-//                    .fontDesign(.serif)
-//                    .fontWeight(.semibold)
-
+                DefaultAnimationAnimationModifier()
                 Text("Ai")
                     .font(.custom("ARCADECLASSIC", size: 20))
                 
-            }  .padding(.bottom, 20)
+            } .padding(.bottom, 20)
             
             
             

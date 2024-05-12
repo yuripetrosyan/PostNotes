@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 import FirebaseFirestore
 import FirebaseFirestoreSwift
+import OpenAI
 
 class ChatListViewModel: ObservableObject {
     
@@ -71,7 +72,7 @@ enum ChatListState {
 struct AppChat: Codable, Identifiable {
     @DocumentID var id: String?
     let topic: String?
-    let model: ChatModel?
+    var model: ChatModel?
     let lastMessageSent: FirestoreDate
     let owner: String
     
@@ -111,6 +112,14 @@ enum ChatModel: String, Codable, CaseIterable, Hashable {
             return .green
         case .gpt4:
             return .purple
+        }
+    }
+    var model: Model {
+        switch self{
+        case .gpt3_5_turbo:
+            return .gpt3_5Turbo
+        case .gpt4:
+            return .gpt4
         }
     }
 }

@@ -21,7 +21,7 @@ struct ChatView: View {
                         .listRowBackground(Color.clear)
                         .id(message.id)
                         .onChange(of: viewModel.messages){
-                        newValue in scrollToButtom(scrollView: scrollView)
+                            newValue in scrollToButtom(scrollView: scrollView)
                         }
                 }
                 .navigationTitle(viewModel.chat?.topic ?? "New Chat")
@@ -39,11 +39,11 @@ struct ChatView: View {
     
     func scrollToButtom(scrollView: ScrollViewProxy){
         guard !viewModel.messages.isEmpty, let lastMessage = viewModel.messages.last else { return }
-       
+        
         withAnimation {
             scrollView.scrollTo(lastMessage.id)
         }
-       
+        
         
         
     }
@@ -96,20 +96,28 @@ struct ChatView: View {
                 .background(Color.gray.opacity(0.1))
                 .clipShape(RoundedRectangle(cornerRadius: 17))
                 .onSubmit {
-                    viewModel.sendMessage()
-                }
+                    sendMessage()                }
             Button {
-                viewModel.sendMessage()
-            } label: {
-                Text("Send")
-                    .padding()
-                    .background(.brandPrimary)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.brandSecondary)
-                    .clipShape(RoundedRectangle(cornerRadius: 17))
-            }
+                sendMessage()            } label: {
+                    Text("Send")
+                        .padding()
+                        .background(.brandPrimary)
+                        .fontWeight(.bold)
+                        .foregroundStyle(.brandSecondary)
+                        .clipShape(RoundedRectangle(cornerRadius: 17))
+                }
             
         }.padding()
+    }
+    
+    func sendMessage() {
+        Task{
+            do{
+                try await viewModel.sendMessage()
+            }catch{
+                print(error)
+            }
+        }
     }
 }
 

@@ -25,19 +25,11 @@ struct DefaultAnimationAnimationModifier: View {
                             .fontWeight(.semibold)
                             .rotation3DEffect(.degrees(flipAngle), axis: (x: 0, y: 1, z: 0))
                             .animation(.default.delay(Double(flip) * 0.1), value: flipAngle)
-                        
-                    
                 }
-                
             }
-            
-//            Button {
-//                //
-//                flipAngle = (flipAngle == .zero) ? 360 : .zero
-//            } label: {
-//                Text("Flip")
-//            }
-        }.onAppear{
+        }
+       
+        .onAppear{
             flipAngle = (flipAngle == .zero) ? 360 : .zero
         }
         .onTapGesture {
