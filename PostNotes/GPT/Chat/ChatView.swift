@@ -24,11 +24,13 @@ struct ChatView: View {
                         newValue in scrollToButtom(scrollView: scrollView)
                         }
                 }
+                .navigationTitle(viewModel.chat?.topic ?? "New Chat")
                 .background(Color(uiColor: .systemGroupedBackground))
                 .listStyle(.plain)
             }
             messageInputView
         }
+        .navigationBarTitleDisplayMode(.inline)
         .onAppear{
             viewModel.fetchData()
         }

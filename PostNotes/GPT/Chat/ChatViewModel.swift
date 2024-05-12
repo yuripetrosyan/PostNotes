@@ -7,7 +7,7 @@
 
 import Foundation
 import OpenAI
-
+import FirebaseFirestoreSwift
 
 class ChatViewModel: ObservableObject {
     @Published var chat: AppChat?
@@ -23,17 +23,17 @@ class ChatViewModel: ObservableObject {
     }
     
     func fetchData(){
-        self.messages = [
-            AppMessage(id: "1", text: "Hello", role: .user, createdAt: Date()),
-            AppMessage(id: "2", text: "I'm good", role: .assistant, createdAt: Date()),
-            AppMessage(id: "3", text: "No", role: .user, createdAt: Date()),
-            AppMessage(id: "4", text: "Yes", role: .assistant, createdAt: Date())
-
-        ]
+//        self.messages = [
+//            AppMessage(id: "1", text: "Hello", role: .user, createdAt: Date()),
+//            AppMessage(id: "2", text: "I'm good", role: .assistant, createdAt: Date()),
+//            AppMessage(id: "3", text: "No", role: .user, createdAt: Date()),
+//            AppMessage(id: "4", text: "Yes", role: .assistant, createdAt: Date())
+//
+//        ]
     }
     
     func sendMessage(){
-        var newMessage = AppMessage(id: UUID().uuidString, text: messageText, role: .user, createdAt: Date())
+        var newMessage = AppMessage(id: UUID().uuidString, text: messageText, role: .user)
         messages.append(newMessage)
         messageText = ""
         
@@ -49,12 +49,10 @@ enum ChatRole: String, Codable {  // Make it Codable to be compatible with JSON
 
 struct AppMessage: Identifiable, Codable, Hashable{
    
-    
-    
-    let id: String?
+    @DocumentID var id: String?
     var text: String
     let role: ChatRole
-    let createdAt: Date
+    let createdAt: FirestoreDate = FirestoreDate()
 }
 
 
