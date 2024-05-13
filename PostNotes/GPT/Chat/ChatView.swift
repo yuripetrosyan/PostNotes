@@ -17,6 +17,7 @@ struct ChatView: View {
             ScrollViewReader { scrollView in
                 List(viewModel.messages) { message in
                     messageView(for: message)
+                    
                         .listRowSeparator(.hidden)
                         .listRowBackground(Color.clear)
                         .id(message.id)
@@ -25,8 +26,9 @@ struct ChatView: View {
                         }
                 }
                 .navigationTitle(viewModel.chat?.topic ?? "New Chat")
-                .background(Color(uiColor: .systemGroupedBackground))
+                //.background(Color(uiColor: .systemGroupedBackground))
                 .listStyle(.plain)
+                
             }
             messageInputView
         }
@@ -91,20 +93,33 @@ struct ChatView: View {
     
     var messageInputView: some View {
         HStack{
-            TextField("Ask anything...", text: $viewModel.messageText)
-                .padding()
-                .background(Color.gray.opacity(0.1))
-                .clipShape(RoundedRectangle(cornerRadius: 17))
-                .onSubmit {
-                    sendMessage()                }
+            CustomTextField()
+                .overlay{
+                    
+                    TextField("Ask anything...", text: $viewModel.messageText)
+                    
+                        .padding()
+                    //  .background(Color.gray.opacity(0.1))
+                        .clipShape(RoundedRectangle(cornerRadius: 17))
+                        .padding(.top, 10)
+                        .onSubmit {
+                            sendMessage()                }
+                    
+                }
+            
+            
             Button {
-                sendMessage()            } label: {
-                    Text("Send")
+                sendMessage()
+            } label: {
+                    Image(systemName: "paperplane.fill")
                         .padding()
                         .background(.brandPrimary)
+                        .frame(width: 40, height: 40)
                         .fontWeight(.bold)
                         .foregroundStyle(.brandSecondary)
-                        .clipShape(RoundedRectangle(cornerRadius: 17))
+                        .clipShape(Circle())
+                        .padding(.top, 10)
+                    
                 }
             
         }.padding()

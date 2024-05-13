@@ -23,8 +23,6 @@ struct FoldersView: View {
                 VStack {
                     ScrollView(.horizontal) {
                         LazyHStack {
-                            
-                            
                             ForEach(items, id: \.id) { note in
                                 NavigationLink(destination: DetailedVIew(item: note) { _ in })  {
                                     CustomGridItemView(item: note)
