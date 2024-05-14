@@ -77,7 +77,7 @@ struct FoldersView: View {
                                                 }
                                             }
                         }}
-                    .shadow(radius: 2, x: 0, y: 0)
+                    .shadow(radius: 3, x:3, y: 2)
                         .scrollContentBackground(.hidden)
                         .padding(.top)
                         .listRowSeparator(.hidden)
@@ -140,22 +140,27 @@ struct CustomFolderCell: View {
     var name: String
     var body: some View {
         HStack {
-            ZStack {
+            ZStack(alignment: .center) {
                 RoundedRectangle(cornerRadius: 11.0)
-                    .frame(width: 65, height: 65)
+                    .frame(width: 64, height: 64)
                 
                 Image(systemName: "folder")
                     .foregroundStyle(.primary1)
             }
            
+           
+            
+            
             Text(name)
                 .frame(width: 250, height: 60, alignment: .leading)
-                .padding(.leading, 5)
            
             Spacer()
         }
+        .frame(maxWidth: .infinity)
+        .frame(width: 290)
         .padding(.vertical, -11)
-        .padding(.horizontal, 29)
+                
+      //  .padding(.horizontal, 29)
         //.shadow(radius: 5, x: 3, y: 5)
        
         
