@@ -31,8 +31,37 @@ struct ChatListView: View {
                         NavigationLink(value: chat.id){
                             VStack(alignment: .leading){
                                 HStack{
-                                    Text(chat.topic ?? "New Chat")
-                                        .font(.headline)
+                                    
+                                    ZStack(alignment: .leading){
+                                        
+                                        RoundedRectangle(cornerRadius: 11)
+                                            .foregroundStyle(.brandPrimary)
+                                            .frame(height: 62)
+                                            .frame(maxWidth: 100)
+                                            
+
+                                            
+                                        VStack(alignment: .leading){
+                                            Text(chat.topic ?? "New Chat")
+                                                .font(.headline)
+                                                .foregroundStyle(.primary1)
+                                                .padding(.bottom, 5)
+                                            
+                                            
+                                            Text(chat.lastMessageTimeAgo)
+                                                .font(.caption2)
+                                                .foregroundStyle(.brandSecondary)
+                                        }
+                                        
+                                        .padding(10)
+                                    }
+                                    .padding(.leading, -20)
+                                    .shadow(radius: 5, x: 2, y: 2)
+
+                                    
+                                
+                                    
+                                    
                                     Spacer()
                                     Text(chat.model?.rawValue ?? "")
                                         .font(.caption2)
@@ -41,10 +70,7 @@ struct ChatListView: View {
                                         .padding(6)
                                         .background((chat.model?.tintColor ?? .white).opacity(0.1))
                                         .clipShape(Capsule(style: .continuous))
-                                }
-                                Text(chat.lastMessageTimeAgo)
-                                    .font(.caption)
-                                    .foregroundStyle(.gray)
+                                }.frame(height: 40)
                                 
                             }
                             
@@ -58,9 +84,12 @@ struct ChatListView: View {
 
                         }
                     }
-                }// .scrollContentBackground(.hidden)
-                // .listRowSeparator(.hidden)
-                .listRowSpacing(5)
+                }
+                .shadow(radius: 5, x: 2, y: 2)
+                .scrollContentBackground(.hidden)
+                .padding(.top)
+                .listRowSeparator(.hidden)
+                .listRowSpacing(10)
             }
             
         }
@@ -108,10 +137,6 @@ struct ChatListView: View {
     }
 }
 
-#Preview {
-    ChatListView()
-}
-
-
-
-
+//#Preview {
+//    ChatListView()
+//}

@@ -14,6 +14,13 @@ import OpenAI
 class ChatListViewModel: ObservableObject {
     
     @Published var chats: [AppChat] = []
+    @Published var mockChats: [AppChat] = [
+        AppChat(id: "1", topic: "Topic", model: .gpt3_5_turbo, lastMessageSent: FirestoreDate(), owner: "123"),
+        AppChat(id: "2", topic: "Gym", model: .gpt4, lastMessageSent:  FirestoreDate(), owner: "1233"),
+        AppChat(id: "3", topic: "Note", model: .gpt3_5_turbo, lastMessageSent:  FirestoreDate(), owner: "1234"),
+        AppChat(id: "4", topic: "Health", model: .gpt4, lastMessageSent:  FirestoreDate(), owner: "1423")
+    
+    ]
     @Published var loadingState: ChatListState = .none
     @Published var isShowingProfileView = false
     
