@@ -93,15 +93,18 @@ struct ChatView: View {
     
     var messageInputView: some View {
         HStack{
-            CustomTextField()
+            RoundedRectangle(cornerRadius: 25.0)
+            
+                  //  .strokeBorder(Color.brandPrimary, lineWidth: 2)
+                    .frame(height: 50)
+                    .foregroundStyle(.ultraThinMaterial.shadow(.inner(radius: 2)))
+                    .shadow(radius: 10, x: 4, y: 6)
                 .overlay{
                     
                     TextField("Ask anything...", text: $viewModel.messageText)
-                    
                         .padding()
                     //  .background(Color.gray.opacity(0.1))
                         .clipShape(RoundedRectangle(cornerRadius: 17))
-                        .padding(.top, 10)
                         .onSubmit {
                             sendMessage()                }
                     
@@ -118,11 +121,12 @@ struct ChatView: View {
                         .fontWeight(.bold)
                         .foregroundStyle(.brandSecondary)
                         .clipShape(Circle())
-                        .padding(.top, 10)
                     
                 }
             
-        }.padding()
+        }
+        .frame(maxWidth: .infinity)
+        .padding()
     }
     
     func sendMessage() {

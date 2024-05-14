@@ -204,8 +204,8 @@
 			isa = PBXGroup;
 			children = (
 				921341EB2BE958C000B92692 /* ChatListView.swift */,
-				92CBAA662BF3AF6D0064291E /* TestForChatListView.swift */,
 				921341ED2BE958CB00B92692 /* ChatListViewModel.swift */,
+				92CBAA662BF3AF6D0064291E /* TestForChatListView.swift */,
 			);
 			path = ChatList;
 			sourceTree = "<group>";
