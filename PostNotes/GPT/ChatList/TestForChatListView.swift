@@ -22,14 +22,16 @@ struct TestForChatListView: View {
                                 
                                 RoundedRectangle(cornerRadius: 11)
                                     .foregroundStyle(.brandPrimary)
-                                    .frame(height: 62)
+                                    .frame(height: 64)
                                     .frame(maxWidth: 100)
                                     
 
                                     
                                 VStack(alignment: .leading){
                                     Text(chat.topic ?? "New Chat")
-                                        .font(.headline)
+                                        .font(.title2)
+                                        .fontDesign(.serif)
+                                        .fontWeight(.semibold)
                                         .foregroundStyle(.primary1)
                                         .padding(.bottom, 5)
                                     
@@ -71,7 +73,7 @@ struct TestForChatListView: View {
                 }
             }
         }
-        .shadow(radius: 5, x: 2, y: 2)
+        .shadow(radius: 2, x: 0, y: 0)
         .scrollContentBackground(.hidden)
         .padding(.top)
         .listRowSeparator(.hidden)

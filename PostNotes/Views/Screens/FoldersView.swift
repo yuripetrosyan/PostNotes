@@ -77,11 +77,12 @@ struct FoldersView: View {
                                                 }
                                             }
                         }}
-                        .shadow(radius: 3, x: 2, y: 3)
+                    .shadow(radius: 2, x: 0, y: 0)
                         .scrollContentBackground(.hidden)
                         .padding(.top)
                         .listRowSeparator(.hidden)
-                        .listRowSpacing(10)
+                    
+                        .listRowSpacing(5)
                         
                         
                     }.navigationTitle("Folders").navigationBarTitleDisplayMode(.inline)
@@ -140,28 +141,23 @@ struct CustomFolderCell: View {
     var body: some View {
         HStack {
             ZStack {
-                RoundedRectangle(cornerRadius: 10.0)
-                    .frame(width: 63, height: 63)
+                RoundedRectangle(cornerRadius: 11.0)
+                    .frame(width: 65, height: 65)
                 
                 Image(systemName: "folder")
                     .foregroundStyle(.primary1)
             }
-            // .padding(-15)
-            // .padding(.leading, -10)
-            
+           
             Text(name)
-            // .padding(.horizontal, 20)
                 .frame(width: 250, height: 60, alignment: .leading)
                 .padding(.leading, 5)
-            // .padding(.trailing, -30)
+           
             Spacer()
         }
-        
-        // .frame(width: 320 ,height: 60)
-        .padding(-10)
-        //  .background(.red)
-        //  .frame(width: 310 ,height: 40)
-        .shadow(radius: 5, x: 3, y: 5)
+        .padding(.vertical, -11)
+        .padding(.horizontal, 29)
+        //.shadow(radius: 5, x: 3, y: 5)
+       
         
         
     }
