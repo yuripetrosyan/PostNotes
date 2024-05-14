@@ -88,7 +88,11 @@ struct ChatView: View {
                 Spacer()
             }
             
-        }
+        }.contextMenu(ContextMenu(menuItems: {
+            Text("Menu Item 1")
+            Text("Menu Item 2")
+            Text("Menu Item 3")
+        }))
     }
     
     var messageInputView: some View {

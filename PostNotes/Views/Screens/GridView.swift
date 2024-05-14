@@ -127,7 +127,7 @@ struct GridView: View {
                  
 
             }
-            .navigationBarBackButtonHidden(true)
+           // .navigationBarBackButtonHidden(true)
       //  }.navigationBarBackButtonHidden()
         
         
