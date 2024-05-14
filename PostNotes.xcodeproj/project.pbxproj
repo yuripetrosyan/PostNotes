@@ -44,8 +44,6 @@
 		921DE72A2BC99C7D00B7C007 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7132BC99C7D00B7C007 /* README.txt */; };
 		921DE72B2BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7142BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf */; };
 		921DE72C2BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */; };
-		921DE72F2BC9DA0300B7C007 /* WelcomePageSearch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE72E2BC9DA0300B7C007 /* WelcomePageSearch.swift */; };
-		921DE7312BC9DF6800B7C007 /* ChatsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921DE7302BC9DF6800B7C007 /* ChatsView.swift */; };
 		923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D22BC54C6C00E10EB3 /* SignUpView.swift */; };
 		923551D52BC5AC8000E10EB3 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */; };
 		9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257981E2BB2195400254FB4 /* PostNotesApp.swift */; };
@@ -130,8 +128,6 @@
 		921DE7132BC99C7D00B7C007 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		921DE7142BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		921DE72E2BC9DA0300B7C007 /* WelcomePageSearch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomePageSearch.swift; sourceTree = "<group>"; };
-		921DE7302BC9DF6800B7C007 /* ChatsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsView.swift; sourceTree = "<group>"; };
 		923551D22BC54C6C00E10EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
@@ -256,20 +252,10 @@
 			path = Urbanist;
 			sourceTree = "<group>";
 		};
-		921DE72D2BC9D9CB00B7C007 /* AI Chat */ = {
-			isa = PBXGroup;
-			children = (
-				921DE72E2BC9DA0300B7C007 /* WelcomePageSearch.swift */,
-				921DE7302BC9DF6800B7C007 /* ChatsView.swift */,
-			);
-			name = "AI Chat";
-			sourceTree = "<group>";
-		};
 		923551D82BC6F03B00E10EB3 /* Screens */ = {
 			isa = PBXGroup;
 			children = (
 				925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */,
-				921DE72D2BC9D9CB00B7C007 /* AI Chat */,
 				925FF02C2BAF6AE800F8EE87 /* GridView.swift */,
 				925FF02E2BAF6B1300F8EE87 /* AccountView.swift */,
 				92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */,
@@ -301,8 +287,8 @@
 			children = (
 				9257981E2BB2195400254FB4 /* PostNotesApp.swift */,
 				921341E82BE5183500B92692 /* AppState.swift */,
-				92FC18C92BED16FB0091469C /* GPT */,
 				92C973432BB09DF60080C2C0 /* Views */,
+				92FC18C92BED16FB0091469C /* GPT */,
 				92C973442BB09E160080C2C0 /* Model */,
 				926705012BCD61AD00372250 /* ViewModel */,
 				92C973452BB09E210080C2C0 /* Utilities */,
@@ -572,11 +558,9 @@
 				921341E92BE5183500B92692 /* AppState.swift in Sources */,
 				92CBAA672BF3AF6D0064291E /* TestForChatListView.swift in Sources */,
 				92C0D2B62BC1B5D400CBD080 /* SearchBar.swift in Sources */,
-				921DE7312BC9DF6800B7C007 /* ChatsView.swift in Sources */,
 				925FF02D2BAF6AE800F8EE87 /* GridView.swift in Sources */,
 				92C0D2952BC095E300CBD080 /* firstNoteAdd.swift in Sources */,
 				921341DD2BE4274B00B92692 /* AuthService.swift in Sources */,
-				921DE72F2BC9DA0300B7C007 /* WelcomePageSearch.swift in Sources */,
 				9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */,
 				921341EC2BE958C000B92692 /* ChatListView.swift in Sources */,
 				925FF03A2BAF709600F8EE87 /* CutomNotepad.swift in Sources */,
