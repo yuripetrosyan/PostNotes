@@ -18,35 +18,33 @@ struct TestForChatListView: View {
                     VStack(alignment: .leading){
                         HStack{
                             
-                            ZStack(alignment: .leading){
-                                
+                            ZStack(alignment: .center){
                                 RoundedRectangle(cornerRadius: 11)
                                     .foregroundStyle(.brandPrimary)
-                                    .frame(height: 64)
-                                    .frame(maxWidth: 100)
-                                    
-
-                                    
-                                VStack(alignment: .leading){
-                                    Text(chat.topic ?? "New Chat")
-                                        .font(.title2)
-                                        .fontDesign(.serif)
-                                        .fontWeight(.semibold)
-                                        .foregroundStyle(.primary1)
-                                        .padding(.bottom, 5)
-                                    
-                                    
-                                    Text(chat.lastMessageTimeAgo)
-                                        .font(.caption2)
-                                        .foregroundStyle(.brandSecondary)
-                                }
+                                    .frame(width: 62,height: 62)
+                                   
+                                  Image(systemName: "book.pages").symbolEffect(.pulse, options: .repeating, isActive: true)
+                                    .foregroundStyle(.primary1)
                                 
-                                .padding(10)
+                                
                             }
                             .padding(.leading, -20)
                             .shadow(radius: 5, x: 2, y: 2)
 
                             
+                            
+                        VStack(alignment: .leading){
+                            Text(chat.topic ?? "New Chat")
+                                .font(.headline)
+                                .foregroundStyle(.brandPrimary)
+                                .padding(.bottom, 5)
+                            
+                            
+                            Text(chat.lastMessageTimeAgo)
+                                .font(.caption2)
+                                .foregroundStyle(.brandSecondary)
+                        }
+                        .padding(5)
                         
                             
                             
@@ -73,7 +71,7 @@ struct TestForChatListView: View {
                 }
             }
         }
-        .shadow(radius: 2, x: 0, y: 0)
+        .shadow(radius: 5, x: 2, y: 2)
         .scrollContentBackground(.hidden)
         .padding(.top)
         .listRowSeparator(.hidden)

@@ -32,33 +32,33 @@ struct ChatListView: View {
                             VStack(alignment: .leading){
                                 HStack{
                                     
-                                    ZStack(alignment: .leading){
-                                        
+                                    ZStack(alignment: .center){
                                         RoundedRectangle(cornerRadius: 11)
                                             .foregroundStyle(.brandPrimary)
-                                            .frame(height: 62)
-                                            .frame(maxWidth: 100)
-                                            
-
-                                            
-                                        VStack(alignment: .leading){
-                                            Text(chat.topic ?? "New Chat")
-                                                .font(.headline)
-                                                .foregroundStyle(.primary1)
-                                                .padding(.bottom, 5)
-                                            
-                                            
-                                            Text(chat.lastMessageTimeAgo)
-                                                .font(.caption2)
-                                                .foregroundStyle(.brandSecondary)
-                                        }
+                                            .frame(width: 62,height: 62)
+                                           
+                                          Image(systemName: "book.pages").symbolEffect(.pulse, options: .repeating, isActive: true)
+                                            .foregroundStyle(.primary1)
                                         
-                                        .padding(10)
+                                        
                                     }
                                     .padding(.leading, -20)
                                     .shadow(radius: 5, x: 2, y: 2)
 
                                     
+                                    
+                                VStack(alignment: .leading){
+                                    Text(chat.topic ?? "New Chat")
+                                        .font(.headline)
+                                        .foregroundStyle(.brandPrimary)
+                                        .padding(.bottom, 5)
+                                    
+                                    
+                                    Text(chat.lastMessageTimeAgo)
+                                        .font(.caption2)
+                                        .foregroundStyle(.brandPrimary.opacity(0.8))
+                                }
+                                .padding(5)
                                 
                                     
                                     
@@ -93,7 +93,8 @@ struct ChatListView: View {
             }
             
         }
-        .navigationTitle("Chats")
+        .navigationTitle("Chats").navigationBarTitleDisplayMode(.inline)
+        
         .toolbar(content: {
             ToolbarItem(placement: .topBarTrailing) {
                 Button {
@@ -119,7 +120,7 @@ struct ChatListView: View {
                 }
                 
             }
-        })
+        }).tint(.brandPrimary)
         .sheet(isPresented: $viewModel.isShowingProfileView, content: {
             ProfileView()
         })
@@ -136,7 +137,7 @@ struct ChatListView: View {
         
     }
 }
-
+//
 //#Preview {
 //    ChatListView()
 //}

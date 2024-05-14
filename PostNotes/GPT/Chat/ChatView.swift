@@ -9,30 +9,59 @@ import SwiftUI
 
 struct ChatView: View {
     @StateObject var viewModel: ChatViewModel
-    
+    @State private var isShowingInfo = false
     var body: some View {
-        
-        VStack{
-            chatSelection
-            ScrollViewReader { scrollView in
-                List(viewModel.messages) { message in
-                    messageView(for: message)
+        ZStack{
+            VStack{
+                chatSelection
+                ScrollViewReader { scrollView in
+                    List(viewModel.messages) { message in
+                        messageView(for: message)
+                        
+                            .listRowSeparator(.hidden)
+                            .listRowBackground(Color.clear)
+                            .id(message.id)
+                            .onChange(of: viewModel.messages){
+                                newValue in scrollToButtom(scrollView: scrollView)
+                            }
+                    }
+                    .navigationTitle(viewModel.chat?.topic ?? "New Chat")
+                    //.background(Color(uiColor: .systemGroupedBackground))
+                    .listStyle(.plain)
                     
-                        .listRowSeparator(.hidden)
-                        .listRowBackground(Color.clear)
-                        .id(message.id)
-                        .onChange(of: viewModel.messages){
-                            newValue in scrollToButtom(scrollView: scrollView)
-                        }
                 }
-                .navigationTitle(viewModel.chat?.topic ?? "New Chat")
-                //.background(Color(uiColor: .systemGroupedBackground))
-                .listStyle(.plain)
+                messageInputView
+            }
+            
+            if isShowingInfo{
+                
+                ZStack{
+                    CustomNotepad()
+                    Text("To access the chat add your OpenAI API key in profile settings")
+                        .multilineTextAlignment(.leading)
+                        .lineLimit(4)
+                        .frame(width: 155)
+                        .padding(.top, 40)
+                        .foregroundStyle(.brandOnly)
+                    
+                }
+                
                 
             }
-            messageInputView
+            
         }
         .navigationBarTitleDisplayMode(.inline)
+        .toolbar(content: {
+            ToolbarItem(placement: .topBarTrailing, content: {
+                Image(systemName: "info.circle.fill")
+                    .onTapGesture {
+                        withAnimation(Animation.smooth) {
+                            isShowingInfo.toggle()
+                        }
+                        
+                    }
+            })
+        })
         .onAppear{
             viewModel.fetchData()
         }
@@ -46,7 +75,7 @@ struct ChatView: View {
             scrollView.scrollTo(lastMessage.id)
         }
         
-        
+                 
         
     }
     var chatSelection: some View{
@@ -147,3 +176,4 @@ struct ChatView: View {
 #Preview {
     ChatView(viewModel: .init(chatId: ""))
 }
+
