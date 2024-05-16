@@ -16,9 +16,7 @@ struct PostNotesTabView: View {
     init() {
         //will not reserve space on the screen for tabview
         UITabBar.appearance().isHidden = true
-      
-        //print(URL.applicationSupportDirectory.path(percentEncoded: false))
-        
+      //print(URL.applicationSupportDirectory.path(percentEncoded: false))
     }
     
     var body: some View {

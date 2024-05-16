@@ -26,6 +26,15 @@ struct GridView: View {
         GridItem(.flexible())
     ]
     
+    var filteredItems: [Note] {
+        items.filter { note in
+            (category == nil || note.category == category) &&
+            (searchedText.isEmpty || note.title.localizedCaseInsensitiveContains(searchedText) == true || note.content.localizedCaseInsensitiveContains(searchedText) == true )
+        }
+    }
+            
+       
+    
     //MARK: - body
     var body: some View {
         //  NavigationStack{
@@ -34,7 +43,7 @@ struct GridView: View {
                 ScrollView {
                     LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
                         // Check if items array is empty
-                        if items.isEmpty {
+                        if filteredItems.isEmpty {
                             // Add first note if it's empty
                             firstNoteAdd()
                                 .onTapGesture {
@@ -43,7 +52,7 @@ struct GridView: View {
                                     }
                                 }
                          }else{
-                            ForEach(items.filter { category == nil || $0.category == category }, id: \.id) { note in
+                            ForEach(filteredItems.filter { category == nil || $0.category == category }, id: \.id) { note in
                                 NavigationLink(destination: DetailedVIew(item: note) { _ in })  {
                                     CustomGridItemView(item: note)
                                         .contextMenu {

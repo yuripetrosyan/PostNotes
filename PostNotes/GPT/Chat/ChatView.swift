@@ -18,7 +18,6 @@ struct ChatView: View {
                 ScrollViewReader { scrollView in
                     List(viewModel.messages) { message in
                         messageView(for: message)
-                        
                             .listRowSeparator(.hidden)
                             .listRowBackground(Color.clear)
                             .id(message.id)
@@ -153,12 +152,17 @@ struct ChatView: View {
                 sendMessage()
             } label: {
                 Image(systemName: "paperplane.fill")
+                
+                    .foregroundColor(.brandPrimary)
                     .padding()
-                    .background(.brandPrimary)
+                    .background(.ultraThinMaterial.shadow(.inner(radius: 1))).colorInvert()
+                    .shadow(radius: 10, x: 4, y: 6)
                     .frame(width: 40, height: 40)
-                    .fontWeight(.bold)
-                    .foregroundStyle(.brandSecondary)
                     .clipShape(Circle())
+                   
+                    .fontWeight(.bold)
+                   
+                    
                 
             }
             

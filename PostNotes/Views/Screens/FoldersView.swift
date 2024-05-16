@@ -53,6 +53,14 @@ struct FoldersView: View {
                         
                         
                         List {
+                            Section(header: Text("All Notes")) {
+                            NavigationLink(tag: "All Notes", selection: $selectedCategory) {
+                                GridView()
+                            } label: {
+                                CustomFolderCell(name: "All Notes")
+                            }
+                        }
+
                             Section(header: Text("Notes on the phone")) {
                                 ForEach(categories, id: \.self) { category in
                                     NavigationLink(tag: category, selection: $selectedCategory) {
@@ -69,14 +77,7 @@ struct FoldersView: View {
                                     }
                                 }
                             }
-                            Section(header: Text("All Notes")) {
-                                NavigationLink(tag: "All Notes", selection: $selectedCategory) {
-                                    GridView()
-                                } label: {
-                                    CustomFolderCell(name: "All Notes")
-                                }
-                            }
-                        }}
+                                                    }}
                     .shadow(radius: 3, x:3, y: 2)
                     .scrollContentBackground(.hidden)
                     .padding(.top)

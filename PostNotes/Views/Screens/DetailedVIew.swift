@@ -1,4 +1,5 @@
 import SwiftUI
+import SwiftData
 
 struct DetailedVIew: View {
     
@@ -68,15 +69,14 @@ struct DetailedVIew: View {
             }
     }
 }
-
-
-struct DetailedVIew_Previews: PreviewProvider {
-    static var previews: some View {
-        let sampleNote = Note(title: "Sample Title", content: "Sample Content", date: .now, category: "Favourite")
-        return DetailedVIew(item: sampleNote) { _ in }
-    }
-}
-
+//
+//
+//struct DetailedVIew_Previews: PreviewProvider {
+//    static var previews: some View {
+//        let sampleNote = Note(title: "Sample Title", content: "Sample Content", date: .now, category: "Favourite")
+//        return DetailedVIew(item: sampleNote) { _ in }
+//    }
+//}
 
 //#Preview {
 //    DetailedVIew(item: .init(title: "Hi there", content: "This is the contnet", date: .now, category: "All"), updateNote: <#(Note) -> Void#>)
