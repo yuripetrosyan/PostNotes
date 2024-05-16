@@ -16,30 +16,20 @@ struct PostNotesTabView: View {
     init() {
         //will not reserve space on the screen for tabview
         UITabBar.appearance().isHidden = true
-        
-        
-        print(URL.applicationSupportDirectory.path(percentEncoded: false))
+      
+        //print(URL.applicationSupportDirectory.path(percentEncoded: false))
         
     }
     
-    
-    
     var body: some View {
-        
-        
         ZStack{
             Spacer()
             // Based on the selected tab, display the corresponding view
             switch tabSelected {
             case .house:
-                // GridView with refreshGrid as a parameter
                 GridView()
-                //FoldersView(categories: FoldersViewModel.shared.folders, selectedCategory: $selectedCategory)
             case .messageAI:
-                //SearchView()
-                //ChatView()
                 ChatListView()
-                
             case .plus:
                 FoldersView(categories: FoldersViewModel.shared.folders)
             case .person:
@@ -58,26 +48,6 @@ struct PostNotesTabView: View {
                         .padding(.bottom, -15)
                     
                 }.ignoresSafeArea(.keyboard, edges: .bottom)
-//            }else{
-//                VStack(alignment: .center){
-//                    
-//                    HStack(alignment: .center){
-//                        Image(systemName: "chevron.left")
-//                            .padding()
-//                            .padding(.top, 25)
-//                            .foregroundStyle(.white)
-//                            .onTapGesture {
-//                                tabSelected = .house
-//                            }
-//                        
-//                        Spacer()
-//                    }
-//                  
-//                    Spacer()
-//                    
-//                }
-//                
-//            }
         }
         .onAppear {
                     // Set selected category to "All Notes" when .house tab is selected
