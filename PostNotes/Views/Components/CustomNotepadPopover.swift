@@ -18,6 +18,7 @@ struct CustomNotepadPopoverLonger: View {
     @State var date: Date = .now
     @State private var selectedCategory = ""
     
+
     var body: some View {
                     GeometryReader { geo in
                 ZStack {
@@ -120,7 +121,7 @@ struct CustomNotepadPopoverLonger: View {
                 .frame(width: geo.size.width, height: geo.size.height)
             
         }
-        .transition(.scale.combined(with: .move(edge: .bottom)))
+       // .transition(.scale.combined(with: .move(edge: .bottom)))
     }
 }
 

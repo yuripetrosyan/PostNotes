@@ -100,6 +100,10 @@ class ChatViewModel: ObservableObject {
             _ = try storeMessage(message: lastMessage)
         }
     }
+    
+    
+    
+    
 }
 
 

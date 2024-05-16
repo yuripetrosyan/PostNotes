@@ -114,13 +114,16 @@ struct GridView: View {
 
             .toolbar {
                   ToolbarItem(placement: .topBarTrailing) {
-                    Image(systemName: "plus")
-                        .tint(.brandPrimary)
-                        .onTapGesture {
-                            withAnimation(Animation.smooth){
-                                isShowingPopover.toggle()
-                            }
-                        }
+                      Button {
+                          withAnimation(Animation.smooth){
+                              isShowingPopover.toggle()
+                          }
+                      } label: {
+                          Image(systemName: "plus")
+                              .tint(.brandPrimary)
+                      }
+                  
+                    
                     
                 }
                 

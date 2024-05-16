@@ -10,6 +10,7 @@ import SwiftUI
 struct ChatView: View {
     @StateObject var viewModel: ChatViewModel
     @State private var isShowingInfo = false
+    @State private var showChatSelection = true
     var body: some View {
         ZStack{
             VStack{
@@ -75,31 +76,35 @@ struct ChatView: View {
             scrollView.scrollTo(lastMessage.id)
         }
         
-                 
+        
         
     }
+    
+    //MARK: - Chat Selection (Select the model)
+    
     var chatSelection: some View{
-        Group{
-            if let model = viewModel.chat?.model?.rawValue{
+        Group {
+            if showChatSelection, let model = viewModel.chat?.model?.rawValue {
                 Text(model)
-            }else{
+            } else if showChatSelection {
                 Picker(selection: $viewModel.selectedModel) {
-                    ForEach(ChatModel.allCases, id: \.self) {
-                        model in
+                    ForEach(ChatModel.allCases, id: \.self) { model in
                         Text(model.rawValue)
                     }
                 } label: {
                     Text("")
-                    // Color(.red)
                 }
-                
                 .pickerStyle(.segmented)
                 .padding()
+                
                 
             }
             
         }
     }
+    
+    
+    //MARK: Message View
     
     func messageView(for message: AppMessage) -> some View{
         HStack{
@@ -128,10 +133,10 @@ struct ChatView: View {
         HStack{
             RoundedRectangle(cornerRadius: 25.0)
             
-                  //  .strokeBorder(Color.brandPrimary, lineWidth: 2)
-                    .frame(height: 50)
-                    .foregroundStyle(.ultraThinMaterial.shadow(.inner(radius: 2)))
-                    .shadow(radius: 10, x: 4, y: 6)
+            //  .strokeBorder(Color.brandPrimary, lineWidth: 2)
+                .frame(height: 50)
+                .foregroundStyle(.ultraThinMaterial.shadow(.inner(radius: 2)))
+                .shadow(radius: 10, x: 4, y: 6)
                 .overlay{
                     
                     TextField("Ask anything...", text: $viewModel.messageText)
@@ -147,25 +152,29 @@ struct ChatView: View {
             Button {
                 sendMessage()
             } label: {
-                    Image(systemName: "paperplane.fill")
-                        .padding()
-                        .background(.brandPrimary)
-                        .frame(width: 40, height: 40)
-                        .fontWeight(.bold)
-                        .foregroundStyle(.brandSecondary)
-                        .clipShape(Circle())
-                    
-                }
+                Image(systemName: "paperplane.fill")
+                    .padding()
+                    .background(.brandPrimary)
+                    .frame(width: 40, height: 40)
+                    .fontWeight(.bold)
+                    .foregroundStyle(.brandSecondary)
+                    .clipShape(Circle())
+                
+            }
             
         }
         .frame(maxWidth: .infinity)
         .padding()
     }
     
+    
+    //MARK: - Send message function
+    
     func sendMessage() {
         Task{
             do{
                 try await viewModel.sendMessage()
+                showChatSelection = false
             }catch{
                 print(error)
             }
