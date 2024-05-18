@@ -12,19 +12,14 @@ import Firebase
 
 class AppState: ObservableObject {
 
-    @Published var currentUser: User?
+    @Published var currentUser: User? 
     @Published var navigationPath = NavigationPath()
+    
+    
+   // @Published private(set) var isLoggedIn = false // Private(set) to prevent external modification
     
     var isLoggedIn: Bool {
         return currentUser != nil
-    }
-    init() {
-        FirebaseApp.configure()
-        
-        if let currentUser = Auth.auth().currentUser {
-            self.currentUser = currentUser
-        }
-       
     }
     
     func logout() {
@@ -37,5 +32,18 @@ class AppState: ObservableObject {
 
           }
       }
+    
+  
+    
+    init() {
+        FirebaseApp.configure()
+        
+        if let currentUser = Auth.auth().currentUser {
+            self.currentUser = currentUser
+        }
+       
+    }
+    
+    
 }
 

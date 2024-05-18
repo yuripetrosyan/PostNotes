@@ -23,7 +23,7 @@ class AuthViewModel: ObservableObject {
         Task {
             do {
                 if isPasswordVisible {
-                    let result = try await authService.login(email: emailText, password: passwordText, userExists: userExists)
+                    let result = try await authService.login(email: emailText, password: passwordText)
                     await MainActor.run(body: {
                         guard let result = result else { return }
                         // Update the app state

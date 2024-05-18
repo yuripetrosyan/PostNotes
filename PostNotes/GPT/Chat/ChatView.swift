@@ -6,11 +6,16 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ChatView: View {
+    @Environment(\.modelContext) var context
     @StateObject var viewModel: ChatViewModel
     @State private var isShowingInfo = false
     @State private var showChatSelection = true
+    @State private var showSaveConfirmation = false
+    
+    
     var body: some View {
         ZStack{
             VStack{
@@ -62,6 +67,14 @@ struct ChatView: View {
                     }
             })
         })
+        
+        
+        .overlay(
+                   Text("Saved!")
+                       .opacity(showSaveConfirmation ? 1 : 0) // Show/hide based on state
+                       .offset(y: -20) // Position above the message
+                       .animation(.easeInOut, value: showSaveConfirmation)
+               ) // Overlay the confirmation text
         .onAppear{
             viewModel.fetchData()
         }
@@ -117,15 +130,44 @@ struct ChatView: View {
                 .foregroundStyle(message.role == .user ? .brandSecondary : .brandPrimary)
                 .background(message.role == .user ? .brandPrimary : .brandSecondary)
                 .clipShape(RoundedRectangle(cornerRadius: 17, style: .continuous))
+                .onTapGesture { // Handle tap on AI message
+                    if message.role == .assistant {
+                        saveNote(content: message.text)
+                        // Show the save confirmation
+                        withAnimation {
+                            showSaveConfirmation = true
+                        }
+                        // Hide it after a short delay
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { // Adjust the delay as needed
+                            withAnimation {
+                                showSaveConfirmation = false
+                            }
+                        }
+                    }
+                }
             if (message.role == .assistant){
                 Spacer()
             }
             
-        }.contextMenu(ContextMenu(menuItems: {
-            Text("Menu Item 1")
-            Text("Menu Item 2")
-            Text("Menu Item 3")
-        }))
+        }
+        
+        
+    }
+    
+    //MARK: - Save Note
+    
+    func saveNote(content: String) {
+        let newNote = Note() // Create the note
+        context.insert(newNote)     // Insert into context
+        newNote.content = content
+        newNote.date = Date()
+        
+        do {
+            try context.save()
+            
+        } catch {
+            print("Error saving note: \(error)")
+        }
     }
     
     var messageInputView: some View {
@@ -159,10 +201,10 @@ struct ChatView: View {
                     .shadow(radius: 10, x: 4, y: 6)
                     .frame(width: 40, height: 40)
                     .clipShape(Circle())
-                   
+                
                     .fontWeight(.bold)
-                   
-                    
+                
+                
                 
             }
             

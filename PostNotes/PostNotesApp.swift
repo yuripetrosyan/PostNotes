@@ -9,7 +9,7 @@ import SwiftUI
 import SwiftData
 
 @main
-struct PostNotesApp: App {
+ struct PostNotesApp: App {
   
     @ObservedObject var appState: AppState = AppState()
     
