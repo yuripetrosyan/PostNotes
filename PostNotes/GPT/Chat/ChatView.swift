@@ -42,9 +42,9 @@ struct ChatView: View {
                 
                 ZStack{
                     CustomNotepad()
-                    Text("To access the chat add your OpenAI API key in profile settings")
+                    Text("-Add API key in profile settings \n -Tap on a message to save as a note ")
                         .multilineTextAlignment(.leading)
-                        .lineLimit(4)
+                        .lineLimit(5)
                         .frame(width: 155)
                         .padding(.top, 40)
                         .foregroundStyle(.brandOnly)
@@ -145,6 +145,25 @@ struct ChatView: View {
                         }
                     }
                 }
+                .contextMenu(ContextMenu(menuItems: {
+                    Button("Save as a note") {
+                        if message.role == .assistant {
+                            saveNote(content: message.text)
+                            // Show the save confirmation
+                            withAnimation {
+                                showSaveConfirmation = true
+                            }
+                            // Hide it after a short delay
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) { // Adjust the delay as needed
+                                withAnimation {
+                                    showSaveConfirmation = false
+                                }
+                            }
+                        }
+
+                    }
+                
+                }))
             if (message.role == .assistant){
                 Spacer()
             }
