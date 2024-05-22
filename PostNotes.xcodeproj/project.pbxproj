@@ -46,6 +46,7 @@
 		921DE72C2BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */; };
 		923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D22BC54C6C00E10EB3 /* SignUpView.swift */; };
 		923551D52BC5AC8000E10EB3 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */; };
+		9242E3F52BFE150B002D04EB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E3F42BFE150B002D04EB /* Color.swift */; };
 		9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257981E2BB2195400254FB4 /* PostNotesApp.swift */; };
 		925798212BB21D1D00254FB4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925798202BB21D1D00254FB4 /* RoundButton.swift */; };
 		925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */; };
@@ -130,6 +131,7 @@
 		921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		923551D22BC54C6C00E10EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
+		9242E3F42BFE150B002D04EB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
 		925798202BB21D1D00254FB4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		925FF0192BAF6ABD00F8EE87 /* PostNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -315,6 +317,7 @@
 				92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */,
 				921DE7162BC99C7D00B7C007 /* Urbanist */,
 				92C0D2B22BC1AD9700CBD080 /* TriangleLoader */,
+				9242E3F42BFE150B002D04EB /* Color.swift */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -540,6 +543,7 @@
 				926705072BCDE32400372250 /* MessageStore.swift in Sources */,
 				920594F02BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift in Sources */,
 				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
+				9242E3F52BFE150B002D04EB /* Color.swift in Sources */,
 				92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */,
 				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
 				921DE6FE2BC965AD00B7C007 /* MessageView.swift in Sources */,

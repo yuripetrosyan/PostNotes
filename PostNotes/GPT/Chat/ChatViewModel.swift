@@ -28,13 +28,30 @@ class ChatViewModel: ObservableObject {
     }
     
     func fetchData(){
-//        self.messages = [
-//            AppMessage(id: "1", text: "Hello", role: .user, createdAt: Date()),
-//            AppMessage(id: "2", text: "I'm good", role: .assistant, createdAt: Date()),
-//            AppMessage(id: "3", text: "No", role: .user, createdAt: Date()),
-//            AppMessage(id: "4", text: "Yes", role: .assistant, createdAt: Date())
-//
-//        ]
+        db.collection("chats").document(chatId).getDocument(as: AppChat.self) { result in
+            switch result{
+            case .success(let success):
+                DispatchQueue.main.async{
+                    self.chat = success
+                }
+            case.failure(let faliure):
+                print(faliure)
+            }
+        }
+        
+        db.collection("chats").document(chatId).collection("message").getDocuments { querySnapshot, error in
+            guard let documents = querySnapshot?.documents, !documents.isEmpty else { return }
+            
+            self.messages = documents.compactMap({ snapshot -> AppMessage? in
+                do{
+                    var message = try  snapshot.data(as: AppMessage.self)
+                    message.id = snapshot.documentID
+                    return message
+                }catch{
+                    return nil
+                }
+            })
+        }
     }
     
     func sendMessage() async throws{

@@ -81,6 +81,7 @@ struct FoldersView: View {
                     .shadow(radius: 3, x:3, y: 2)
                     .scrollContentBackground(.hidden)
                     .padding(.top)
+                    .padding(.bottom, 60)//not to be obscured by tabview
                     .listRowSeparator(.hidden)
                     
                     .listRowSpacing(5)

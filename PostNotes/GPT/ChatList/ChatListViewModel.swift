@@ -64,7 +64,8 @@ class ChatListViewModel: ObservableObject {
     }
     
     func deleteChate(chat: AppChat){
-        
+        guard let id = chat.id else {return}
+        db.collection("chats").document(id).delete()
     }
     
 }

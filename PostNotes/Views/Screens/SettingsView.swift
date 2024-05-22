@@ -11,26 +11,28 @@ struct SettingsView: View {
     @ObservedObject var settingsViewModel = SettingsViewModel()
     @EnvironmentObject var appState: AppState
     var authViewModel = AuthViewModel()
-  //  @Environment(\.colorScheme) var colorScheme
     
     var body: some View {
         
         VStack{
-            Text("Hi \(authViewModel.emailText)")
-                .font(.title)
+            
             ProfileView().scrollContentBackground(.hidden)
+            
+            
 
             Button(action: {
                 appState.logout()
             }, label: {
                 Text("Logout")
-                    .font(.headline)
+                    .font(.title2)
+                    .fontDesign(.rounded)
+                    .fontWeight(.semibold)
                     .foregroundStyle(.brandSecondary)
             })
-            .padding()
-            .background(.brandPrimary)
+            .frame(width: 250, height: 50)
+            .background(LinearGradient(colors: [.brandPrimary, .brandPrimary.opacity(0.7)], startPoint: .leading, endPoint: .trailing))
             .clipShape(Capsule(style: .continuous))
-            .padding(.bottom, 70)
+            .padding(.bottom, 80)
 
             
         }

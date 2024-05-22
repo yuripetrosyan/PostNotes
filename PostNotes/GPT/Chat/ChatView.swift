@@ -70,11 +70,16 @@ struct ChatView: View {
         
         
         .overlay(
-                   Text("Saved!")
-                       .opacity(showSaveConfirmation ? 1 : 0) // Show/hide based on state
-                       .offset(y: -20) // Position above the message
-                       .animation(.easeInOut, value: showSaveConfirmation)
-               ) // Overlay the confirmation text
+            
+            Text("Saved!")
+               
+                .padding(10)
+                .background(RoundedRectangle(cornerRadius: 12).foregroundStyle(.ultraThinMaterial))
+                .offset(y: -20)
+                .opacity(showSaveConfirmation ? 1 : 0) // Show/hide based on state
+                .animation(.easeInOut, value: showSaveConfirmation)
+
+        )
         .onAppear{
             viewModel.fetchData()
         }
@@ -160,9 +165,9 @@ struct ChatView: View {
                                 }
                             }
                         }
-
+                        
                     }
-                
+                    
                 }))
             if (message.role == .assistant){
                 Spacer()
