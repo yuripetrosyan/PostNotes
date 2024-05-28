@@ -15,6 +15,8 @@ struct ChatView: View {
     @State private var showChatSelection = true
     @State private var showSaveConfirmation = false
     
+   
+    
     
     var body: some View {
         ZStack{

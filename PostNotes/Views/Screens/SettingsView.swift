@@ -16,10 +16,11 @@ struct SettingsView: View {
         
         VStack{
             
-            ProfileView().scrollContentBackground(.hidden)
+                
+                ProfileView().scrollContentBackground(.hidden)
+                
             
-            
-
+        
             Button(action: {
                 appState.logout()
             }, label: {

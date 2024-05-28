@@ -4,16 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Copy of Copy of PostNotes.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
-		<key>Copy of PostNotes.xcscheme</key>
-		<dict>
-			<key>orderHint</key>
-			<integer>0</integer>
-		</dict>
 		<key>LatestNoteExtension.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
@@ -54,6 +44,11 @@
 			<true/>
 		</dict>
 		<key>927F56212BB2117000849EDB</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>92D7446E2C06388200BD5555</key>
 		<dict>
 			<key>primary</key>
 			<true/>

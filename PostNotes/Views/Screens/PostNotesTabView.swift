@@ -43,7 +43,7 @@ struct PostNotesTabView: View {
                     
                     Spacer()
                     CustomTabBar(selectedTab: $tabSelected)
-                        .padding(.bottom, -15)
+                        .padding(.bottom, -20)
                     
                 }.ignoresSafeArea(.keyboard, edges: .bottom)
         }

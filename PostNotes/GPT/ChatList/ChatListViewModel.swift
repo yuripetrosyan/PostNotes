@@ -27,14 +27,7 @@ class ChatListViewModel: ObservableObject {
     private let db = Firestore.firestore()
     
     func fetchData(user: String?){
-//        self.chats = [
-//            AppChat(id: "1", topic: "Topic", model: .gpt3_5_turbo, lastMessageSent: Date(), owner: "123"),
-//            AppChat(id: "2", topic: "Gym", model: .gpt4, lastMessageSent: Date(), owner: "1233"),
-//            AppChat(id: "3", topic: "Note", model: .gpt3_5_turbo, lastMessageSent: Date(), owner: "1234"),
-//            AppChat(id: "4", topic: "Health", model: .gpt4, lastMessageSent: Date(), owner: "1423")
-//        ]
-//        self.loadingState = .resultsFound
-        
+
         
         if loadingState == .none {
             loadingState = .loading
@@ -52,6 +45,10 @@ class ChatListViewModel: ObservableObject {
             }
         }
     }
+    
+    
+ 
+    
     
     func createChat(user: String?) async throws -> String{
         let document = try await db.collection("chats").addDocument(data: ["lastMessageSent": Date(), "owner": user ?? "" ])
@@ -79,10 +76,11 @@ enum ChatListState {
 
 struct AppChat: Codable, Identifiable {
     @DocumentID var id: String?
-    let topic: String?
+    var topic: String?
     var model: ChatModel?
     let lastMessageSent: FirestoreDate
     let owner: String
+    
     
     //how long ago the message was sent
     var lastMessageTimeAgo: String{
@@ -96,7 +94,7 @@ struct AppChat: Codable, Identifiable {
             (components.hour, "hour"),
             (components.minute, "minute"),
             (components.second, "second")
-        ]
+        ]        
         
         for timeUnit in timeUnits {
             if let value = timeUnit.value, value > 0 {

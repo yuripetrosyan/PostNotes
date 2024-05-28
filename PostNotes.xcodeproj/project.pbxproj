@@ -102,7 +102,6 @@
 		921341E82BE5183500B92692 /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		921341EB2BE958C000B92692 /* ChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListView.swift; sourceTree = "<group>"; };
 		921341ED2BE958CB00B92692 /* ChatListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatListViewModel.swift; sourceTree = "<group>"; };
-		92166DCA2BC1D11F0027511B /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
 		92166DCC2BC1D11F0027511B /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		921DE6F92BC9641200B7C007 /* MessageModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageModel.swift; sourceTree = "<group>"; };
 		921DE6FB2BC964FD00B7C007 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -160,6 +159,7 @@
 		92CBAA662BF3AF6D0064291E /* TestForChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestForChatListView.swift; sourceTree = "<group>"; };
 		92CC639D2BC547E300D53101 /* FlatGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatGlassView.swift; sourceTree = "<group>"; };
 		92CF50A22BBDB5BD00BC2A49 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
+		92D7446F2C06388200BD5555 /* PostNotes Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = "PostNotes Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92FC18C22BED0DAD0091469C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		92FC18C52BED0DD40091469C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		92FC18C72BED0E470091469C /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
@@ -174,6 +174,13 @@
 				921341E52BE431CD00B92692 /* FirebaseFirestore in Frameworks */,
 				92FC18CC2BEFC5B80091469C /* OpenAI in Frameworks */,
 				921341E72BE431CD00B92692 /* FirebaseFirestoreSwift in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92D7446C2C06388200BD5555 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -211,7 +218,6 @@
 		92166DC92BC1D11F0027511B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				92166DCA2BC1D11F0027511B /* WidgetKit.framework */,
 				92166DCC2BC1D11F0027511B /* SwiftUI.framework */,
 			);
 			name = Frameworks;
@@ -280,6 +286,7 @@
 			isa = PBXGroup;
 			children = (
 				925FF0192BAF6ABD00F8EE87 /* PostNotes.app */,
+				92D7446F2C06388200BD5555 /* PostNotes Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -451,6 +458,23 @@
 			productReference = 925FF0192BAF6ABD00F8EE87 /* PostNotes.app */;
 			productType = "com.apple.product-type.application";
 		};
+		92D7446E2C06388200BD5555 /* PostNotes Watch Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 92D744782C06388200BD5555 /* Build configuration list for PBXNativeTarget "PostNotes Watch Extension" */;
+			buildPhases = (
+				92D7446B2C06388200BD5555 /* Sources */,
+				92D7446C2C06388200BD5555 /* Frameworks */,
+				92D7446D2C06388200BD5555 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "PostNotes Watch Extension";
+			productName = "PostNotes Watch Extension";
+			productReference = 92D7446F2C06388200BD5555 /* PostNotes Watch Extension.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -458,11 +482,14 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1530;
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1530;
 				TargetAttributes = {
 					925FF0182BAF6ABD00F8EE87 = {
 						CreatedOnToolsVersion = 15.3;
+					};
+					92D7446E2C06388200BD5555 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -485,6 +512,7 @@
 			projectRoot = "";
 			targets = (
 				925FF0182BAF6ABD00F8EE87 /* PostNotes */,
+				92D7446E2C06388200BD5555 /* PostNotes Watch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -520,6 +548,13 @@
 				921DE7222BC99C7D00B7C007 /* Urbanist-Medium.ttf in Resources */,
 				921DE7182BC99C7D00B7C007 /* Urbanist-BlackItalic.ttf in Resources */,
 				921DE72B2BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92D7446D2C06388200BD5555 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,6 +605,13 @@
 				925FF03A2BAF709600F8EE87 /* CutomNotepad.swift in Sources */,
 				925FF0332BAF6B5B00F8EE87 /* CustiomGridtem.swift in Sources */,
 				921DE6FC2BC964FD00B7C007 /* Constants.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		92D7446B2C06388200BD5555 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -761,6 +803,62 @@
 			};
 			name = Release;
 		};
+		92D744762C06388200BD5555 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT829445M9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PostNotes Watch Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PostNotes Watch Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YuriPetrosyan.PostNotes-Watch-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Debug;
+		};
+		92D744772C06388200BD5555 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = ZT829445M9;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "PostNotes Watch Extension/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "PostNotes Watch Extension";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.YuriPetrosyan.PostNotes-Watch-Extension";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 4;
+				WATCHOS_DEPLOYMENT_TARGET = 10.5;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -778,6 +876,15 @@
 			buildConfigurations = (
 				925FF0282BAF6ABE00F8EE87 /* Debug */,
 				925FF0292BAF6ABE00F8EE87 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		92D744782C06388200BD5555 /* Build configuration list for PBXNativeTarget "PostNotes Watch Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				92D744762C06388200BD5555 /* Debug */,
+				92D744772C06388200BD5555 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
