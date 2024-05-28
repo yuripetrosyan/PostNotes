@@ -19,7 +19,6 @@ struct SettingsView: View {
                 
                 ProfileView().scrollContentBackground(.hidden)
                 
-            
         
             Button(action: {
                 appState.logout()

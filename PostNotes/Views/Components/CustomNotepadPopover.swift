@@ -13,6 +13,7 @@ struct CustomNotepadPopoverLonger: View {
     @Binding var isShowingPopover: Bool
     @State var newNoteTitle: String = ""
     @State var newNoteContent: String = ""
+    @State private var selectedCategory = ""
 
     var body: some View {
         GeometryReader { geo in
@@ -104,7 +105,6 @@ struct CustomNotepadPopoverLonger: View {
         }
     }
     
-    @State private var selectedCategory = "All Notes"
     
     func saveNote(title: String, content: String, selectedCategory: String) {
         let newNote = Note() // Create a new note

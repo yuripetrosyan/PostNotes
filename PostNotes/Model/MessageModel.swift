@@ -14,16 +14,13 @@ struct Message: Identifiable{
     let dateCreated: Date
     let sender: MessageSender
     
-    
 }
-
 
 enum MessageSender{
     case me
     case gpt
     
 }
-
 
 extension Message{
     static let sampleMessages = [

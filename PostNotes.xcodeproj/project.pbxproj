@@ -73,6 +73,7 @@
 		92CBAA672BF3AF6D0064291E /* TestForChatListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CBAA662BF3AF6D0064291E /* TestForChatListView.swift */; };
 		92CC639E2BC547E300D53101 /* FlatGlassView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CC639D2BC547E300D53101 /* FlatGlassView.swift */; };
 		92CF50A32BBDB5BD00BC2A49 /* NoteModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92CF50A22BBDB5BD00BC2A49 /* NoteModel.swift */; };
+		92EB43882C065E6B00018579 /* DetailedViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92EB43872C065E6B00018579 /* DetailedViewViewModel.swift */; };
 		92FC18C32BED0DAD0091469C /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FC18C22BED0DAD0091469C /* ChatView.swift */; };
 		92FC18C62BED0DD40091469C /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FC18C52BED0DD40091469C /* ProfileView.swift */; };
 		92FC18C82BED0E470091469C /* ChatViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92FC18C72BED0E470091469C /* ChatViewModel.swift */; };
@@ -160,6 +161,7 @@
 		92CC639D2BC547E300D53101 /* FlatGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatGlassView.swift; sourceTree = "<group>"; };
 		92CF50A22BBDB5BD00BC2A49 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
 		92D7446F2C06388200BD5555 /* PostNotes Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = "PostNotes Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		92EB43872C065E6B00018579 /* DetailedViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewViewModel.swift; sourceTree = "<group>"; };
 		92FC18C22BED0DAD0091469C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		92FC18C52BED0DD40091469C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		92FC18C72BED0E470091469C /* ChatViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewModel.swift; sourceTree = "<group>"; };
@@ -297,9 +299,9 @@
 				9257981E2BB2195400254FB4 /* PostNotesApp.swift */,
 				921341E82BE5183500B92692 /* AppState.swift */,
 				92C973432BB09DF60080C2C0 /* Views */,
+				926705012BCD61AD00372250 /* ViewModel */,
 				92FC18C92BED16FB0091469C /* GPT */,
 				92C973442BB09E160080C2C0 /* Model */,
-				926705012BCD61AD00372250 /* ViewModel */,
 				92C973452BB09E210080C2C0 /* Utilities */,
 				925FF02B2BAF6AD300F8EE87 /* Extras */,
 				925FF0202BAF6ABE00F8EE87 /* Assets.xcassets */,
@@ -354,6 +356,7 @@
 			children = (
 				923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */,
 				926705022BCD621600372250 /* SettingsViewModel.swift */,
+				92EB43872C065E6B00018579 /* DetailedViewViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -567,6 +570,7 @@
 			files = (
 				92FC18C32BED0DAD0091469C /* ChatView.swift in Sources */,
 				92FC18C62BED0DD40091469C /* ProfileView.swift in Sources */,
+				92EB43882C065E6B00018579 /* DetailedViewViewModel.swift in Sources */,
 				923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */,
 				925FF0352BAF6B9300F8EE87 /* CustomTextField.swift in Sources */,
 				92C0D2B42BC1AD9700CBD080 /* TriangleLoader.swift in Sources */,
