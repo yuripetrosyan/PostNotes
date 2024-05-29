@@ -20,6 +20,7 @@ struct GridView: View {
     @State var folderNameFilter: String? = nil
     @State var searchedText: String = ""
     @State private var showingConfirmation = false
+    @State private var showCamera = false
     
     let columns: [GridItem] = [
         GridItem(.flexible()),
@@ -116,7 +117,24 @@ struct GridView: View {
                         .tint(.brandPrimary)
                 }
             }
+            
+            ToolbarItem(placement: .topBarLeading) {
+                Button {
+                    withAnimation(Animation.smooth){
+                        //Open Camera
+                        showCamera = true
+                    }
+                } label: {
+                    Image(systemName: "camera")
+                        .tint(.brandPrimary)
+                }
+
+            }
         }
+        .sheet(isPresented: $showCamera, content: {
+            CameraView()
+                .presentationDragIndicator(.visible)
+        }) .animation(.easeInOut, value: showCamera)
     }
 }
 

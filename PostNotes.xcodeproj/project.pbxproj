@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		920594F02BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920594EF2BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift */; };
+		920BD6B22C07D39900BF3B46 /* CameraView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BD6B12C07D39900BF3B46 /* CameraView.swift */; };
+		920BD6B42C07D3C900BF3B46 /* CameraPreview.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BD6B32C07D3C900BF3B46 /* CameraPreview.swift */; };
+		920BD6B62C07D3DF00BF3B46 /* CameraManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BD6B52C07D3DF00BF3B46 /* CameraManager.swift */; };
+		920BD6B82C07D3F700BF3B46 /* CameraViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920BD6B72C07D3F700BF3B46 /* CameraViewModel.swift */; };
 		920F43C42BDA6F6B0047680E /* KeychainHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 920F43C32BDA6F6B0047680E /* KeychainHelper.swift */; };
 		921341D92BE4272200B92692 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921341D82BE4272200B92692 /* AuthView.swift */; };
 		921341DB2BE4273900B92692 /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 921341DA2BE4273900B92692 /* AuthViewModel.swift */; };
@@ -95,6 +99,10 @@
 
 /* Begin PBXFileReference section */
 		920594EF2BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultAnimationAnimationModifier.swift; sourceTree = "<group>"; };
+		920BD6B12C07D39900BF3B46 /* CameraView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraView.swift; sourceTree = "<group>"; };
+		920BD6B32C07D3C900BF3B46 /* CameraPreview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraPreview.swift; sourceTree = "<group>"; };
+		920BD6B52C07D3DF00BF3B46 /* CameraManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraManager.swift; sourceTree = "<group>"; };
+		920BD6B72C07D3F700BF3B46 /* CameraViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewModel.swift; sourceTree = "<group>"; };
 		920F43C32BDA6F6B0047680E /* KeychainHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeychainHelper.swift; sourceTree = "<group>"; };
 		921341D82BE4272200B92692 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		921341DA2BE4273900B92692 /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
@@ -195,6 +203,17 @@
 				920594EF2BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		920BD6B02C07D2F600BF3B46 /* Camera */ = {
+			isa = PBXGroup;
+			children = (
+				920BD6B12C07D39900BF3B46 /* CameraView.swift */,
+				920BD6B32C07D3C900BF3B46 /* CameraPreview.swift */,
+				920BD6B52C07D3DF00BF3B46 /* CameraManager.swift */,
+				920BD6B72C07D3F700BF3B46 /* CameraViewModel.swift */,
+			);
+			path = Camera;
 			sourceTree = "<group>";
 		};
 		921341DE2BE4276A00B92692 /* Authentication */ = {
@@ -301,6 +320,7 @@
 				92C973432BB09DF60080C2C0 /* Views */,
 				926705012BCD61AD00372250 /* ViewModel */,
 				92FC18C92BED16FB0091469C /* GPT */,
+				920BD6B02C07D2F600BF3B46 /* Camera */,
 				92C973442BB09E160080C2C0 /* Model */,
 				92C973452BB09E210080C2C0 /* Utilities */,
 				925FF02B2BAF6AD300F8EE87 /* Extras */,
@@ -578,16 +598,20 @@
 				926705032BCD621600372250 /* SettingsViewModel.swift in Sources */,
 				923551D52BC5AC8000E10EB3 /* FolderViewModel.swift in Sources */,
 				921341EE2BE958CB00B92692 /* ChatListViewModel.swift in Sources */,
+				920BD6B62C07D3DF00BF3B46 /* CameraManager.swift in Sources */,
 				92C877DA2BB445B1000E9BBB /* CustomNotepadPopover.swift in Sources */,
+				920BD6B42C07D3C900BF3B46 /* CameraPreview.swift in Sources */,
 				926705072BCDE32400372250 /* MessageStore.swift in Sources */,
 				920594F02BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift in Sources */,
 				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
 				9242E3F52BFE150B002D04EB /* Color.swift in Sources */,
+				920BD6B22C07D39900BF3B46 /* CameraView.swift in Sources */,
 				92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */,
 				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
 				921DE6FE2BC965AD00B7C007 /* MessageView.swift in Sources */,
 				921341DB2BE4273900B92692 /* AuthViewModel.swift in Sources */,
 				92CC639E2BC547E300D53101 /* FlatGlassView.swift in Sources */,
+				920BD6B82C07D3F700BF3B46 /* CameraViewModel.swift in Sources */,
 				92FC18C82BED0E470091469C /* ChatViewModel.swift in Sources */,
 				920F43C42BDA6F6B0047680E /* KeychainHelper.swift in Sources */,
 				92C877D82BB442A2000E9BBB /* CustomNotepadWide.swift in Sources */,
@@ -756,6 +780,8 @@
 				INFOPLIST_FILE = PostNotes/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "PostNotes Ai";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used to capture photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Library is used to save photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -789,6 +815,8 @@
 				INFOPLIST_FILE = PostNotes/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "PostNotes Ai";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
+				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used to capture photos";
+				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Library is used to save photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
