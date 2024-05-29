@@ -26,12 +26,14 @@ struct PostNotesTabView: View {
             switch tabSelected {
             case .house:
                 GridView()
+            case .camera:
+                //AccountView()
+                CameraView()
             case .messageAI:
                 ChatListView()
-            case .plus:
+            case .folder:
                 FoldersView(categories: FoldersViewModel.shared.folders)
-            case .person:
-                AccountView()
+          
             case .gearshape:
                 SettingsView()
             }

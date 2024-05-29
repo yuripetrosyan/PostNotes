@@ -118,23 +118,9 @@ struct GridView: View {
                 }
             }
             
-            ToolbarItem(placement: .topBarLeading) {
-                Button {
-                    withAnimation(Animation.smooth){
-                        //Open Camera
-                        showCamera = true
-                    }
-                } label: {
-                    Image(systemName: "camera")
-                        .tint(.brandPrimary)
-                }
-
-            }
+            
         }
-        .sheet(isPresented: $showCamera, content: {
-            CameraView()
-                .presentationDragIndicator(.visible)
-        }) .animation(.easeInOut, value: showCamera)
+      
     }
 }
 
