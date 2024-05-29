@@ -58,7 +58,7 @@ struct CameraView: View {
                                 
                                 
                             }.padding(.leading, 25)
-                                .padding(.top, 65)
+                                .padding(.top, 35)
                             
                             
                             
@@ -96,7 +96,7 @@ struct CameraView: View {
                                     }
                                 }
                         }
-                    }
+                    }.padding(.bottom, 70)
                     
                     
                 }
