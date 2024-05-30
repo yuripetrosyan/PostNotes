@@ -81,7 +81,6 @@ struct CardView: View {
                         .frame(height: 120)
                         .offset(CGSize(width: 0.0, height: -20.0))
                     
-                    
                     Text(title)
                         .font(.title2)
                         .fontWeight(.bold)
@@ -89,8 +88,6 @@ struct CardView: View {
                         .padding(.horizontal, 20)
                         .lineLimit(4)
                         .padding(.bottom, 20)
-                    
-                    
                 }
                 
                 Spacer()

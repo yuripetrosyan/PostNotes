@@ -14,39 +14,75 @@ struct SettingsView: View {
     
     
     var body: some View {
-        
-        VStack{
-            List{
-                
-                Section{
-                    ProfileView()
-                }
+        NavigationStack{
+            VStack{
+                List{
+                    Section{
+                       
+                        
+                        NavigationLink {
+                            ExploreList()
+                        } label: {
+                            HStack{
+                                Image("Illustration2")
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fit)
+                                    .frame(height: 70)
+                                
+                                Text("See Updates")
+                                    .font(.title2)
+                                    .fontWeight(.semibold)
+                                    .foregroundColor(.white)
+                                    .padding(.leading, 10)
+                            }
+                        }
+
+                        //
+                        //                    NavigationLink("See Updates") {
+                        //                        ExploreList()
+                        //                    }
+                    }
+                    .frame(height: 70)
+                    .background(Color("background9").padding(-2000))
+                  //  .shadow(color: Color("backgroundShadow4"), radius: 20, x: 0, y: 20)
+               
                     
-                
-                NavigationLink("See Updates") {
-                    ExploreList()
+
+                    
+                    Section{
+                        ProfileView()
+                        
+                    }
+                        
+                    
+                    Section{
+                        Button("Logout"){
+                            
+                        }.foregroundStyle(.red)
+                    }
+                    
+                    
                 }
-                }
                 
                 
-            
-                Button(action: {
-                    appState.logout()
-                }, label: {
-                    Text("Logout")
-                        .font(.title2)
-                        .fontDesign(.rounded)
-                        .fontWeight(.semibold)
-                        .foregroundStyle(.brandSecondary)
-                })
-                .frame(width: 250, height: 50)
-                .background(LinearGradient(colors: [.brandPrimary, .brandPrimary.opacity(0.7)], startPoint: .leading, endPoint: .trailing))
-                .clipShape(Capsule(style: .continuous))
-                .padding(.bottom, 80)
                 
+                
+//                Button(action: {
+//                    appState.logout()
+//                }, label: {
+//                    Text("Logout")
+//                        .font(.title2)
+//                        .fontDesign(.rounded)
+//                        .fontWeight(.semibold)
+//                        .foregroundStyle(.brandSecondary)
+//                })
+//                .frame(width: 250, height: 50)
+//                .background(LinearGradient(colors: [.brandPrimary, .brandPrimary.opacity(0.7)], startPoint: .leading, endPoint: .trailing))
+//                .clipShape(Capsule(style: .continuous))
+//                .padding(.bottom, 80)
                 
             }
-            
+        }
         }
     }
     
