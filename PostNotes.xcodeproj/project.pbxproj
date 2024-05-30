@@ -50,7 +50,6 @@
 		921DE72C2BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */; };
 		923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D22BC54C6C00E10EB3 /* SignUpView.swift */; };
 		923551D52BC5AC8000E10EB3 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */; };
-		9242E3F52BFE150B002D04EB /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9242E3F42BFE150B002D04EB /* Color.swift */; };
 		9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257981E2BB2195400254FB4 /* PostNotesApp.swift */; };
 		925798212BB21D1D00254FB4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925798202BB21D1D00254FB4 /* RoundButton.swift */; };
 		925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */; };
@@ -65,6 +64,9 @@
 		926705072BCDE32400372250 /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926705062BCDE32400372250 /* MessageStore.swift */; };
 		926812592BB0DD140048822D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812582BB0DD140048822D /* SettingsView.swift */; };
 		926812772BB1D6C30048822D /* FoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812762BB1D6C20048822D /* FoldersView.swift */; };
+		928B95242C08EEED0010D729 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B95232C08EEED0010D729 /* BlurView.swift */; };
+		928B95272C08F02B0010D729 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B95262C08F02B0010D729 /* ExploreView.swift */; };
+		928B95292C08F0AB0010D729 /* ExploreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B95282C08F0AB0010D729 /* ExploreList.swift */; };
 		92C0D2952BC095E300CBD080 /* firstNoteAdd.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D2942BC095E300CBD080 /* firstNoteAdd.swift */; };
 		92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */; };
 		92C0D2B32BC1AD9700CBD080 /* TriangleShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92C0D2AF2BC1AD9700CBD080 /* TriangleShape.swift */; };
@@ -139,7 +141,6 @@
 		921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		923551D22BC54C6C00E10EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
 		923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
-		9242E3F42BFE150B002D04EB /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
 		925798202BB21D1D00254FB4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		925FF0192BAF6ABD00F8EE87 /* PostNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -155,6 +156,9 @@
 		926705062BCDE32400372250 /* MessageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStore.swift; sourceTree = "<group>"; };
 		926812582BB0DD140048822D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		926812762BB1D6C20048822D /* FoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersView.swift; sourceTree = "<group>"; };
+		928B95232C08EEED0010D729 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
+		928B95262C08F02B0010D729 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
+		928B95282C08F0AB0010D729 /* ExploreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreList.swift; sourceTree = "<group>"; };
 		92C0D2942BC095E300CBD080 /* firstNoteAdd.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = firstNoteAdd.swift; sourceTree = "<group>"; };
 		92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabView.swift; sourceTree = "<group>"; };
 		92C0D2AF2BC1AD9700CBD080 /* TriangleShape.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TriangleShape.swift; sourceTree = "<group>"; };
@@ -290,6 +294,7 @@
 				92C9734A2BB09ECA0080C2C0 /* DetailedVIew.swift */,
 				926812762BB1D6C20048822D /* FoldersView.swift */,
 				926812582BB0DD140048822D /* SettingsView.swift */,
+				928B95252C08F0150010D729 /* Explore */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -343,10 +348,9 @@
 		925FF02B2BAF6AD300F8EE87 /* Extras */ = {
 			isa = PBXGroup;
 			children = (
-				92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */,
-				921DE7162BC99C7D00B7C007 /* Urbanist */,
+				928B95222C08EED50010D729 /* Fonts */,
 				92C0D2B22BC1AD9700CBD080 /* TriangleLoader */,
-				9242E3F42BFE150B002D04EB /* Color.swift */,
+				928B95232C08EEED0010D729 /* BlurView.swift */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -379,6 +383,24 @@
 				92EB43872C065E6B00018579 /* DetailedViewViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		928B95222C08EED50010D729 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				92C9734C2BB0A0B40080C2C0 /* ARCADECLASSIC.TTF */,
+				921DE7162BC99C7D00B7C007 /* Urbanist */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		928B95252C08F0150010D729 /* Explore */ = {
+			isa = PBXGroup;
+			children = (
+				928B95262C08F02B0010D729 /* ExploreView.swift */,
+				928B95282C08F0AB0010D729 /* ExploreList.swift */,
+			);
+			path = Explore;
 			sourceTree = "<group>";
 		};
 		92C0D2B02BC1AD9700CBD080 /* Support */ = {
@@ -595,6 +617,7 @@
 				925FF0352BAF6B9300F8EE87 /* CustomTextField.swift in Sources */,
 				92C0D2B42BC1AD9700CBD080 /* TriangleLoader.swift in Sources */,
 				92CF50A32BBDB5BD00BC2A49 /* NoteModel.swift in Sources */,
+				928B95292C08F0AB0010D729 /* ExploreList.swift in Sources */,
 				926705032BCD621600372250 /* SettingsViewModel.swift in Sources */,
 				923551D52BC5AC8000E10EB3 /* FolderViewModel.swift in Sources */,
 				921341EE2BE958CB00B92692 /* ChatListViewModel.swift in Sources */,
@@ -604,7 +627,6 @@
 				926705072BCDE32400372250 /* MessageStore.swift in Sources */,
 				920594F02BECD54F005D09D8 /* DefaultAnimationAnimationModifier.swift in Sources */,
 				925FF02F2BAF6B1300F8EE87 /* AccountView.swift in Sources */,
-				9242E3F52BFE150B002D04EB /* Color.swift in Sources */,
 				920BD6B22C07D39900BF3B46 /* CameraView.swift in Sources */,
 				92C0D29C2BC0C30900CBD080 /* CustomTabView.swift in Sources */,
 				925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */,
@@ -619,8 +641,10 @@
 				921DE6FA2BC9641200B7C007 /* MessageModel.swift in Sources */,
 				921341D92BE4272200B92692 /* AuthView.swift in Sources */,
 				92C0D2B32BC1AD9700CBD080 /* TriangleShape.swift in Sources */,
+				928B95272C08F02B0010D729 /* ExploreView.swift in Sources */,
 				925798212BB21D1D00254FB4 /* RoundButton.swift in Sources */,
 				926812772BB1D6C30048822D /* FoldersView.swift in Sources */,
+				928B95242C08EEED0010D729 /* BlurView.swift in Sources */,
 				926812592BB0DD140048822D /* SettingsView.swift in Sources */,
 				921341E92BE5183500B92692 /* AppState.swift in Sources */,
 				92CBAA672BF3AF6D0064291E /* TestForChatListView.swift in Sources */,

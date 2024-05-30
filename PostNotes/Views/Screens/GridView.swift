@@ -12,9 +12,7 @@ struct GridView: View {
     
     @Environment(\.modelContext) var context
     @Query(sort: \Note.date, order: .reverse) var items: [Note]
-    
-    var category: String? // category optional
-    
+     var category: String? // category optional
     @ObservedObject var foldersManager = FoldersViewModel.shared
     @State var isShowingPopover = false
     @State var folderNameFilter: String? = nil
@@ -40,6 +38,9 @@ struct GridView: View {
     var body: some View {
         //  NavigationStack{
         ZStack{
+            
+            BlurView(style: .systemMaterial).ignoresSafeArea()
+            
             ZStack{
                 ScrollView {
                     LazyVGrid(columns: columns, alignment: .center, spacing: 10) {

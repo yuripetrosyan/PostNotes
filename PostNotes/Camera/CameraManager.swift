@@ -5,7 +5,7 @@
 //  Created by Yuri Petrosyan on 29/05/2024.
 //
 
-
+                                      
 import SwiftUI
 import AVFoundation
 
@@ -205,7 +205,7 @@ class CameraManager: ObservableObject {
             photoSettings.photoQualityPrioritization = .quality
             
             if let videoConnection = photoOutput.connection(with: .video), videoConnection.isVideoOrientationSupported {
-                videoConnection.videoOrientation = .portrait
+                //videoConnection.videoOrientation = .portrait
             }
             
             cameraDelegate = CameraDelegate { [weak self] image in

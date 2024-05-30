@@ -122,7 +122,10 @@ struct ChatListView: View {
             }
         }).tint(.brandPrimary)
         .sheet(isPresented: $viewModel.isShowingProfileView, content: {
-            ProfileView()
+            List{
+                ProfileView()
+
+            }
         })
         .navigationDestination(for: String.self, destination: { chatId in
             ChatView(viewModel: .init(chatId: chatId))
@@ -137,8 +140,8 @@ struct ChatListView: View {
         
     }
 }
-//
-//#Preview {
-//    ChatListView()
-//}
+
+#Preview {
+    ChatListView()
+}
         

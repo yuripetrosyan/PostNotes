@@ -9,15 +9,26 @@ import SwiftUI
 
 struct ProfileView: View {
     
+    @State private var buttonIsGreen = false
     @State var apiKey: String = UserDefaults.standard.string(forKey: "openai_api_key") ?? ""
     var body: some View {
-        List{
-            Section("OpenAI API Key") {
-                TextField("Enter key", text: $apiKey) {
+            
+                TextField("OpenAI API Key", text: $apiKey) {
                     UserDefaults.standard.setValue(apiKey, forKey: "openai_api_key")
                 }
+        Button("Save") {
+            
+            UserDefaults.standard.setValue(apiKey, forKey: "openai_api_key")
+        }
+        .onTapGesture  {
+            withAnimation(.smooth){
+                buttonIsGreen = true
             }
         }
+        .foregroundStyle(buttonIsGreen ? .green : .blue)
+        .fontWeight(buttonIsGreen ? .semibold : .regular)
+            
+        
     }
 }
 

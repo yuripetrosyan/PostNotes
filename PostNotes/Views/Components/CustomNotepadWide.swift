@@ -9,12 +9,7 @@ struct CustomNotepadWide: View {
         ZStack{
                 RoundedRectangle(cornerRadius: 25.0)
                     .frame(width: 270, height: initialState ? 110 : 230)
-                //Animation
-                //Rectangle goes down while top round rectangle goes up
-                
                     .offset(CGSize(width: 0.0, height: initialState ? -15.0 : 0))
-                
-                
                     .foregroundStyle(.ultraThinMaterial.shadow(.inner(radius: 4)))
                 
                 TopRoundedRectangle(radius: 25)

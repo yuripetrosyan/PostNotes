@@ -28,6 +28,11 @@ class SettingsViewModel: ObservableObject{
     @Published var userName: String = "John Doe"
     @Published var userLocation: String = "California, USA"
     
+    
+    
+    
+
+    
     // MARK: - Persistence =
       private let defaults = UserDefaults.standard
     
