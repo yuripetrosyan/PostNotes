@@ -7,18 +7,19 @@
 
 import SwiftUI
 
-struct FlatSignUpView: View {
+struct SignInView: View {
     @State var email = ""
     @State var password = ""
-    @State var passwordAgain = ""
     @Binding var sheetIsOn: Bool
-    
+    @ObservedObject var viewModel: AuthViewModel = AuthViewModel()
+    @EnvironmentObject var appState: AppState
+
     var body: some View {
  
             VStack{
                     
                     HStack{
-                        Text("Sign up")
+                        Text("Log in")
                             .font(.largeTitle)
                             .bold()
                             .frame(maxWidth : .infinity, alignment: .leading)
@@ -35,7 +36,7 @@ struct FlatSignUpView: View {
                                 }
                             }
                     }
-                    Text("Create a new account")
+                    Text("If you already have an account")
                         .font(.callout)
                         .frame(maxWidth : .infinity, alignment: .leading)
                 
@@ -47,27 +48,25 @@ struct FlatSignUpView: View {
                 VStack (spacing: 12) {
                     
                 
-                    TextField("Enter email", text: $email)
+                    TextField("Enter email", text: $viewModel.emailText)
                         .modifier(FlatGlassView())
                     
                     
-                    SecureField("Enter password", text: $password)
+                    SecureField("Enter password", text: $viewModel.passwordText)
                         .modifier(FlatGlassView())
                     
-                    
-                    SecureField("Re-enter password", text: $passwordAgain)
-                        .modifier(FlatGlassView())
+                
                 }
                 .padding()
                 
                 
-                Text("By signing up you accept the **Terms of Service** and **Privacy Policy**")
-                    .font(.footnote)
+               // Text("By signing up you accept the **Terms of Service** and **Privacy Policy**")
+                    //.font(.footnote)
                 
                     Divider().padding(.horizontal).padding(.bottom)
 
                 Button {
-                    //TODO:- add action
+                    viewModel.authenticate(appState: appState)
                 } label: {
                         Text("Next")
                             .bold()
@@ -100,6 +99,6 @@ struct FlatSignUpView: View {
 
 
 #Preview {
-    //FlatSignUpView(sheetIsOn: .constant(true))
+   // SignInView(sheetIsOn: .constant(true))
     AccountView()
 }
