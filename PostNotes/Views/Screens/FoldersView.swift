@@ -22,15 +22,21 @@ struct FoldersView: View {
         ZStack {
             NavigationView {
                 VStack {
-                    ScrollView(.horizontal) {
-                        LazyHStack {
+                    ScrollView(.horizontal, showsIndicators: false) {
+                        LazyHStack(spacing: 180.0){
                             ForEach(items, id: \.id) { note in
                                 NavigationLink(destination: DetailedVIew(item: note) { _ in })  {
-                                    CustomGridItemView(item: note)
+                                    GeometryReader { geometry in
+                                        CustomGridItemView(item: note)
+                                            .rotation3DEffect(Angle(degrees:
+                                                                        Double(geometry.frame(in: .global).minX - 30) / -40), axis: (x: 0, y: 10.0, z: 0))
+                                    }
                                 }
                             }
-                        }
-                        .padding()
+                        } .padding(.leading, 30)
+                            .padding(.top, 10)
+                          
+                       // .padding()
                         .frame(height: 190)
                     }
                     

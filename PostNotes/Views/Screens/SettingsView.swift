@@ -46,18 +46,15 @@ struct SettingsView: View {
                     .background(Color("background9").padding(-2000))
                   //  .shadow(color: Color("backgroundShadow4"), radius: 20, x: 0, y: 20)
                
-                    
-
-                    
-                    Section{
+                     Section("OpenAI API key", content: {
                         ProfileView()
+                    })
                         
-                    }
-                        
+                  
                     
                     Section{
                         Button("Logout"){
-                            
+                                appState.logout()
                         }.foregroundStyle(.red)
                     }
                     

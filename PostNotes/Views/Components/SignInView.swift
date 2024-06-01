@@ -17,7 +17,6 @@ struct SignInView: View {
     var body: some View {
  
             VStack{
-                    
                     HStack{
                         Text("Log in")
                             .font(.largeTitle)
@@ -50,10 +49,14 @@ struct SignInView: View {
                 
                     TextField("Enter email", text: $viewModel.emailText)
                         .modifier(FlatGlassView())
+                        .textContentType(.username)
+                        .textInputAutocapitalization(.never)
                     
                     
                     SecureField("Enter password", text: $viewModel.passwordText)
                         .modifier(FlatGlassView())
+                        .textContentType(.password)
+                        .textInputAutocapitalization(.never)
                     
                 
                 }
@@ -66,7 +69,7 @@ struct SignInView: View {
                     Divider().padding(.horizontal).padding(.bottom)
 
                 Button {
-                    viewModel.authenticate(appState: appState)
+                    viewModel.authenticate2(appState: appState)
                 } label: {
                         Text("Next")
                             .bold()
@@ -83,7 +86,7 @@ struct SignInView: View {
                 }
                 
             }
-            
+            .frame(maxWidth: 300)
             .padding()
             .background(.ultraThinMaterial.shadow(.inner(color: .gray.opacity(0.6) ,radius: 5)))
             .foregroundColor(Color.primary.opacity(0.35))

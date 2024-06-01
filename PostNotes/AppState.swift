@@ -15,7 +15,6 @@ class AppState: ObservableObject {
     @Published var currentUser: User? 
     @Published var navigationPath = NavigationPath()
     
-    
    // @Published private(set) var isLoggedIn = false // Private(set) to prevent external modification
     
     var isLoggedIn: Bool {

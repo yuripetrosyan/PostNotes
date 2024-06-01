@@ -48,7 +48,7 @@
 		921DE72A2BC99C7D00B7C007 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7132BC99C7D00B7C007 /* README.txt */; };
 		921DE72B2BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7142BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf */; };
 		921DE72C2BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */; };
-		923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D22BC54C6C00E10EB3 /* SignUpView.swift */; };
+		923551D32BC54C6C00E10EB3 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D22BC54C6C00E10EB3 /* SignInView.swift */; };
 		923551D52BC5AC8000E10EB3 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */; };
 		9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257981E2BB2195400254FB4 /* PostNotesApp.swift */; };
 		925798212BB21D1D00254FB4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925798202BB21D1D00254FB4 /* RoundButton.swift */; };
@@ -64,6 +64,7 @@
 		926705072BCDE32400372250 /* MessageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926705062BCDE32400372250 /* MessageStore.swift */; };
 		926812592BB0DD140048822D /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812582BB0DD140048822D /* SettingsView.swift */; };
 		926812772BB1D6C30048822D /* FoldersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 926812762BB1D6C20048822D /* FoldersView.swift */; };
+		927173CF2C0B2F7A007618FA /* LaunchAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 927173CE2C0B2F7A007618FA /* LaunchAnimation.swift */; };
 		928B95242C08EEED0010D729 /* BlurView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B95232C08EEED0010D729 /* BlurView.swift */; };
 		928B95272C08F02B0010D729 /* ExploreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B95262C08F02B0010D729 /* ExploreView.swift */; };
 		928B95292C08F0AB0010D729 /* ExploreList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 928B95282C08F0AB0010D729 /* ExploreList.swift */; };
@@ -139,7 +140,7 @@
 		921DE7132BC99C7D00B7C007 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		921DE7142BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-Italic-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-VariableFont_wght.ttf"; sourceTree = "<group>"; };
-		923551D22BC54C6C00E10EB3 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		923551D22BC54C6C00E10EB3 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
 		925798202BB21D1D00254FB4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
@@ -156,6 +157,7 @@
 		926705062BCDE32400372250 /* MessageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageStore.swift; sourceTree = "<group>"; };
 		926812582BB0DD140048822D /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 		926812762BB1D6C20048822D /* FoldersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FoldersView.swift; sourceTree = "<group>"; };
+		927173CE2C0B2F7A007618FA /* LaunchAnimation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchAnimation.swift; sourceTree = "<group>"; };
 		928B95232C08EEED0010D729 /* BlurView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurView.swift; sourceTree = "<group>"; };
 		928B95262C08F02B0010D729 /* ExploreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreView.swift; sourceTree = "<group>"; };
 		928B95282C08F0AB0010D729 /* ExploreList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExploreList.swift; sourceTree = "<group>"; };
@@ -172,7 +174,6 @@
 		92CBAA662BF3AF6D0064291E /* TestForChatListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestForChatListView.swift; sourceTree = "<group>"; };
 		92CC639D2BC547E300D53101 /* FlatGlassView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FlatGlassView.swift; sourceTree = "<group>"; };
 		92CF50A22BBDB5BD00BC2A49 /* NoteModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoteModel.swift; sourceTree = "<group>"; };
-		92D7446F2C06388200BD5555 /* PostNotes Watch Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = "PostNotes Watch Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
 		92EB43872C065E6B00018579 /* DetailedViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedViewViewModel.swift; sourceTree = "<group>"; };
 		92FC18C22BED0DAD0091469C /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 		92FC18C52BED0DD40091469C /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
@@ -188,13 +189,6 @@
 				921341E52BE431CD00B92692 /* FirebaseFirestore in Frameworks */,
 				92FC18CC2BEFC5B80091469C /* OpenAI in Frameworks */,
 				921341E72BE431CD00B92692 /* FirebaseFirestoreSwift in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92D7446C2C06388200BD5555 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,7 +306,6 @@
 			isa = PBXGroup;
 			children = (
 				925FF0192BAF6ABD00F8EE87 /* PostNotes.app */,
-				92D7446F2C06388200BD5555 /* PostNotes Watch Extension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -351,6 +344,7 @@
 				928B95222C08EED50010D729 /* Fonts */,
 				92C0D2B22BC1AD9700CBD080 /* TriangleLoader */,
 				928B95232C08EEED0010D729 /* BlurView.swift */,
+				927173CE2C0B2F7A007618FA /* LaunchAnimation.swift */,
 			);
 			path = Extras;
 			sourceTree = "<group>";
@@ -369,7 +363,7 @@
 				92C0D2B52BC1B5D400CBD080 /* SearchBar.swift */,
 				92C0D29B2BC0C30900CBD080 /* CustomTabView.swift */,
 				921DE6FD2BC965AD00B7C007 /* MessageView.swift */,
-				923551D22BC54C6C00E10EB3 /* SignUpView.swift */,
+				923551D22BC54C6C00E10EB3 /* SignInView.swift */,
 				92CC639D2BC547E300D53101 /* FlatGlassView.swift */,
 			);
 			path = Components;
@@ -503,23 +497,6 @@
 			productReference = 925FF0192BAF6ABD00F8EE87 /* PostNotes.app */;
 			productType = "com.apple.product-type.application";
 		};
-		92D7446E2C06388200BD5555 /* PostNotes Watch Extension */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 92D744782C06388200BD5555 /* Build configuration list for PBXNativeTarget "PostNotes Watch Extension" */;
-			buildPhases = (
-				92D7446B2C06388200BD5555 /* Sources */,
-				92D7446C2C06388200BD5555 /* Frameworks */,
-				92D7446D2C06388200BD5555 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "PostNotes Watch Extension";
-			productName = "PostNotes Watch Extension";
-			productReference = 92D7446F2C06388200BD5555 /* PostNotes Watch Extension.appex */;
-			productType = "com.apple.product-type.extensionkit-extension";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -532,9 +509,6 @@
 				TargetAttributes = {
 					925FF0182BAF6ABD00F8EE87 = {
 						CreatedOnToolsVersion = 15.3;
-					};
-					92D7446E2C06388200BD5555 = {
-						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -557,7 +531,6 @@
 			projectRoot = "";
 			targets = (
 				925FF0182BAF6ABD00F8EE87 /* PostNotes */,
-				92D7446E2C06388200BD5555 /* PostNotes Watch Extension */,
 			);
 		};
 /* End PBXProject section */
@@ -596,13 +569,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		92D7446D2C06388200BD5555 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -613,7 +579,7 @@
 				92FC18C32BED0DAD0091469C /* ChatView.swift in Sources */,
 				92FC18C62BED0DD40091469C /* ProfileView.swift in Sources */,
 				92EB43882C065E6B00018579 /* DetailedViewViewModel.swift in Sources */,
-				923551D32BC54C6C00E10EB3 /* SignUpView.swift in Sources */,
+				923551D32BC54C6C00E10EB3 /* SignInView.swift in Sources */,
 				925FF0352BAF6B9300F8EE87 /* CustomTextField.swift in Sources */,
 				92C0D2B42BC1AD9700CBD080 /* TriangleLoader.swift in Sources */,
 				92CF50A32BBDB5BD00BC2A49 /* NoteModel.swift in Sources */,
@@ -653,17 +619,11 @@
 				92C0D2952BC095E300CBD080 /* firstNoteAdd.swift in Sources */,
 				921341DD2BE4274B00B92692 /* AuthService.swift in Sources */,
 				9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */,
+				927173CF2C0B2F7A007618FA /* LaunchAnimation.swift in Sources */,
 				921341EC2BE958C000B92692 /* ChatListView.swift in Sources */,
 				925FF03A2BAF709600F8EE87 /* CutomNotepad.swift in Sources */,
 				925FF0332BAF6B5B00F8EE87 /* CustiomGridtem.swift in Sources */,
 				921DE6FC2BC964FD00B7C007 /* Constants.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		92D7446B2C06388200BD5555 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -805,10 +765,9 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "PostNotes Ai";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used to capture photos";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Library is used to save photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -840,10 +799,9 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "PostNotes Ai";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.productivity";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Camera is used to capture photos";
-				INFOPLIST_KEY_NSPhotoLibraryUsageDescription = "Photo Library is used to save photos";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -856,62 +814,6 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		92D744762C06388200BD5555 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZT829445M9;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "PostNotes Watch Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "PostNotes Watch Extension";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.YuriPetrosyan.PostNotes-Watch-Extension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.5;
-			};
-			name = Debug;
-		};
-		92D744772C06388200BD5555 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = ZT829445M9;
-				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "PostNotes Watch Extension/Info.plist";
-				INFOPLIST_KEY_CFBundleDisplayName = "PostNotes Watch Extension";
-				INFOPLIST_KEY_NSHumanReadableCopyright = "";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@executable_path/../../Frameworks",
-					"@executable_path/../../../../Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.YuriPetrosyan.PostNotes-Watch-Extension";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 10.5;
 			};
 			name = Release;
 		};
@@ -932,15 +834,6 @@
 			buildConfigurations = (
 				925FF0282BAF6ABE00F8EE87 /* Debug */,
 				925FF0292BAF6ABE00F8EE87 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		92D744782C06388200BD5555 /* Build configuration list for PBXNativeTarget "PostNotes Watch Extension" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				92D744762C06388200BD5555 /* Debug */,
-				92D744772C06388200BD5555 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

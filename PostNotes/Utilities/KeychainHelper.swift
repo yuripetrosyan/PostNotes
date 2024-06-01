@@ -35,7 +35,7 @@ func getAPIKey(forKey: String) -> String? {
   }
   return key
 }
-
+                                              
 
 func loadAndSaveAPIKey() {
     guard let path = Bundle.main.path(forResource: "api_keys", ofType: "plist"), // Adjust if using .env

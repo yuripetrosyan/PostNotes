@@ -20,7 +20,6 @@ struct AccountView: View {
     
     var body: some View {
         NavigationStack{
-            
         ZStack {
             
             Image(.backgroundPhoto)
@@ -95,11 +94,6 @@ struct AccountView: View {
                                         
                                 }
                             }
-                    
-                    
-                        
-                    
-                    
                 }
                 
                 
@@ -109,13 +103,10 @@ struct AccountView: View {
             
             
             if sheetIsOn{
-                FlatSignUpView(sheetIsOn: $sheetIsOn)
+                SignInView(sheetIsOn: $sheetIsOn)
                     .transition(.move(edge: .bottom))
                     
             }
-            
-            
-            
         }
     }
 }

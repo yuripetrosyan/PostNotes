@@ -10,7 +10,7 @@ struct AuthView: View {
     
     @ObservedObject var viewModel: AuthViewModel = AuthViewModel()
     @EnvironmentObject var appState: AppState
-    
+    @State private var sheetIsOn = false
     var body: some View {
         ZStack{
             Image(.backgroundPhoto)
@@ -25,18 +25,17 @@ struct AuthView: View {
                     
                 } .padding(.bottom, 20)
                 
-               
+                CustomTextField()
+                    .overlay{
+                        TextField("Email", text: $viewModel.emailText)
+                            .textContentType(.username)
+                            .textInputAutocapitalization(.never)
+                            .padding(.horizontal)
+                            .padding(.top, 10)
+                    }
+                
                 if viewModel.isPasswordVisible {
                     VStack{
-                        CustomTextField()
-                            .overlay{
-                                TextField("Email", text: $viewModel.emailText)
-                                    .textContentType(.username)
-                                    .textInputAutocapitalization(.never)
-                                    .padding(.horizontal)
-                                    .padding(.top, 10)
-                            }
-                        
                         CustomTextField()
                             .overlay{
                                 SecureField("password", text: $viewModel.passwordText)
@@ -45,65 +44,55 @@ struct AuthView: View {
                                     .padding(.horizontal)
                                     .padding(.top, 10)
                             }
-                        
-                        Button(action: {
-                            viewModel.authenticate(appState: appState)
-                            
-                        },label: {
-                            Text(viewModel.userExists ? "Log In" : "Sign Up")
-                            .fontWeight(.semibold)
-                                .foregroundColor(.primary1)
-                                .padding()
-                                .frame(width: 150, height:  50)
-                                .background(Color.brandPrimary)
-                                .cornerRadius(30)
-                                .padding(.horizontal)
-                                .shadow(radius: 5, x: 3, y: 3)
-                            
-                        }).padding()
                     }
-                    
-                }else{
-                    
-                    HStack{
-                        CustomTextField()
-                            .overlay{
-                                TextField("Email", text: $viewModel.emailText)
-                                    .textContentType(.username)
-                                    .textInputAutocapitalization(.never)
-                                    .padding(.horizontal)
-                                    .padding(.top, 10)
-                            }
-                        Button(action: {
-                            viewModel.authenticate(appState: appState)
-                            
-                        },label: {
-                            Image(systemName: "arrow.right")
-                            
-                                .fontWeight(.semibold)
-                                .foregroundColor(.primary1)
-                                .frame(width: 40, height:  40)
-                                .background(Color.brandPrimary)
-                                .cornerRadius(30)
-                                .shadow(radius: 5, x: 3, y: 3)
-                        })  .padding(.top, 10)
-                    }.padding()
                 }
-                
-                
                 if viewModel.isLoading {
                     ProgressView()
                 } else{
+                    Button(action: {
+                        viewModel.authenticate(appState: appState)
+                        
+                    },label: {
+                        Text(viewModel.userExists ? "Log In" : "Sign Up")
+                            .fontWeight(.semibold)
+                            .foregroundColor(.primary1)
+                            .padding()
+                            .frame(width: 150, height:  50)
+                            .background(Color.brandPrimary)
+                            .cornerRadius(30)
+                            .padding(.horizontal)
+                            .shadow(radius: 5, x: 3, y: 3)
+                        
+                    }).padding()
                     
                 }
                 
-                
-                
+                HStack(spacing: 5){
+                    Text("Already have an account?")
+                        .font(.footnote)
+                    
+                        Text("Sign In!")
+                            .fontWeight(.semibold)
+                            .font(.footnote)
+                            .onTapGesture {
+                                withAnimation(Animation.smooth){
+                                    sheetIsOn.toggle()
+                                        
+                                }
+                            }
+                }
                 
                 
             }
             .padding(.top, 40)
             .padding(.horizontal)
+            
+            
+            if sheetIsOn{
+                SignInView(sheetIsOn: $sheetIsOn)
+                    .transition(.move(edge: .bottom))
+                    
+            }
             
         }
     }
@@ -116,3 +105,28 @@ struct AuthView: View {
 
 
 
+//CustomTextField()
+//    .overlay{
+//        TextField("Email", text: $viewModel.emailText)
+//            .textContentType(.username)
+//            .textInputAutocapitalization(.never)
+//            .padding(.horizontal)
+//            .padding(.top, 10)
+//    }
+
+
+//Button(action: {
+//    viewModel.authenticate(appState: appState)
+//
+//},label: {
+//    Text(viewModel.userExists ? "Log In" : "Sign Up")
+//    .fontWeight(.semibold)
+//        .foregroundColor(.primary1)
+//        .padding()
+//        .frame(width: 150, height:  50)
+//        .background(Color.brandPrimary)
+//        .cornerRadius(30)
+//        .padding(.horizontal)
+//        .shadow(radius: 5, x: 3, y: 3)
+//
+//}).padding()

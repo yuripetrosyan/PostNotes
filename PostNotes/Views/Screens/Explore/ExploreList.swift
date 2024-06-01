@@ -39,7 +39,8 @@ struct ExploreList: View {
                                         shadowColor: item.shadowColor)
                                .rotation3DEffect(Angle(degrees:
                                                         Double(geometry.frame(in: .global).minX - 30) / -20), axis: (x: 0, y: 20.0, z: 0))
-                               .sheet(isPresented: self.$showContent) { ChatListView() }
+                              // .sheet(isPresented: self.$showContent) { //ChatListView()
+                             //  }
                            }
                            .frame(width: 246, height: 360)
                        }

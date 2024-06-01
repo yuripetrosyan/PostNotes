@@ -9,14 +9,24 @@ import SwiftUI
 
 struct ProfileView: View {
     
-    @State private var buttonIsGreen = false
+    @State private var buttonIsGreen: Bool = false
     @State var apiKey: String = UserDefaults.standard.string(forKey: "openai_api_key") ?? ""
+    
+   
+    
     var body: some View {
+        
+        
             
                 TextField("OpenAI API Key", text: $apiKey) {
                     UserDefaults.standard.setValue(apiKey, forKey: "openai_api_key")
+                }.onChange(of: apiKey){
+                    buttonIsGreen = false
                 }
-        Button("Save") {
+        
+       
+        
+        Button(buttonIsGreen ? "Saved" : "Save") {
             
             UserDefaults.standard.setValue(apiKey, forKey: "openai_api_key")
         }
