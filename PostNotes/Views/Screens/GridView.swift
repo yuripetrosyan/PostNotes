@@ -20,7 +20,7 @@ struct GridView: View {
     @State var searchedText: String = ""
     @State private var showingConfirmation = false
     @State private var showCamera = false
-    
+
     let columns: [GridItem] = [
         GridItem(.flexible()),
         GridItem(.flexible())
@@ -41,12 +41,18 @@ struct GridView: View {
         ZStack{
             
             //BlurView(style: .systemMaterial).ignoresSafeArea()
-          //  Color.backgroundPrimary.ignoresSafeArea()
+            // Color.backgroundPrimary.ignoresSafeArea()
             RiveViewModel(fileName: "shapes").view()
                 .ignoresSafeArea()
                 .blur(radius: 30)
             
-            
+            //CameraView()
+//
+//                .padding(.top, 50)
+//                .opacity(showCamera ? 1 : 0)
+//                .offset(x: showCamera ? 0 : -300)
+//                .rotation3DEffect(.degrees(showCamera ? 0 : 30), axis: (x: 0, y: 1, z: 0))
+//                //.ignoresSafeArea(.all, edges: .top)
             
             ZStack{
                 ScrollView {
@@ -98,6 +104,14 @@ struct GridView: View {
                    
                 }
             }.opacity(isShowingPopover ? 0.2 : 1)
+            //3d effect when camera is open
+                .mask(RoundedRectangle(cornerRadius: 30, style: .continuous))
+                .rotation3DEffect(.degrees(showCamera ? 30 : 0), axis: (x: 0, y: -1, z: 0), perspective: 1)
+                .offset(x: showCamera ? 300 : 0, y: showCamera ? -100 : 0)
+                .scaleEffect(showCamera ? 0.9 : 1)
+                .scaleEffect(showCamera ? 0.92 : 1)
+            
+            
             
             //showing add popover
             if isShowingPopover{
@@ -120,8 +134,20 @@ struct GridView: View {
                             isShowingPopover.toggle()
                         }
                     }
+                }
+            ToolbarItem(placement: .topBarLeading) {
+                Circle()
+                    .frame(width: 40, height: 40)
+                    .opacity(0)
+                    .overlay {
+                        Image(systemName: showCamera ? "xmark" : "camera")
+                    }
+                    .onTapGesture {
+                        withAnimation(.spring(duration: 0.5, bounce: 0.3)){
+                            showCamera.toggle()
+                        }
+                    }
             }
-
         
             
             

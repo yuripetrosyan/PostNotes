@@ -36,7 +36,7 @@ struct AuthView: View {
                     Text("Ai")
                         .font(.custom("ARCADECLASSIC", size: 20))
                     
-                } .padding(.bottom, 20)
+                }//.padding(.bottom)
                 
                 HStack{
                     CustomTextField()

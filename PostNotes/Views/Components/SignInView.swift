@@ -69,7 +69,10 @@ struct SignInView: View {
                     Divider().padding(.horizontal).padding(.bottom)
 
                 Button {
-                    viewModel.authenticate2(appState: appState)
+                
+             
+                        viewModel.authenticate2(appState: appState)
+                    
                 } label: {
                         Text("Next")
                             .bold()
