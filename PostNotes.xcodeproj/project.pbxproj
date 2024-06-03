@@ -50,6 +50,14 @@
 		921DE72C2BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */; };
 		923551D32BC54C6C00E10EB3 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D22BC54C6C00E10EB3 /* SignInView.swift */; };
 		923551D52BC5AC8000E10EB3 /* FolderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */; };
+		923C4DE32C0DD2E600E6B186 /* RiveRuntime in Frameworks */ = {isa = PBXBuildFile; productRef = 923C4DE22C0DD2E600E6B186 /* RiveRuntime */; };
+		923C4DEC2C0DD5C400E6B186 /* button.riv in Resources */ = {isa = PBXBuildFile; fileRef = 923C4DE42C0DD5C400E6B186 /* button.riv */; };
+		923C4DED2C0DD5C400E6B186 /* check.riv in Resources */ = {isa = PBXBuildFile; fileRef = 923C4DE52C0DD5C400E6B186 /* check.riv */; };
+		923C4DEE2C0DD5C400E6B186 /* confetti.riv in Resources */ = {isa = PBXBuildFile; fileRef = 923C4DE62C0DD5C400E6B186 /* confetti.riv */; };
+		923C4DEF2C0DD5C400E6B186 /* house.riv in Resources */ = {isa = PBXBuildFile; fileRef = 923C4DE72C0DD5C400E6B186 /* house.riv */; };
+		923C4DF02C0DD5C400E6B186 /* icons.riv in Resources */ = {isa = PBXBuildFile; fileRef = 923C4DE82C0DD5C400E6B186 /* icons.riv */; };
+		923C4DF12C0DD5C400E6B186 /* menu_button.riv in Resources */ = {isa = PBXBuildFile; fileRef = 923C4DE92C0DD5C400E6B186 /* menu_button.riv */; };
+		923C4DF22C0DD5C400E6B186 /* shapes.riv in Resources */ = {isa = PBXBuildFile; fileRef = 923C4DEA2C0DD5C400E6B186 /* shapes.riv */; };
 		9257981F2BB2195400254FB4 /* PostNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9257981E2BB2195400254FB4 /* PostNotesApp.swift */; };
 		925798212BB21D1D00254FB4 /* RoundButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925798202BB21D1D00254FB4 /* RoundButton.swift */; };
 		925FF01F2BAF6ABD00F8EE87 /* PostNotesTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 925FF01E2BAF6ABD00F8EE87 /* PostNotesTabView.swift */; };
@@ -142,6 +150,13 @@
 		921DE7152BC99C7D00B7C007 /* Urbanist-VariableFont_wght.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Urbanist-VariableFont_wght.ttf"; sourceTree = "<group>"; };
 		923551D22BC54C6C00E10EB3 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		923551D42BC5AC8000E10EB3 /* FolderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FolderViewModel.swift; sourceTree = "<group>"; };
+		923C4DE42C0DD5C400E6B186 /* button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = button.riv; sourceTree = "<group>"; };
+		923C4DE52C0DD5C400E6B186 /* check.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = check.riv; sourceTree = "<group>"; };
+		923C4DE62C0DD5C400E6B186 /* confetti.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = confetti.riv; sourceTree = "<group>"; };
+		923C4DE72C0DD5C400E6B186 /* house.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = house.riv; sourceTree = "<group>"; };
+		923C4DE82C0DD5C400E6B186 /* icons.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = icons.riv; sourceTree = "<group>"; };
+		923C4DE92C0DD5C400E6B186 /* menu_button.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = menu_button.riv; sourceTree = "<group>"; };
+		923C4DEA2C0DD5C400E6B186 /* shapes.riv */ = {isa = PBXFileReference; lastKnownFileType = file; path = shapes.riv; sourceTree = "<group>"; };
 		9257981E2BB2195400254FB4 /* PostNotesApp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostNotesApp.swift; sourceTree = "<group>"; };
 		925798202BB21D1D00254FB4 /* RoundButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundButton.swift; sourceTree = "<group>"; };
 		925FF0192BAF6ABD00F8EE87 /* PostNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -185,6 +200,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				923C4DE32C0DD2E600E6B186 /* RiveRuntime in Frameworks */,
 				921341E32BE431CD00B92692 /* FirebaseAuth in Frameworks */,
 				921341E52BE431CD00B92692 /* FirebaseFirestore in Frameworks */,
 				92FC18CC2BEFC5B80091469C /* OpenAI in Frameworks */,
@@ -293,6 +309,20 @@
 			path = Screens;
 			sourceTree = "<group>";
 		};
+		923C4DEB2C0DD5C400E6B186 /* RiveAssets */ = {
+			isa = PBXGroup;
+			children = (
+				923C4DE42C0DD5C400E6B186 /* button.riv */,
+				923C4DE52C0DD5C400E6B186 /* check.riv */,
+				923C4DE62C0DD5C400E6B186 /* confetti.riv */,
+				923C4DE72C0DD5C400E6B186 /* house.riv */,
+				923C4DE82C0DD5C400E6B186 /* icons.riv */,
+				923C4DE92C0DD5C400E6B186 /* menu_button.riv */,
+				923C4DEA2C0DD5C400E6B186 /* shapes.riv */,
+			);
+			path = RiveAssets;
+			sourceTree = "<group>";
+		};
 		925FF0102BAF6ABD00F8EE87 = {
 			isa = PBXGroup;
 			children = (
@@ -323,6 +353,7 @@
 				92C973452BB09E210080C2C0 /* Utilities */,
 				925FF02B2BAF6AD300F8EE87 /* Extras */,
 				925FF0202BAF6ABE00F8EE87 /* Assets.xcassets */,
+				923C4DEB2C0DD5C400E6B186 /* RiveAssets */,
 				92C973512BB0A41C0080C2C0 /* Info.plist */,
 				921341DF2BE42C1200B92692 /* GoogleService-Info.plist */,
 				925FF0222BAF6ABE00F8EE87 /* Preview Content */,
@@ -492,6 +523,7 @@
 				921341E42BE431CD00B92692 /* FirebaseFirestore */,
 				921341E62BE431CD00B92692 /* FirebaseFirestoreSwift */,
 				92FC18CB2BEFC5B80091469C /* OpenAI */,
+				923C4DE22C0DD2E600E6B186 /* RiveRuntime */,
 			);
 			productName = PostNotes;
 			productReference = 925FF0192BAF6ABD00F8EE87 /* PostNotes.app */;
@@ -525,6 +557,7 @@
 				920F43B62BDA658C0047680E /* XCRemoteSwiftPackageReference "Glur" */,
 				921341E12BE431CD00B92692 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 				92FC18CA2BEFC5B80091469C /* XCRemoteSwiftPackageReference "OpenAI" */,
+				923C4DE12C0DD2E600E6B186 /* XCRemoteSwiftPackageReference "rive-ios" */,
 			);
 			productRefGroup = 925FF01A2BAF6ABD00F8EE87 /* Products */;
 			projectDirPath = "";
@@ -544,6 +577,7 @@
 				921DE7232BC99C7D00B7C007 /* Urbanist-MediumItalic.ttf in Resources */,
 				921DE7172BC99C7D00B7C007 /* Urbanist-Black.ttf in Resources */,
 				921DE7252BC99C7D00B7C007 /* Urbanist-SemiBold.ttf in Resources */,
+				923C4DF22C0DD5C400E6B186 /* shapes.riv in Resources */,
 				921DE7202BC99C7D00B7C007 /* Urbanist-Light.ttf in Resources */,
 				921DE71F2BC99C7D00B7C007 /* Urbanist-Italic.ttf in Resources */,
 				921DE72A2BC99C7D00B7C007 /* README.txt in Resources */,
@@ -556,15 +590,21 @@
 				921341E02BE42C1200B92692 /* GoogleService-Info.plist in Resources */,
 				921DE7212BC99C7D00B7C007 /* Urbanist-LightItalic.ttf in Resources */,
 				921DE7292BC99C7D00B7C007 /* OFL.txt in Resources */,
+				923C4DEF2C0DD5C400E6B186 /* house.riv in Resources */,
+				923C4DEE2C0DD5C400E6B186 /* confetti.riv in Resources */,
 				921DE71B2BC99C7D00B7C007 /* Urbanist-ExtraBold.ttf in Resources */,
 				921DE7242BC99C7D00B7C007 /* Urbanist-Regular.ttf in Resources */,
 				921DE7192BC99C7D00B7C007 /* Urbanist-Bold.ttf in Resources */,
 				921DE71D2BC99C7D00B7C007 /* Urbanist-ExtraLight.ttf in Resources */,
+				923C4DF02C0DD5C400E6B186 /* icons.riv in Resources */,
 				921DE7262BC99C7D00B7C007 /* Urbanist-SemiBoldItalic.ttf in Resources */,
+				923C4DEC2C0DD5C400E6B186 /* button.riv in Resources */,
 				921DE71C2BC99C7D00B7C007 /* Urbanist-ExtraBoldItalic.ttf in Resources */,
 				925FF0212BAF6ABE00F8EE87 /* Assets.xcassets in Resources */,
 				921DE7222BC99C7D00B7C007 /* Urbanist-Medium.ttf in Resources */,
 				921DE7182BC99C7D00B7C007 /* Urbanist-BlackItalic.ttf in Resources */,
+				923C4DED2C0DD5C400E6B186 /* check.riv in Resources */,
+				923C4DF12C0DD5C400E6B186 /* menu_button.riv in Resources */,
 				921DE72B2BC99C7D00B7C007 /* Urbanist-Italic-VariableFont_wght.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -857,6 +897,14 @@
 				minimumVersion = 10.25.0;
 			};
 		};
+		923C4DE12C0DD2E600E6B186 /* XCRemoteSwiftPackageReference "rive-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/rive-app/rive-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.12.0;
+			};
+		};
 		92FC18CA2BEFC5B80091469C /* XCRemoteSwiftPackageReference "OpenAI" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/MacPaw/OpenAI";
@@ -882,6 +930,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 921341E12BE431CD00B92692 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		923C4DE22C0DD2E600E6B186 /* RiveRuntime */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 923C4DE12C0DD2E600E6B186 /* XCRemoteSwiftPackageReference "rive-ios" */;
+			productName = RiveRuntime;
 		};
 		92FC18CB2BEFC5B80091469C /* OpenAI */ = {
 			isa = XCSwiftPackageProductDependency;

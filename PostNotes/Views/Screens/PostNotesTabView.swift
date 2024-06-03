@@ -16,7 +16,7 @@ struct PostNotesTabView: View {
     init() {
         //will not reserve space on the screen for tabview
         UITabBar.appearance().isHidden = true
-      //print(URL.applicationSupportDirectory.path(percentEncoded: false))
+        //print(URL.applicationSupportDirectory.path(percentEncoded: false))
     }
     
     var body: some View {
@@ -33,29 +33,30 @@ struct PostNotesTabView: View {
                 ChatListView()
             case .folder:
                 FoldersView(categories: FoldersViewModel.shared.folders)
-          
+                
             case .gearshape:
                 SettingsView()
             }
             
             
-        //Use this to hide tabbar while in chat with ai
-          //  if tabSelected != .messageAI{
-                VStack{
-                    
-                    Spacer()
-                    CustomTabBar(selectedTab: $tabSelected)
-                        .padding(.bottom, -20)
-                    
-                }.ignoresSafeArea(.keyboard, edges: .bottom)
+            //Use this to hide tabbar while in chat with ai
+            //  if tabSelected != .messageAI{
+            VStack{
+                
+                Spacer()
+                CustomTabBar(selectedTab: $tabSelected)
+                    .padding(.bottom, -20)
+                
+            }.ignoresSafeArea(.keyboard, edges: .bottom)
         }
+    
         .onAppear {
-                    // Set selected category to "All Notes" when .house tab is selected
-                    if tabSelected == .house {
-                        selectedCategory = "All Notes"
-                    }
-                }
-    }
+            // Set selected category to "All Notes" when .house tab is selected
+            if tabSelected == .house {
+                selectedCategory = "All Notes"
+            }
+        }
+}
 }
 
 #Preview {

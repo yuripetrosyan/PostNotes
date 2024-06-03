@@ -26,12 +26,13 @@ struct LaunchAnimation: View {
                 ZStack{
                     RoundedRectangle(cornerRadius: 25)
                         .frame(width: 170, height: 170)
-                        .foregroundStyle(.white)
+                        .foregroundStyle(.brandSecondary)
                         .offset(CGSize(width: 0.0, height: isAnimating ? 200.0 : 0.0))
                         .scaleEffect(scale)
                     // .offset(CGSize(width: 00.0, height: 90.0))
                     
                     TopRoundedRectangle(radius: 25)
+                        .foregroundStyle(.brandPrimary)
                         .frame(width: 170, height: 50)
                         .offset(CGSize(width: 0.0, height: isAnimating ? -200.0 : -60.0))
                         .foregroundColor(.brandOnly)

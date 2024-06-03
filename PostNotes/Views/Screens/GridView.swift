@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import RiveRuntime
 import SwiftData
 
 struct GridView: View {
@@ -36,13 +37,20 @@ struct GridView: View {
     
     //MARK: - body
     var body: some View {
-        //  NavigationStack{
+          NavigationStack{
         ZStack{
             
-            BlurView(style: .systemMaterial).ignoresSafeArea()
+            //BlurView(style: .systemMaterial).ignoresSafeArea()
+          //  Color.backgroundPrimary.ignoresSafeArea()
+            RiveViewModel(fileName: "shapes").view()
+                .ignoresSafeArea()
+                .blur(radius: 30)
+            
+            
             
             ZStack{
                 ScrollView {
+                    SearchBar(text: $searchedText)
                     LazyVGrid(columns: columns, alignment: .center, spacing: 10) {
                         // Check if items array is empty
                         if filteredItems.isEmpty {
@@ -53,7 +61,7 @@ struct GridView: View {
                                         isShowingPopover.toggle()
                                     }
                                 }
-                         }else{
+                        }else{
                             ForEach(filteredItems.filter { category == nil || $0.category == category }, id: \.id) { note in
                                 NavigationLink(destination: DetailedVIew(item: note) { _ in })  {
                                     CustomGridItemView(item: note)
@@ -87,41 +95,38 @@ struct GridView: View {
                     
                     .foregroundStyle(.brandPrimary)
                     .padding()
-                    .padding(.top, 55)
+                   
                 }
-                
-                VStack{
-                    SearchBar(text: $searchedText)
-                    Spacer()
-                }
-                
             }.opacity(isShowingPopover ? 0.2 : 1)
             
             //showing add popover
             if isShowingPopover{
                 CustomNotepadPopoverLonger(isShowingPopover: $isShowingPopover)
-                
             }
-            
         }
         .navigationTitle(category ?? "All Notes")
         .navigationBarTitleDisplayMode(.inline)
-        
         .toolbar {
+            
             ToolbarItem(placement: .topBarTrailing) {
-                Button {
-                    withAnimation(Animation.smooth){
-                        isShowingPopover.toggle()
+                Circle()
+                    .frame(width: 40, height: 40)
+                    .opacity(0)
+                    .overlay {
+                        Image(systemName: "plus")
                     }
-                } label: {
-                    Image(systemName: "plus")
-                        .tint(.brandPrimary)
-                }
+                    .onTapGesture {
+                        withAnimation(.easeInOut){
+                            isShowingPopover.toggle()
+                        }
+                    }
             }
+
+        
             
             
         }
-      
+    }
     }
 }
 

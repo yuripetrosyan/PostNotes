@@ -20,7 +20,7 @@ class SettingsViewModel: ObservableObject{
     }
     
     @Published var selectedTheme: Theme = .system
-    
+   // @Published var shadowColor: Color
     //Accent Color
     @Published var accentColor: Color = .brandPrimary
     
@@ -35,14 +35,14 @@ class SettingsViewModel: ObservableObject{
     
     // MARK: - Persistence =
       private let defaults = UserDefaults.standard
-    
-    init() {
+//    
+  init() {
            // Load any previously saved preferences here
            if let storedTheme = defaults.string(forKey: "themePreference") {
                selectedTheme = Theme(rawValue: storedTheme) ?? .system
            }
            // Similar loading for other properties...
-       }
+  }
     
     // MARK: - Save Functions
         func saveThemePreference() {
