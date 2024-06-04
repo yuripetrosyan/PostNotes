@@ -1,5 +1,11 @@
 # PostNotes: Your AI-Powered Notepad
 
+
+![Frame 1171276143](https://github.com/yuripetrosyan/PostNotes/assets/73176415/e95b6558-f047-47ca-a950-439fc48b98c9)
+
+
+
+
 [![License](https://img.shields.io/badge/license-MIT-blue.svg)]([link-to-license-file])
 
 PostNotes is a note-taking app designed to supercharge your productivity with AI. Capture your thoughts in a familiar, notepad-like interface, while leveraging AI for powerful note summarization, organization, and search.
