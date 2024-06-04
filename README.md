@@ -38,7 +38,7 @@ PostNotes is a note-taking app designed to supercharge your productivity with AI
 * **Platform:** iOS (Currently)
 * **Technology:** SwiftUI, SwiftData, OpenAI API
 * **Backend:** Firestore
-
+<!--- 
 ## Getting Started
 
 1. **Clone the Repository:**
