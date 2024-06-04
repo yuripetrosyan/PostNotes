@@ -2,13 +2,14 @@ import SwiftUI
 
 
 struct CustomNotepadWide: View {
-    @State private var initialState: Bool = true
+    @State private var initialState: Bool = false//change to true
     
     
     var body: some View {
         ZStack{
                 RoundedRectangle(cornerRadius: 25.0)
-                    .frame(width: 270, height: initialState ? 110 : 230)
+                    .frame(width: 270, height: //initialState ? 110v:
+                           230)
                     .offset(CGSize(width: 0.0, height: initialState ? -15.0 : 0))
                     .foregroundStyle(.ultraThinMaterial.shadow(.inner(radius: 4)))
                 
@@ -18,12 +19,13 @@ struct CustomNotepadWide: View {
                     .foregroundColor(.brandPrimary)
                     .shadow(radius: 5, x: 3, y: 5)
             }
-            
-            .onAppear{
-                withAnimation(.smooth){
-                    initialState.toggle()
-                }
-            }
+        //turn on
+//            .onAppear{
+//                withAnimation(.smooth){
+//                    initialState.toggle()
+//                }
+            //}
+       
 //            .onTapGesture {
 //                withAnimation(.smooth) {
 //                    initialState.toggle()
@@ -45,14 +47,16 @@ struct CustomNotepadWideLonger: View {
     var body: some View {
         ZStack{
             RoundedRectangle(cornerRadius: 25.0)
-                .frame(width: 270, height: initialState ? 200 : 400)
+                .frame(width: 270, height: //initialState ? 200 :
+                        400)
 
               //.foregroundStyle(.primary1)//.opacity(0.7)
                 .foregroundStyle(.ultraThinMaterial.shadow(.inner(radius: 3)))
             
             TopRoundedRectangle(radius: 25)
                 .frame(width: 270, height: 80)
-                .offset(CGSize(width: 0.0, height: initialState ? -60 : -160.0))
+                .offset(CGSize(width: 0.0, height: //initialState ? -60 :
+                               -160.0))
 
                 .foregroundColor(.brandPrimary)
                 
@@ -60,11 +64,11 @@ struct CustomNotepadWideLonger: View {
 
         
         //.shadow(radius: 5, x: 3, y: 5)
-        .onAppear{
-            withAnimation(.smooth){
-                initialState.toggle()
-            }
-        }
+//        .onAppear{
+//            withAnimation(.smooth){
+//                initialState.toggle()
+//            }
+//        }
     
        
 //        .onTapGesture {
