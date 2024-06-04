@@ -1,8 +1,8 @@
 # PostNotes: Your AI-Powered Notepad
 
 
-![Frame 1171276143](https://github.com/yuripetrosyan/PostNotes/assets/73176415/e95b6558-f047-47ca-a950-439fc48b98c9)
 
+![Frame](https://github.com/yuripetrosyan/PostNotes/assets/73176415/c1ed9d4c-8ec7-41d6-a543-2260335bbbea)
 
 
 
