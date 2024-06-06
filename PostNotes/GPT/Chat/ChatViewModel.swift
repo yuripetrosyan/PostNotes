@@ -85,6 +85,7 @@ class ChatViewModel: ObservableObject {
             self?.chat?.model = self?.selectedModel
         }
     }
+    
     private func generateResponse(for message: AppMessage) async throws {
         let openAI = OpenAI(apiToken: apiKey)
 

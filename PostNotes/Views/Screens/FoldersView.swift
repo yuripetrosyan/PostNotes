@@ -20,7 +20,7 @@ struct FoldersView: View {
     
     var body: some View {
         ZStack {
-            NavigationView {
+            NavigationStack {
                 VStack {
                     ScrollView(.horizontal, showsIndicators: false) {
                         LazyHStack(spacing: 180.0){

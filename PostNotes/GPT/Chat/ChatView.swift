@@ -29,8 +29,10 @@ struct ChatView: View {
                             .listRowBackground(Color.clear)
                             .id(message.id)
                             .onChange(of: viewModel.messages){
-                                newValue in scrollToButtom(scrollView: scrollView)
+                                newValue in scrollToBottom(scrollView: scrollView)
                             }
+                           
+
                     }
                     .navigationTitle(viewModel.chat?.topic ?? "New Chat")
                     //.background(Color(uiColor: .systemGroupedBackground))
@@ -88,7 +90,7 @@ struct ChatView: View {
     }
     
     
-    func scrollToButtom(scrollView: ScrollViewProxy){
+    func scrollToBottom(scrollView: ScrollViewProxy){
         guard !viewModel.messages.isEmpty, let lastMessage = viewModel.messages.last else { return }
         
         withAnimation {

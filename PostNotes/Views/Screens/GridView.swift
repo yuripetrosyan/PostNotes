@@ -39,7 +39,6 @@ struct GridView: View {
     var body: some View {
         NavigationStack{
             ZStack{
-                
                 //BlurView(style: .systemMaterial).ignoresSafeArea()
                  //Color.red.ignoresSafeArea()
                 RiveViewModel(fileName: "shapes").view()
@@ -48,11 +47,10 @@ struct GridView: View {
                 
                 //CameraView()
                 CustomNotepadPopoverLonger(isShowingPopover: $showPopover)
-                
                     .opacity(showPopover ? 1 : 0)
                     .offset(x: showPopover ? 30 : 300)
                     .rotation3DEffect(.degrees(showPopover ? 0 : 30), axis: (x: 0, y: 1, z: 0))
-                //                //.ignoresSafeArea(.all, edges: .top)
+                    .ignoresSafeArea(.all, edges: .top)
                 
                 ZStack{
                     ScrollView {

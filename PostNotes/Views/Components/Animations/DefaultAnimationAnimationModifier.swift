@@ -41,4 +41,5 @@ struct DefaultAnimationAnimationModifier: View {
 #Preview {
     DefaultAnimationAnimationModifier()
         .preferredColorScheme(.dark)
+        
 }
