@@ -12,12 +12,11 @@ PostNotes is a note-taking app designed to supercharge your productivity with AI
 
 ## Features
 
-
 * **Retro Notepads:** Enjoy a minimalist design inspired by real-life notepads.
+* **AI-Powered Summarization, Correction:** Get instant summaries of your notes to quickly grasp key points. 
 * **Chat Functionality:** Discuss and refine your notes with an integrated AI chatbot.
 * **Cloud Synchronization:** Securely store and access your notes from any device using Firestore. 
 * **Advanced Search:** Effortlessly find notes using natural language queries and filters.
-* **AI-Powered Summarization:** Get instant summaries of your notes to quickly grasp key points. (Coming soon)
 * **Intelligent Organization:** Let AI categorize and tag your notes automatically, keeping them neatly organized. (Coming soon)
 
 <!--- 
