@@ -56,10 +56,6 @@ struct CustomNotepad: View {
        
         .shadow(radius: 5, x: 3, y: 4)
         .contentShape(.contextMenuPreview, RoundedRectangle(cornerRadius: 25))
-                      
-                          
-        
-
     }
 }
 

@@ -50,21 +50,21 @@ let item: Note
     
 }
 
-
+//
 //struct CustomGridItem: Identifiable {
 //    let id = UUID()
 //    let itemTitle: String
 //    let itemContent: String
 //}
-
-
+//
+//
 //
 //
 //#Preview {
-//    CustomGridItemView(item: Note(title: "Holiday", content: "Activities such as swimming, snork, and sunbathing are popular during these sunny days. Barbecues and picnics by the shore create cherished moments of togetherness and relaxation. Adventure seekers may opt for hiking, camping, or exploring national parks to immerse themselves in nature's beauty. Regardless of the destination, the summer holiday provides a much-needed break from routine, allowing individuals to recharge and create lasting memories with loved ones."))
+//    CustomGridItemView(item: Note)
 //}
-
-
+//
+//
 
 
 //

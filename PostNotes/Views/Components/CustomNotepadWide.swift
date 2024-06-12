@@ -57,10 +57,10 @@ struct CustomNotepadWideLonger: View {
                 .frame(width: 270, height: 80)
                 .offset(CGSize(width: 0.0, height: //initialState ? -60 :
                                -160.0))
+                //.foregroundColor(.brandPrimary)
+                .foregroundStyle(.ultraThickMaterial.shadow(.inner(radius: 4))).colorScheme(.dark)
 
-                .foregroundColor(.brandPrimary)
-                
-        }
+        }.colorScheme(.light)
 
         
         //.shadow(radius: 5, x: 3, y: 5)

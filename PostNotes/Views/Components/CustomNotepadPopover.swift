@@ -26,9 +26,9 @@ struct CustomNotepadPopoverLonger: View {
                                 .fontWeight(.semibold)
                                 .fontDesign(.serif)
                                 .font(.title2)
-                                .foregroundColor(.primary1)
+                                .foregroundColor(.brandOnly1.opacity(0.9))
                             )
-                            .foregroundColor(.primary1)
+                            .foregroundColor(.brandOnly1.opacity(0.9))
                             .fontWeight(.semibold)
                             .fontDesign(.serif)
                             .font(.title2)
@@ -40,7 +40,7 @@ struct CustomNotepadPopoverLonger: View {
                                 }
                             }
                             .pickerStyle(.menu)
-                            .tint(.brandSecondary)
+                            .tint(.brandOnly1.opacity(0.7))
                         }
                         .frame(width: 230, height: 50)
                         .padding(.vertical)
@@ -50,7 +50,7 @@ struct CustomNotepadPopoverLonger: View {
                             .offset(y: -20)
                             .scrollContentBackground(.hidden)
                             .multilineTextAlignment(.leading)
-                            .foregroundStyle(.brandPrimary)
+                            .foregroundStyle(.brandOnly)
                             .padding(20)
                         Spacer()
                     }
@@ -70,7 +70,7 @@ struct CustomNotepadPopoverLonger: View {
                                     .frame(width: 100)
                                     .fontWeight(.semibold)
                                     .fontDesign(.rounded)
-                                    .foregroundStyle(.brandPrimary)
+                                    .foregroundStyle(.brandOnly)
                             }
 
                             Spacer(minLength: 20)
@@ -89,9 +89,9 @@ struct CustomNotepadPopoverLonger: View {
                                     .frame(width: 100, height: 40)
                                     .fontWeight(.semibold)
                                     .fontDesign(.rounded)
-                                    .foregroundStyle(.primary1)
+                                    .foregroundStyle(.brandOnly1)
                                     .background(RoundedRectangle(cornerRadius: 20)
-                                        .foregroundStyle(.brandPrimary))
+                                        .foregroundStyle(.brandOnly))
                             }
                         }
                         .frame(width: 200)
@@ -121,7 +121,7 @@ struct CustomNotepadPopoverLonger: View {
         }
     }
 }
-
+//
 //
 //#Preview {
 //    CustomNotepadPopoverLonger(isShowingPopover: .constant(true))

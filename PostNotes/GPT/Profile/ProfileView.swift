@@ -24,10 +24,7 @@ struct ProfileView: View {
                     buttonIsGreen = false
                 }
         
-       
-        
         Button(buttonIsGreen ? "Saved" : "Save") {
-            
             UserDefaults.standard.setValue(apiKey, forKey: "openai_api_key")
         }
         .onTapGesture  {
