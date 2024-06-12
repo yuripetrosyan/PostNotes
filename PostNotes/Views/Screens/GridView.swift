@@ -42,8 +42,10 @@ struct GridView: View {
                 //BlurView(style: .systemMaterial).ignoresSafeArea()
                  //Color.red.ignoresSafeArea()
                 RiveViewModel(fileName: "shapes").view()
+                    .scaleEffect(CGSize(width: 1.5, height: 1.5))
+                    .offset(x: -100, y: -100)
                     .ignoresSafeArea()
-                    .blur(radius: 30)
+                    .blur(radius: 90)
                 
                 //CameraView()
                 CustomNotepadPopoverLonger(isShowingPopover: $showPopover)
