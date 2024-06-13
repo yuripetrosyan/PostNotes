@@ -31,7 +31,7 @@ struct GridView: View {
             (category == nil || note.category == category) &&
             (searchedText.isEmpty || note.title.localizedCaseInsensitiveContains(searchedText) == true || note.content.localizedCaseInsensitiveContains(searchedText) == true )
         }
-    }
+    }  
     
     
     

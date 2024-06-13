@@ -140,9 +140,16 @@ struct DetailedVIew: View {
                 
                 Text("Analyze")
                     .font(.headline)
-                    .frame(width: 200, height: 30)
+                    .frame(width: 80, height: 30)
                     .offset(x: -85)
                     .foregroundColor(.brandPrimary)
+                    .background(RoundedRectangle(cornerRadius: 12).foregroundStyle(.ultraThinMaterial)
+                        .frame(width: 110)
+                        .padding(.trailing, 140)
+                    )
+                   
+                    .opacity(ShowHideMenu ? 1 : 0)
+                   
                     .rotationEffect(.degrees(iconPosition ? 60: -180 ))
                     .animation(.easeInOut(duration: 1).delay(0.1))
                     .onTapGesture {
@@ -160,9 +167,12 @@ struct DetailedVIew: View {
                 
                 Text("Summerize")
                     .font(.headline)
-                    .frame(width: 300, height: 30)
+                    .frame(width: 200, height: 30)
                     .offset(x: -95)
                     .foregroundColor(.brandPrimary)
+                    .background(RoundedRectangle(cornerRadius: 12).foregroundStyle(.ultraThinMaterial) .frame(width: 140)
+                        .padding(.trailing, 160))
+                    .opacity(ShowHideMenu ? 1 : 0)
                     .rotationEffect(.degrees(iconPosition ? 30: -180 ))
                     .animation(.easeInOut(duration: 1).delay(0.3))
                     .onTapGesture {
@@ -183,9 +193,15 @@ struct DetailedVIew: View {
                 
                 Text("Correct")
                     .font(.headline)
-                    .frame(width: 200, height: 30)
+                    .frame(width: 250, height: 30)
                     .offset(x: -85)
                     .foregroundColor(.brandPrimary)
+                    .background(RoundedRectangle(cornerRadius: 12)
+                        .foregroundStyle(.ultraThinMaterial)
+                        .frame(width: 110)
+                        .padding(.trailing, 140))
+               
+                    .opacity(ShowHideMenu ? 1 : 0)
                     .rotationEffect(.degrees(iconPosition ? 0: -180 ))
                 //.rotationEffect(.degrees(45))
                     .animation(.easeInOut(duration: 1).delay(0.6))
@@ -214,10 +230,10 @@ struct DetailedVIew: View {
                     Circle()
                         .frame(width: 60, height: 60)
                         .padding(10)
-                        .foregroundColor(ShowHideMenu ? .yellow : Color.clear)
+                        .foregroundStyle(ShowHideMenu ? .ultraThinMaterial : .bar)
                         .overlay {
-                            Image(systemName: "sparkles")
-                                .foregroundStyle(ShowHideMenu ? .white : .yellow)
+                            Image(systemName: ShowHideMenu ? "sparkle" : "sparkles")
+                                .foregroundStyle(.yellow)
                                 .font(.title)
                                 .fontWeight(.heavy)
                                 .rotationEffect(.degrees(ShowHideMenu ? 45 : 0 ))
