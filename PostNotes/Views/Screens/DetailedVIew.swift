@@ -246,6 +246,7 @@ struct DetailedVIew: View {
                         }
                 }
             }
+            //}
             .padding()
         }
     }
