@@ -8,11 +8,22 @@
 import SwiftUI
 
 struct CircleView: View {
+    @Binding var show: Bool
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        RoundedRectangle(cornerRadius: show ? 16 : 40)
+            .frame(width: show ? 150 : 50, height: show ? 220 : 50)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .bottomTrailing)
+            .foregroundStyle(.ultraThickMaterial)
+            .padding()
+            .onTapGesture {
+                withAnimation(.snappy){
+                    show.toggle()
+                }
+            }
     }
 }
 
-#Preview {
-    CircleView()
-}
+//#Preview {
+    //CircleView(show: .constant(false))
+//}
